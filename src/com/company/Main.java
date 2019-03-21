@@ -24,9 +24,9 @@ public class Main {
         Salesperson sp1 = new Salesperson();
         sp1.setEmpID("ABC1");
 
-        //Vehicles
+        //Vehicles - objects [done]
 
-        // create 10 car/trucks objects
+        // Cars
 
         Car car1 = new Car("1A2B3C");
         car1.addCarToInventory(car1);
@@ -104,8 +104,34 @@ public class Main {
 
 
         Truck truck1 = new Truck("5C6D7E");
-
         truck1.setTon(Ton.one);
+
+        Truck truck2 = new Truck("6T3R1Y");
+        truck2.setTon(Ton.one);
+
+        Truck truck3 = new Truck("9P7O2S");
+        truck3.setTon(Ton.two);
+
+        Truck truck4 = new Truck("5L7F3X");
+        truck4.setTon(Ton.one);
+
+        Truck truck5 = new Truck("8T2Z4G");
+        truck5.setTon(Ton.two);
+
+        Truck truck6 = new Truck("3V8C5K");
+        truck6.setTon(Ton.one);
+
+        Truck truck7 = new Truck("7W4A3C");
+        truck7.setTon(Ton.one);
+
+        Truck truck8 = new Truck("4G1D7J");
+        truck8.setTon(Ton.two);
+
+        Truck truck9 = new Truck("2K6V8R");
+        truck9.setTon(Ton.two);
+
+        Truck truck10 = new Truck("6T9C4F");
+        truck10.setTon(Ton.one);
 
 
         //Inventory
