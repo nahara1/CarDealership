@@ -1,5 +1,3 @@
 package com.company;
 
 public enum NumDoors {two, four}
-
-//Number of doors
