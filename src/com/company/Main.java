@@ -6,8 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        //Dealership
-
+        //Dealerships
         Dealership dealer1 = new Dealership("Car Dealership Abington", "123 St Ave Town, PA 12345", "1234567890");
         Dealership dealer2 = new Dealership("Car Dealership Bensalem", "123 St Ave Town, PA 12345", "1234567890");
 
