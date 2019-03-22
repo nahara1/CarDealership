@@ -134,7 +134,6 @@ public class Main {
 
 
         //Inventory
-        Inventory in1 = new Inventory();
 
     //    in1.setCar(car1);
 
@@ -142,17 +141,120 @@ public class Main {
         //Get quantity in inventory
 
 
+        Inventory in1 = new Inventory();
+        Inventory in2 = new Inventory();
+        Inventory in3 = new Inventory();
+        Inventory in4 = new Inventory();
+        Inventory in5 = new Inventory();
+        Inventory in6 = new Inventory();
+        Inventory in7 = new Inventory();
+        Inventory in8 = new Inventory();
+        Inventory in9 = new Inventory();
+        Inventory in10 = new Inventory();
+/*
+        in1.setCar(car1);
+        in2.setCar(car2);
+        in3.setCar(car3);
+        in4.setCar(car4);
+        in5.setCar(car5);
+        in6.setCar(car6);
+        in7.setCar(car7);
+        in8.setCar(car8);
+        in9.setCar(car9);
+        in10.setCar(car10);
+*/
+
+//Get quantity in inventory
+
+
         //Customers
 
 
         Customers cust1 = new Customers();
+        Customers cust2 = new Customers();
+        Customers cust3 = new Customers();
+        Customers cust4 = new Customers();
+        Customers cust5 = new Customers();
+        Customers cust6 = new Customers();
+        Customers cust7 = new Customers();
+        Customers cust8 = new Customers();
+        Customers cust9 = new Customers();
+        Customers cust10 = new Customers();
+
         cust1.setFirstName("Ann");
         cust1.setGroupID("A");
 
+        cust2.setFirstName("Joe");
+        cust2.setGroupID("J");
 
-        //SalesLead
+        cust3.setFirstName("Alex");
+        cust3.setGroupID("Al");
+
+        cust4.setFirstName("Ronald");
+        cust4.setGroupID("R");
+
+        cust5.setFirstName("Hannah");
+        cust5.setGroupID("H");
+
+        cust6.setFirstName("Mia");
+        cust6.setGroupID("M");
+
+        cust7.setFirstName("Greg");
+        cust7.setGroupID("G");
+
+        cust8.setFirstName("Tony");
+        cust8.setGroupID("T");
+
+        cust9.setFirstName("Cody");
+        cust9.setGroupID("C");
+
+        cust10.setFirstName("Patricia");
+        cust10.setGroupID("P");
+
+
+//SalesLead
         SalesLead s1 = new SalesLead();
         s1.setSalesLeadID(0);
+
+        SalesLead s2 = new SalesLead();
+        s2.setSalesLeadID(1);
+
+        SalesLead s3 = new SalesLead();
+        s3.setSalesLeadID(2);
+
+        SalesLead s4 = new SalesLead();
+        s4.setSalesLeadID(3);
+
+        SalesLead s5 = new SalesLead();
+        s5.setSalesLeadID(4);
+
+        SalesLead s6 = new SalesLead();
+        s6.setSalesLeadID(5);
+
+        SalesLead s7 = new SalesLead();
+        s7.setSalesLeadID(6);
+
+        SalesLead s8 = new SalesLead();
+        s8.setSalesLeadID(7);
+
+        SalesLead s9 = new SalesLead();
+        s9.setSalesLeadID(8);
+
+        SalesLead s10 = new SalesLead();
+        s10.setSalesLeadID(9);
+
+        System.out.println(s1.getSalesLeadID());
+        System.out.println(s2.getSalesLeadID());
+        System.out.println(s3.getSalesLeadID());
+        System.out.println(s4.getSalesLeadID());
+        System.out.println(s5.getSalesLeadID());
+        System.out.println(s6.getSalesLeadID());
+        System.out.println(s7.getSalesLeadID());
+        System.out.println(s8.getSalesLeadID());
+        System.out.println(s9.getSalesLeadID());
+        System.out.println(s10.getSalesLeadID());
+
+
 
         System.out.print(s1.getSalesLeadID());
 

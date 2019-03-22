@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Customers {
 
     public static void main(String[] args) {
@@ -7,6 +9,28 @@ public class Customers {
 
     private int custID;
     private String firstName, lastName, phoneNumber, custEmail, groupID;
+    int cCount = 0;
+
+    Customers (int custID) {}
+    Customers () {}
+
+
+    // add new customer method
+
+    public Customers addCustomer() {
+        Customers cust = new Customers(cCount++);
+        Scanner scnr = new Scanner(System.in);
+        System.out.println("Please enter your first name: ");
+        cust.setFirstName(scnr.nextLine());
+        System.out.println("Please enter your last name: ");
+        cust.setLastName(scnr.nextLine());
+        System.out.println("Please enter your phone number: ");
+        cust.setPhoneNumber(scnr.nextLine());
+        cust.setCustID(cCount);
+
+
+        return cust;
+    }
 
     //Group customers based on their last name (asd order).
     public String getGroupID() {
