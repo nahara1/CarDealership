@@ -151,6 +151,8 @@ public class Main {
         Inventory in9 = new Inventory();
         Inventory in10 = new Inventory();
 //
+
+        //
         in1.setCar(car1);
         in2.setCar(car2);
         in3.setCar(car3);
