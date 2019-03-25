@@ -1,6 +1,8 @@
 package com.company;
 
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -256,9 +258,129 @@ public class Main {
         System.out.println(s10.getSalesLeadID());
 
 
+        // Menu options
 
-        System.out.print(s1.getSalesLeadID());
+        final char EXIT_CODE = 'E';
+        final char CUST_CODE = 'C';
+        final char CUST_PRNT = 'P';
+        final char INV_CODE = 'I';
+        final char SL_CODE = 'S';
+        final char SELL_CODE = 'V';
+        final char TRAN_CODE = 'T';
+        final char HELP_CODE = '?';
 
+        char userAction;
+
+        final String PROMPT_ACTION = "Add 'C'ustomer, 'P'rint Customers, 'S' Add Sales Lead, List 'I'nventory, Sell 'V'ehicle, List 'T'ransaction or 'E'xit: ";
+
+
+        // prompt user
+        userAction = getAction(PROMPT_ACTION);
+
+        while (userAction != EXIT_CODE) {
+            switch (userAction) {
+                case CUST_CODE:
+                    cList.add(cust.addCustomer());
+
+                    break;
+                case MENU_CODE:
+
+                    break;
+
+                case CUST_PRNT:
+
+                    break;
+
+                // clean it up
+                case ORDER_CODE: //addOrders();
+                    // add loop to prompt user to order more items
+                    String userInput = "Type 'Y'es to order or type 'N'o to go back to the main menu: ";
+                    userAction = getAction(userInput);
+                    while (userAction != 'N') {
+                        //oList.add(main.addOrder());
+
+                        /*Order o1 = new Order();
+                        o1.getorderId();
+                        oList.add(main.addOrder());
+                        */
+
+                        //get input menu id
+                        Scanner input = new Scanner(System.in);
+                        menu1.printMenuInfo();
+                        menu2.printMenuInfo();
+                        menu3.printMenuInfo();
+                        menu4.printMenuInfo();
+
+
+                        //using order() method
+                        //or.order();
+
+
+                        System.out.println("Enter menu item id: ");
+                        int menuId = input.nextInt();
+                        System.out.println("Enter quantity: ");
+                        int qty = or.getQuantity();
+
+                        oList.add(or.order());
+
+                        switch (menuId) {
+                            case 1:
+                                subTotal = or.getSubTotal(menu1.getPrice(1), qty);
+                                or.getSubTo(subTotal);
+                                userAction = getAction(userInput);
+                                break;
+                            case 2:
+                                subTotal = or.getSubTotal(menu2.getPrice(2), qty);
+                                or.getSubTo(subTotal);
+                                userAction = getAction(userInput);
+                                break;
+                            case 3:
+                                subTotal = or.getSubTotal(menu3.getPrice(3), qty);
+                                or.getSubTo(subTotal);
+                                userAction = getAction(userInput);
+                                break;
+                            case 4:
+                                subTotal = or.getSubTotal(menu4.getPrice(4), qty);
+                                or.getSubTo(subTotal);
+                                userAction = getAction(userInput);
+                                break;
+                        }
+
+                    }
+
+
+                    //print order
+                    break;
+                case TRAN_CODE: //listTransactions();
+                    //                 System.out.println("Enter payment type: " + trans1.setPaymentType());
+                    Transaction trans1 = new Transaction(1);
+                    tList.add(trans1);
+                    System.out.println("Your order total is: $ " + orderTotal);
+                    // trans1.selectPayType();
+                    trans1.setPaymentType(trans1.selectPayType());
+
+                    System.out.println("Receipt: ");
+                    trans1.printReceipt(orderTotal, trans1.getPaymentType());
+                    trans1.listTransactions(tList);
+
+
+                    break;
+                case HELP_CODE: //
+                    break;
+            }
+
+            userAction = getAction(PROMPT_ACTION);
+        }
+    }
+
+    public static char getAction(String prompt) {
+        Scanner scnr = new Scanner(System.in);
+        String answer = "";
+        System.out.println(prompt);
+        answer = scnr.nextLine().toUpperCase() + " ";
+        char firstChar = answer.charAt(0);
+        return firstChar;
+    }
 
     }
 }
