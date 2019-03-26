@@ -10,7 +10,18 @@ public class Parts {
 
 
 
-    // add a constructor
+    // constructors
+
+    public Parts () {
+
+    }
+
+    public Parts (int _partID, String _partCategory, String _name) {
+        this.name = _name;
+        this.partCategory = _partCategory;
+        this.partID = _partID;
+
+    }
 
     public int getPartID() {
         return partID;

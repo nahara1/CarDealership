@@ -1,4 +1,5 @@
 package com.company;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -11,6 +12,8 @@ public class SalesLead {
     int cCount;
 
     private int salesPersonID;
+
+    public ArrayList<SalesLead> slList = new ArrayList<>();
 
 
     // Constructors

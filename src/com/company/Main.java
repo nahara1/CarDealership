@@ -19,7 +19,7 @@ public class Main {
 
 
 
-        System.out.println(dealer2.getName());
+        ArrayList<SalesLead> slList = new ArrayList<>();
 
         // objects for each class for adding them to arrayLists
         Car car = new Car();
@@ -30,10 +30,6 @@ public class Main {
         Salesperson sp = new Salesperson();
         SalesLead sl = new SalesLead();
         Transaction tr1 = new Transaction();
-
-        ArrayList<SalesLead> slList = new ArrayList<>();
-
-
 
 
 
@@ -307,7 +303,7 @@ public class Main {
 
                 case SL_CODE:
                     System.out.println("Enter your emp id: ");
-                    int emp_id = input.nextInt();
+                    String emp_id = input.next();
                     slList.add(sl.addSL(emp_id));
 
                     break;
