@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class Customers {
 
-    public static void main(String[] args) {
-    }
 
     private int custID;
     private String firstName, lastName, phoneNumber, custEmail, groupID;
