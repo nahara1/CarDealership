@@ -46,70 +46,45 @@ public class Main {
 
 
         car1.setColor("Black");
-        System.out.println(car1.getColor());
+
 
         Car car2 = new Car("1A4K5L");
-        car2.addCarToInventory(car2);
 
 
         car2.setColor("Red");
-        System.out.println(car2.getColor());
 
         Car car3 = new Car("2B6F9S");
-        car3.addCarToInventory(car3);
-
 
         car3.setColor("White");
-        System.out.println(car3.getColor());
 
         Car car4 = new Car("3D1G7T");
-        car4.addCarToInventory(car4);
-
 
         car4.setColor("Black");
-        System.out.println(car4.getColor());
 
         Car car5 = new Car("6H3M2X");
-        car5.addCarToInventory(car5);
-
 
         car5.setColor("Silver");
-        System.out.println(car5.getColor());
 
         Car car6 = new Car("9G5Z1E");
-        car6.addCarToInventory(car6);
-
 
         car6.setColor("Purple");
-        System.out.println(car6.getColor());
 
         Car car7 = new Car("4Y3T8U");
         car7.addCarToInventory(car7);
 
 
         car7.setColor("Green");
-        System.out.println(car7.getColor());
 
         Car car8 = new Car("1D7C3J");
-        car8.addCarToInventory(car8);
-
-
         car8.setColor("Maroon");
-        System.out.println(car8.getColor());
 
         Car car9 = new Car("3T9R5F");
         car9.addCarToInventory(car9);
-
-
         car9.setColor("Orange");
-        System.out.println(car9.getColor());
 
         Car car10 = new Car("5H2V9P");
         car10.addCarToInventory(car10);
-
-
         car10.setColor("Yellow");
-        System.out.println(car10.getColor());
 
         // Trucks
 
@@ -257,16 +232,6 @@ public class Main {
         SalesLead s10 = new SalesLead();
         s10.setSalesLeadID(9);
 
-        System.out.println(s1.getSalesLeadID());
-        System.out.println(s2.getSalesLeadID());
-        System.out.println(s3.getSalesLeadID());
-        System.out.println(s4.getSalesLeadID());
-        System.out.println(s5.getSalesLeadID());
-        System.out.println(s6.getSalesLeadID());
-        System.out.println(s7.getSalesLeadID());
-        System.out.println(s8.getSalesLeadID());
-        System.out.println(s9.getSalesLeadID());
-        System.out.println(s10.getSalesLeadID());
 
 
         // Menu options
@@ -288,6 +253,7 @@ public class Main {
 
 
         // prompt user
+        System.out.println("DEALERSHIP MAIN MENU");
         userAction = getAction(PROMPT_ACTION);
 
         while (userAction != EXIT_CODE) {
@@ -301,6 +267,14 @@ public class Main {
 
                     break;
 
+                case INV_CODE:
+
+                    break;
+
+                case SELL_CODE:
+
+                    break;
+
                 case SL_CODE:
                     System.out.println("Enter your emp id: ");
                     String emp_id = input.next();
@@ -309,6 +283,10 @@ public class Main {
                     break;
 
                 case ADD_PARTS:
+
+                    break;
+
+                case ADD_VEHICLE:
 
                     break;
 
@@ -324,6 +302,7 @@ public class Main {
     }
 
     public static char getAction(String prompt) {
+
         Scanner scnr = new Scanner(System.in);
         String answer = "";
         System.out.println(prompt);

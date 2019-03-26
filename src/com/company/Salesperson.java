@@ -10,7 +10,7 @@ public class Salesperson {
     Scanner userInput = new Scanner(System.in);
     String input;
 
-    Salesperson sp = new Salesperson();
+    //Salesperson sp = new Salesperson();
 
 
     // sellCar - to remove car object from ArrayList CarList - remove from inventory and receive money
@@ -27,7 +27,7 @@ public class Salesperson {
     public void addSalesLead(String empID) {
         // ask for id
 
-        String input = userInput.next();
+        String input = userInput.nextLine();
         empID = input;
         SalesLead sl = new SalesLead();
         sl.addSL(empID);

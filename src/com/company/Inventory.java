@@ -18,6 +18,15 @@ public class Inventory {
         trucksList = new ArrayList<Truck>();
         partsList = new ArrayList<Parts>();
     }
+    /*
+
+    public static void carsList(ArrayList<partsList> mList) {
+        for (Inventory inv : partsList) {
+            System.out.println(car.geCar());
+
+        }
+    }
+    */
 
 
 // output car by price in asc or desc order
