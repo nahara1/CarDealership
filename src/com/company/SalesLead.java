@@ -1,17 +1,48 @@
 package com.company;
 import java.util.Date;
+import java.util.Scanner;
+
 
 public class SalesLead {
     protected int salesLeadID;
     protected String sl_firstName, sl_lastName, sl_phoneNumber, sl_Email;
     protected Boolean salesLeadActive;
-    protected Date salesLeadDate;
+    protected String salesLeadDate;
+    int cCount;
 
     private int salesPersonID;
 
-    // add salesPeople id to know which one added a salesLead
 
-    public SalesLead() {}
+    // Constructors
+    public SalesLead(int _id) {
+        this.salesLeadID = _id;
+    }
+    public SalesLead() {
+    }
+
+
+    // add salesPeople id to know which one added a salesLead
+    public SalesLead addSL(String _empID) {
+        SalesLead sl = new SalesLead(cCount++);
+        Scanner scnr = new Scanner(System.in);
+        // fix this
+        System.out.println("Employee ID: " + _empID);
+
+        System.out.println("Please enter SL first name: ");
+        sl.setSl_firstName(scnr.nextLine());
+        System.out.println("Please enter SL last name: ");
+        sl.setSl_lastName(scnr.nextLine());
+        System.out.println("Please enter date: ");
+        sl.setSl_Date(scnr.nextLine());
+        System.out.println("Please enter SL phone number: ");
+        sl.setSl_phoneNumber(scnr.nextLine());
+        sl.setSalesLeadID(cCount);
+
+
+
+        return sl;
+    }
+
 
 
     public int getSalesLeadID() {
@@ -54,11 +85,11 @@ public class SalesLead {
         this.sl_Email = _sl_Email;
     }
 
-    public Date getSl_Date() {
+    public String getSl_Date() {
         return salesLeadDate;
     }
 
-    public void setSl_Date(Date _sl_Date){
+    public void setSl_Date(String _sl_Date){
         this.salesLeadDate = _sl_Date;
     }
 }

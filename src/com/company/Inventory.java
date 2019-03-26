@@ -12,6 +12,7 @@ public class Inventory {
 
 
     //Constructor Method
+
     public Inventory() {
         carsList = new ArrayList<Car>();
         trucksList = new ArrayList<Truck>();

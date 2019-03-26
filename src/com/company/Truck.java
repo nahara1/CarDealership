@@ -16,6 +16,10 @@ public final class Truck extends Vehicle {
 
     }
 
+    public Truck() {
+
+    }
+
 
     public void setTon(Ton _tonage) {
         tonage = _tonage;

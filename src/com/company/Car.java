@@ -14,10 +14,11 @@ public final class Car extends Vehicle {
 
 
 
-  /*  Car() {
-        Quantity++;
+    Car() {
+
+
     }
-    */
+
 
     public void setQuantity(int newQty) {
         itemQuantity = newQty;

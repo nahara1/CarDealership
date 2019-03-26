@@ -1,6 +1,7 @@
 package com.company;
 
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -17,7 +18,23 @@ public class Main {
         //listDealerships.add(dealer2);
 
 
+
         System.out.println(dealer2.getName());
+
+        // objects for each class for adding them to arrayLists
+        Car car = new Car();
+        Inventory inv = new Inventory();
+        Truck truck = new Truck();
+        Parts parts = new Parts();
+
+        Salesperson sp = new Salesperson();
+        SalesLead sl = new SalesLead();
+        Transaction tr1 = new Transaction();
+
+        ArrayList<SalesLead> slList = new ArrayList<>();
+
+
+
 
 
         //SalesPeople
@@ -34,8 +51,6 @@ public class Main {
 
         car1.setColor("Black");
         System.out.println(car1.getColor());
-
-//                System.out.println(.printInvList());
 
         Car car2 = new Car("1A4K5L");
         car2.addCarToInventory(car2);
@@ -265,6 +280,8 @@ public class Main {
         final char CUST_PRNT = 'P';
         final char INV_CODE = 'I';
         final char SL_CODE = 'S';
+        final char ADD_VEHICLE = '>';
+        final char ADD_PARTS = '<';
         final char SELL_CODE = 'V';
         final char TRAN_CODE = 'T';
         final char HELP_CODE = '?';
@@ -278,93 +295,30 @@ public class Main {
         userAction = getAction(PROMPT_ACTION);
 
         while (userAction != EXIT_CODE) {
+            Scanner input = new Scanner(System.in);
             switch (userAction) {
                 case CUST_CODE:
-                    cList.add(cust.addCustomer());
+
 
                     break;
-                case MENU_CODE:
-
-                    break;
-
                 case CUST_PRNT:
 
                     break;
 
-                // clean it up
-                case ORDER_CODE: //addOrders();
-                    // add loop to prompt user to order more items
-                    String userInput = "Type 'Y'es to order or type 'N'o to go back to the main menu: ";
-                    userAction = getAction(userInput);
-                    while (userAction != 'N') {
-                        //oList.add(main.addOrder());
-
-                        /*Order o1 = new Order();
-                        o1.getorderId();
-                        oList.add(main.addOrder());
-                        */
-
-                        //get input menu id
-                        Scanner input = new Scanner(System.in);
-                        menu1.printMenuInfo();
-                        menu2.printMenuInfo();
-                        menu3.printMenuInfo();
-                        menu4.printMenuInfo();
-
-
-                        //using order() method
-                        //or.order();
-
-
-                        System.out.println("Enter menu item id: ");
-                        int menuId = input.nextInt();
-                        System.out.println("Enter quantity: ");
-                        int qty = or.getQuantity();
-
-                        oList.add(or.order());
-
-                        switch (menuId) {
-                            case 1:
-                                subTotal = or.getSubTotal(menu1.getPrice(1), qty);
-                                or.getSubTo(subTotal);
-                                userAction = getAction(userInput);
-                                break;
-                            case 2:
-                                subTotal = or.getSubTotal(menu2.getPrice(2), qty);
-                                or.getSubTo(subTotal);
-                                userAction = getAction(userInput);
-                                break;
-                            case 3:
-                                subTotal = or.getSubTotal(menu3.getPrice(3), qty);
-                                or.getSubTo(subTotal);
-                                userAction = getAction(userInput);
-                                break;
-                            case 4:
-                                subTotal = or.getSubTotal(menu4.getPrice(4), qty);
-                                or.getSubTo(subTotal);
-                                userAction = getAction(userInput);
-                                break;
-                        }
-
-                    }
-
-
-                    //print order
-                    break;
-                case TRAN_CODE: //listTransactions();
-                    //                 System.out.println("Enter payment type: " + trans1.setPaymentType());
-                    Transaction trans1 = new Transaction(1);
-                    tList.add(trans1);
-                    System.out.println("Your order total is: $ " + orderTotal);
-                    // trans1.selectPayType();
-                    trans1.setPaymentType(trans1.selectPayType());
-
-                    System.out.println("Receipt: ");
-                    trans1.printReceipt(orderTotal, trans1.getPaymentType());
-                    trans1.listTransactions(tList);
-
+                case SL_CODE:
+                    System.out.println("Enter your emp id: ");
+                    int emp_id = input.nextInt();
+                    slList.add(sl.addSL(emp_id));
 
                     break;
+
+                case ADD_PARTS:
+
+                    break;
+
+                case TRAN_CODE:
+                    break;
+
                 case HELP_CODE: //
                     break;
             }
@@ -381,9 +335,8 @@ public class Main {
         char firstChar = answer.charAt(0);
         return firstChar;
     }
+ }
 
-    }
-}
 
 
 
