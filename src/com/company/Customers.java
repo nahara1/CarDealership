@@ -7,7 +7,7 @@ public class Customers {
 
     private int custID;
     private String firstName, lastName, phoneNumber, custEmail, groupID;
-    int cCount = 0;
+    int cCount = 10;
 
     Customers (int custID) {}
     Customers () {}
