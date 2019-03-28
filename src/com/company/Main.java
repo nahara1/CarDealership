@@ -294,23 +294,25 @@ public class Main {
                     break;
 
                 case ADD_VEHICLE:
-                    String userInput = "Type 1 to add a car or 2 to add a truck";
-                    userAction = getAction(userInput);
+                    //String userInput = "Type 1 to add a car or 2 to add a truck";
+                    //userAction = getAction(userInput);
 
-                    while (userAction != 'E') {
+                    //while (userAction != 'E') {
 
+                        System.out.println("Enter Vehicle Type: ");
+                        String type = input.nextLine();
 
-                        switch (userAction) {
-                            case 1:
+                        switch (type) {
+                            case "car":
                                 carList.add(car.addCar());
 
 
                                 break;
-                            case 2:
+                            case "truck":
 
                                 break;
                         }
-                    }
+
                         break;
 
                         case TRAN_CODE:

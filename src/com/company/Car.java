@@ -22,16 +22,19 @@ public final class Car extends Vehicle {
     public Car addCar() {
         Car car = new Car();
         Scanner scnr = new Scanner(System.in);
+        System.out.println("Please enter VIN number: ");
+        car.setVin(scnr.nextLine());
         System.out.println("Please enter car model: ");
         car.setModel(scnr.nextLine());
         System.out.println("Please enter car maker: ");
         car.setMaker(scnr.nextLine());
         System.out.println("Please enter car year: ");
         car.setYear(scnr.nextInt());
+
+        // not working ??
         System.out.println("Please enter car color: ");
         car.setColor(scnr.nextLine());
-        System.out.println("Please enter VIN number: ");
-        car.setVin(scnr.nextLine());
+
 
 
         return car;
