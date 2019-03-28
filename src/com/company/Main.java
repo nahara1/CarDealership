@@ -240,20 +240,20 @@ public class Main {
 
         // Menu options
 
-        final char EXIT_CODE = 'E';
-        final char CUST_CODE = 'C';
-        final char CUST_PRNT = 'P';
-        final char INV_CODE = 'I';
-        final char SL_CODE = 'S';
-        final char ADD_VEHICLE = '>';
-        final char ADD_PARTS = '<';
-        final char SELL_CODE = 'V';
-        final char TRAN_CODE = 'T';
+        final char CUST_CODE = '1';
+        final char CUST_PRNT = '2';
+        final char SL_CODE = '3';
+        final char INV_CODE = '4';
+        final char ADD_VEHICLE = '5';
+        final char ADD_PARTS = '6';
+        final char SELL_CODE = '7';
+        final char TRAN_CODE = '8';
         final char HELP_CODE = '?';
+        final char EXIT_CODE = '!';
 
         char userAction;
 
-        final String PROMPT_ACTION = "Add 'C'ustomer, 'P'rint Customers, 'S' Add Sales Lead, List 'I'nventory, Sell 'V'ehicle, List 'T'ransaction or 'E'xit: ";
+        final String PROMPT_ACTION = "1 - Add Customer, 2 - Print List of Customers, 3 - Add Sales Lead, 4 - List Inventory, 5 - Add a Vehicle, 6 - Add Parts, 7 - Sell a Vehicle, 8 - List Transactions, ? - Help: ";
 
 
         // prompt user
