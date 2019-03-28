@@ -297,16 +297,19 @@ public class Main {
                     String userInput = "Type 1 to add a car or 2 to add a truck";
                     userAction = getAction(userInput);
 
-
-                    switch (userAction) {
-                        case 1:
-                            carList.add(car.addCar());
+                    while (userAction != 'E') {
 
 
-                            break;
-                        case 2:
+                        switch (userAction) {
+                            case 1:
+                                carList.add(car.addCar());
 
-                            break;
+
+                                break;
+                            case 2:
+
+                                break;
+                        }
                     }
                         break;
 
@@ -320,6 +323,7 @@ public class Main {
                     userAction = getAction(PROMPT_ACTION);
             }
         }
+
 
 
     public static char getAction(String prompt) {
