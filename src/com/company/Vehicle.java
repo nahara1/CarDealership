@@ -1,7 +1,7 @@
 package com.company;
 import java.util.Date;
 
-public abstract class Vehicle implements Iterable<Vehicle> {
+public abstract class Vehicle {
     private String vin;
     private String name;
     private Date built;
@@ -58,6 +58,5 @@ public abstract class Vehicle implements Iterable<Vehicle> {
     public void setNumDoors(NumDoors _numDoors){
         numDoors =_numDoors;}
 
-
-    public abstract void addCarToInventory(Car car1);
+//public abstract void addCarToInventory(Car car1);
 }

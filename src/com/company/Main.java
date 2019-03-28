@@ -9,6 +9,10 @@ public class Main {
     public static void main(String[] args) {
 
 
+        ArrayList<Customers> cList = new ArrayList<>();
+        Customers cust = new Customers();
+
+
         //Dealerships
         Dealership dealer1 = new Dealership("Car Dealership Abington", "123 St Ave Town, PA 12345", "1234567890");
         Dealership dealer2 = new Dealership("Car Dealership Bensalem", "123 St Ave Town, PA 12345", "1234567890");
@@ -18,8 +22,9 @@ public class Main {
         //listDealerships.add(dealer2);
 
 
-
         ArrayList<SalesLead> slList = new ArrayList<>();
+
+        ArrayList<Car> carList = new ArrayList<>();
 
         // objects for each class for adding them to arrayLists
         Car car = new Car();
@@ -27,10 +32,10 @@ public class Main {
         Truck truck = new Truck();
         Parts parts = new Parts();
 
+
         Salesperson sp = new Salesperson();
         SalesLead sl = new SalesLead();
         Transaction tr1 = new Transaction();
-
 
 
         //SalesPeople
@@ -42,7 +47,7 @@ public class Main {
         // Cars
 
         Car car1 = new Car("1A2B3C");
-        car1.addCarToInventory(car1);
+        //car1.addCarToInventory(car1);
 
 
         car1.setColor("Black");
@@ -70,7 +75,7 @@ public class Main {
         car6.setColor("Purple");
 
         Car car7 = new Car("4Y3T8U");
-        car7.addCarToInventory(car7);
+        //car7.addCarToInventory(car7);
 
 
         car7.setColor("Green");
@@ -79,11 +84,11 @@ public class Main {
         car8.setColor("Maroon");
 
         Car car9 = new Car("3T9R5F");
-        car9.addCarToInventory(car9);
+        //car9.addCarToInventory(car9);
         car9.setColor("Orange");
 
         Car car10 = new Car("5H2V9P");
-        car10.addCarToInventory(car10);
+        //car10.addCarToInventory(car10);
         car10.setColor("Yellow");
 
         // Trucks
@@ -122,7 +127,7 @@ public class Main {
 
         //Inventory
 
-    //    in1.setCar(car1);
+        //    in1.setCar(car1);
 
 
         //Get quantity in inventory
@@ -233,7 +238,6 @@ public class Main {
         s10.setSalesLeadID(9);
 
 
-
         // Menu options
 
         final char EXIT_CODE = 'E';
@@ -260,10 +264,13 @@ public class Main {
             Scanner input = new Scanner(System.in);
             switch (userAction) {
                 case CUST_CODE:
+                    cList.add(cust.addCustomer());
 
 
                     break;
                 case CUST_PRNT:
+                    System.out.printf("%-10s | %-12s | %-10s\n", "ID", "Name", "Phone Number");
+                    Customers.printCustomer(cList);
 
                     break;
 
@@ -287,19 +294,33 @@ public class Main {
                     break;
 
                 case ADD_VEHICLE:
+                    String userInput = "Type 1 to add a car or 2 to add a truck";
+                    userAction = getAction(userInput);
 
-                    break;
 
-                case TRAN_CODE:
-                    break;
+                    switch (userAction) {
+                        case 1:
+                            carList.add(car.addCar());
 
-                case HELP_CODE: //
-                    break;
+
+                            break;
+                        case 2:
+
+                            break;
+                    }
+                        break;
+
+                        case TRAN_CODE:
+                            break;
+
+                        case HELP_CODE: //
+                            break;
+                    }
+
+                    userAction = getAction(PROMPT_ACTION);
             }
-
-            userAction = getAction(PROMPT_ACTION);
         }
-    }
+
 
     public static char getAction(String prompt) {
 
@@ -309,7 +330,9 @@ public class Main {
         answer = scnr.nextLine().toUpperCase() + " ";
         char firstChar = answer.charAt(0);
         return firstChar;
+
     }
+
  }
 
 

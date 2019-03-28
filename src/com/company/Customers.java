@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Customers {
@@ -18,12 +19,15 @@ public class Customers {
     public Customers addCustomer() {
         Customers cust = new Customers(cCount++);
         Scanner scnr = new Scanner(System.in);
-        System.out.println("Please enter your first name: ");
+        System.out.println("Please enter customer first name: ");
         cust.setFirstName(scnr.nextLine());
-        System.out.println("Please enter your last name: ");
+        System.out.println("Please enter customer last name: ");
         cust.setLastName(scnr.nextLine());
-        System.out.println("Please enter your phone number: ");
+        System.out.println("Please enter customer phone number: ");
         cust.setPhoneNumber(scnr.nextLine());
+        System.out.println("Please enter customer email: ");
+        cust.setCustEmail(scnr.nextLine());
+
         cust.setCustID(cCount);
 
 
@@ -79,6 +83,20 @@ public class Customers {
         this.custEmail = _email;
     }
 
+    public static void printCustomer(ArrayList<Customers> cList){
+        for (Customers cust: cList){
+            //System.out.println("Customer Id: " + cust.getCustomerId());
+            System.out.printf("%-10s | %-12s | %-10s\n", cust.getCustID(), cust.getcustEmail(), cust.getPhoneNumber());
+            //    System.out.println("Customer Name: " + cust.getCustomerName());
+            //    System.out.println("Customer Phone: " + cust.getCustomerPhone());
 
+            // index of each object
+            //  System.out.println("Index: " + cList.indexOf(cust));
+
+            // use this to count inventory
+            //   System.out.println("Array List Size: " + cList.size());
+
+        }
+    }
     // purchaseCar
 }

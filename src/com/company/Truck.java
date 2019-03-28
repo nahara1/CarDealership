@@ -33,16 +33,14 @@ public final class Truck extends Vehicle {
         setWheeldrive(Wheeldrive.four);
     }
 
-
+/*
     @Override
     public void addCarToInventory(Car car1) {
 
     }
+    */
 
-    @Override
-    public Iterator<Vehicle> iterator() {
-        return null;
-    }
+
 }
 
 
