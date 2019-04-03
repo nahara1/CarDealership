@@ -246,18 +246,19 @@ public class Main {
 
         final char CUST_CODE = '1';
         final char CUST_PRNT = '2';
-        final char SL_CODE = '3';
-        final char INV_CODE = '4';
-        final char ADD_VEHICLE = '5';
-        final char ADD_PARTS = '6';
-        final char SELL_CODE = '7';
-        final char TRAN_CODE = '8';
+        final char SL_PRNT = '3';
+        final char SL_CODE = '4';
+        final char INV_CODE = '5';
+        final char ADD_VEHICLE = '6';
+        final char ADD_PARTS = '7';
+        final char SELL_CODE = '8';
+        final char TRAN_CODE = '9';
         final char HELP_CODE = '?';
         final char EXIT_CODE = '!';
 
         char userAction;
 
-        final String PROMPT_ACTION = "1 - Add Customer, 2 - Print List of Customers, 3 - Add Sales Lead, 4 - List Inventory, 5 - Add a Vehicle, 6 - Add Parts, 7 - Sell a Vehicle, 8 - List Transactions, ? - Help: ";
+        final String PROMPT_ACTION = "\n 1 - Add Customer\n 2 - Print List of Customers\n 3 - Print Sales Lead List \n 4 - Add Sales Lead\n 5 - List Inventory\n 6 - Add a Vehicle\n 7 - Add Parts\n 8 - Sell a Vehicle\n 9 - List Transactions\n ? - Help\n ";
 
 
         // prompt user
@@ -276,6 +277,16 @@ public class Main {
                     System.out.printf ("%-10s | %-12s | %-10s\n", "ID", "Name", "Phone Number");
                     Customers.printCustomer (cList);
 
+                    SalesLead.printSalesLead(slList);
+
+                    break;
+
+                case SL_PRNT:
+
+                    // to do - print salesperson id as well
+                    System.out.printf ("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", "ID", "Employee ID", "Name", "Phone Number", "Email", "Date Added");
+                    SalesLead.printSalesLead(slList);
+
                     break;
 
                 case INV_CODE:
@@ -288,13 +299,13 @@ public class Main {
 
                 case SL_CODE:
                     System.out.println ("Enter your emp id: ");
-                    String emp_id = input.next ();
-                    slList.add (sl.addSL (emp_id));
+                    String emp_id = input.next();
+                    slList.add (sl.addSL(emp_id));
 
                     break;
 
                 case ADD_PARTS:
-                    partsList.add(parts.addParts ());
+                    partsList.add(parts.addParts());
 
                     break;
 
@@ -304,17 +315,17 @@ public class Main {
 
                     //while (userAction != 'E') {
 
-                    System.out.println ("Enter Vehicle Type: ");
-                    String type = input.nextLine ();
+                    System.out.println ("Enter Vehicle Type ('car'/'truck'): ");
+                    String type = input.nextLine().toLowerCase();
 
                     switch (type) {
                         case "car":
-                            carList.add (car.addCar ());
+                            carList.add (car.addCar());
 
 
                             break;
                         case "truck":
-                            truckList.add (truck.addTruck ());
+                            truckList.add (truck.addTruck());
 
                             break;
                     }

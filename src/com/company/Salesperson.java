@@ -97,9 +97,30 @@ public class Salesperson {
     public void sellParts() {
         Scanner input_partID = new Scanner(System.in);
         int idNumber_ = input_partID.nextInt();
+
+        // get parts id to retrieve parts item from parts arrayList
         System.out.println("Enter part ID number: ");
 
         // remove vehicle from partsList
+        // check if there's an item with given id ??
+               /*
+                if (idNumber_ == (parts.getPartsID)) {
+
+                }
+
+                or
+                boolean check = partsList.contains("id");
+
+                if (check) {
+                    //do sth
+                }else{System.out.println("Try again");}
+                */
+               // get index and then remove it from arrayList
+
+       // pList.indexOf(parts) ?
+
+
+
 
     }
 

@@ -36,6 +36,7 @@ public class Inventory {
         partsList.add(_parts);
     }
 
+// add printInventory method
 
 
     }

@@ -29,6 +29,7 @@ public final class Car extends Vehicle {
         System.out.println("Please enter car year: ");
         car.setYear(scnr.nextInt());
 
+
         // not working ??
         System.out.println("Please enter car color: ");
         car.setColor(scnr.nextLine());
