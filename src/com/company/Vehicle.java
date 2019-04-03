@@ -8,18 +8,8 @@ public abstract class Vehicle {
     private Wheeldrive wheeldrive;
     private NumDoors numDoors;
 
-
-    /*
-    public static int Quantity=0;
-
-
-
-
-
-    Vehicle() {
-        Quantity++;
-    }
-    */
+    private String maker, model, color;
+    private int year;
 
 
 
