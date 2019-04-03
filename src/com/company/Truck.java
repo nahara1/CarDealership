@@ -31,6 +31,7 @@ public final class Truck extends Vehicle {
         truck.setMaker (scnr.nextLine ());
         System.out.println ("Please enter truck year: ");
         truck.setYear (scnr.nextInt ());
+        truck.setTon();
 
         /* not working ??
         System.out.println ("Please enter truck color: ");
@@ -80,6 +81,14 @@ public final class Truck extends Vehicle {
     }
     public void setYear(int _carYear) {
         this.year = _carYear;
+    }
+
+    public Ton setTon() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter tonage: ");
+        tonage = Ton.valueOf(input.next().toLowerCase());
+        // add if statement for cash payment to calculate change
+        return tonage;
     }
 }
 

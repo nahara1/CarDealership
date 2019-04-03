@@ -1,12 +1,15 @@
 package com.company;
 
+
+import java.util.Scanner;
+
 public class Parts {
 
 
-    // Getters and Setters for Parts sub-class
     private int partID;
-    private String partCategory, name;
-    //
+    private String name;
+    private PartsCategory partCategory;
+
 
 
 
@@ -16,14 +19,22 @@ public class Parts {
 
     }
 
-    public Parts (int _partID, String _partCategory, String _name) {
+    public Parts (int _partID, PartsCategory _partCategory, String _name) {
         this.name = _name;
         this.partCategory = _partCategory;
         this.partID = _partID;
 
     }
 
-    public int getPartID() {
+    public Parts addParts() {
+        Parts parts = new Parts();
+        Scanner scnr = new Scanner(System.in);
+        System.out.println("Please enter part name: ");
+        parts.setPartName(scnr.nextLine());
+        parts.setCategory();
+        return parts;
+    }
+        public int getPartID() {
         return partID;
     }
 
@@ -31,20 +42,28 @@ public class Parts {
         this.partID = randomID;
     }
 
-    public String getPartCategory() {
+    public PartsCategory getPartCategory() {
         return partCategory;
     }
-
+/*
     public void setPartCategory(String anyPartCategory) {
         this.partCategory = anyPartCategory;
     }
-
+*/
     public String getPartName() {
         return name;
     }
 
     public void setPartName(String anyName) {
         this.name = anyName;
+    }
+
+    public PartsCategory setCategory() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter Parts Type: ");
+        partCategory = PartsCategory.valueOf(input.next().toLowerCase());
+        // add if statement for cash payment to calculate change
+        return partCategory;
     }
 }
 

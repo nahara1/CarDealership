@@ -28,6 +28,8 @@ public class Main {
 
         ArrayList<Truck> truckList = new ArrayList<> ();
 
+        ArrayList<Parts> partsList = new ArrayList<> ();
+
         // objects for each class for adding them to arrayLists
         Car car = new Car ();
         Inventory inv = new Inventory ();
@@ -292,6 +294,7 @@ public class Main {
                     break;
 
                 case ADD_PARTS:
+                    partsList.add(parts.addParts ());
 
                     break;
 

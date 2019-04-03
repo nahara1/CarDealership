@@ -10,11 +10,13 @@ public class Customers {
     private String firstName, lastName, phoneNumber, custEmail, groupID;
     int cCount = 10;
 
-    Customers (int custID) {}
-    Customers () {}
+    Customers(int custID) {
+    }
 
+    Customers() {
+    }
 
-    // add new customer method
+    // add customer method
 
     public Customers addCustomer() {
         Customers cust = new Customers(cCount++);
@@ -55,7 +57,7 @@ public class Customers {
         return firstName;
     }
 
-    public void setFirstName(String _FirstName){
+    public void setFirstName(String _FirstName) {
         this.firstName = _FirstName;
     }
 
@@ -63,7 +65,7 @@ public class Customers {
         return lastName;
     }
 
-    public void setLastName(String _LastName){
+    public void setLastName(String _LastName) {
         this.lastName = _LastName;
     }
 
@@ -71,7 +73,7 @@ public class Customers {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String _PhoneNumber){
+    public void setPhoneNumber(String _PhoneNumber) {
         this.phoneNumber = _PhoneNumber;
     }
 
@@ -79,24 +81,18 @@ public class Customers {
         return custEmail;
     }
 
-    public void setCustEmail(String _email){
+    public void setCustEmail(String _email) {
         this.custEmail = _email;
     }
 
-    public static void printCustomer(ArrayList<Customers> cList){
-        for (Customers cust: cList){
+    public static void printCustomer(ArrayList<Customers> cList) {
+        for (Customers cust : cList) {
             //System.out.println("Customer Id: " + cust.getCustomerId());
             System.out.printf("%-10s | %-12s | %-10s\n", cust.getCustID(), cust.getcustEmail(), cust.getPhoneNumber());
-            //    System.out.println("Customer Name: " + cust.getCustomerName());
-            //    System.out.println("Customer Phone: " + cust.getCustomerPhone());
-
-            // index of each object
-            //  System.out.println("Index: " + cList.indexOf(cust));
-
-            // use this to count inventory
-            //   System.out.println("Array List Size: " + cList.size());
 
         }
+
+
+        // add method purchaseCar
     }
-    // purchaseCar
 }
