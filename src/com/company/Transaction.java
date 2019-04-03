@@ -25,6 +25,10 @@ public class Transaction {
         commission = price*0.1f;
     }
 
+    public void commission(int inventoryID, float price) {
+        commission = price*0.1f;
+    }
+
 
     // Purchase
 

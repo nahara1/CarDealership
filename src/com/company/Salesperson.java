@@ -4,13 +4,12 @@ import java.util.Scanner;
 
 public class Salesperson {
 
-    //   private float commission;
+    private double commission;
     protected String empFirstName, empLastName, phoneNumber, empEmail, empID;
 
     Scanner userInput = new Scanner(System.in);
     String input;
 
-    //Salesperson sp = new Salesperson();
 
 
     // sellCar - to remove car object from ArrayList CarList - remove from inventory and receive money
@@ -22,8 +21,6 @@ public class Salesperson {
 
 
     // Add salesLead - new customer
-
-
     public void addSalesLead(String empID) {
         // ask for id
 
@@ -63,28 +60,6 @@ public class Salesperson {
 }
 
 
-
-
-
-
-
-
-
-    /* Commission
-
-    public float getCommission() {
-        return commission;
-    }
-
-    public void setCommission(float _Commission) {this.commission = _Commission;}
-
-    public void commission(int inventoryID, float price) {
-        commission = price*0.1f;
-    }
-    */
-
-
-
     public String getEmpID() {return empID;} // get random number
     public void setEmpID(String _empID) {this.empID = _empID;}
 
@@ -106,7 +81,6 @@ public class Salesperson {
         Scanner input_vin = new Scanner(System.in);
         int vin_ = input_vin.nextInt();
         System.out.println("Enter VIN number: ");
-
 
         // how to retrieve an object based on vin number
 
