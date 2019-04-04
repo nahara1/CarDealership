@@ -28,7 +28,7 @@ public final class Car extends Vehicle {
         car.setMaker(scnr.nextLine());
         System.out.println("Please enter car year: ");
         car.setYear(scnr.nextInt());
-
+        car.setDoors();
 
         // not working ??
         System.out.println("Please enter car color: ");
@@ -54,51 +54,11 @@ public final class Car extends Vehicle {
 
 
 
-    // Getters and Setters for Car sub-class
-
-    public Car(String _Vin) {
-        setVin(_Vin);
-        itemQuantity +=1;
-
-    }
 
 
 
-    public String getMaker() {
-        return maker;
-    }
-    public void setMaker(String _Maker) {
-        this.maker = _Maker;
-    }
-
-    public String getModel() {
-        return model;
-    }
-    public void setModel(String _Model) {
-        this.model = _Model;
-    }
-
-    public String getColor() {
-        return color;
-    }
-    public void setColor(String _Color) {
-        this.color = _Color;
-    }
 
 
-    public int getYear() {
-        return year;
-    }
-    public void setYear(int _carYear) {
-        this.year = _carYear;
-    }
-
-/*
-    @Override
-    public void addCarToInventory(Car car1) {
-
-    }
-    */
 
 }
 

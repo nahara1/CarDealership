@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.Iterator;
 import java.util.Scanner;
 
 public final class Truck extends Vehicle {
@@ -8,6 +7,8 @@ public final class Truck extends Vehicle {
     private String maker, model, color;
     private Ton tonage;
     public static int Quantity = 0;
+    private NumDoors numDoors;
+
 
 // Constructor
 
@@ -32,6 +33,7 @@ public final class Truck extends Vehicle {
         System.out.println ("Please enter truck year: ");
         truck.setYear (scnr.nextInt ());
         truck.setTon();
+        truck.setDoors();
 
         /* not working ??
         System.out.println ("Please enter truck color: ");
@@ -54,36 +56,7 @@ public final class Truck extends Vehicle {
             setWheeldrive (Wheeldrive.four);
         }
 
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String _Model) {
-        this.model = _Model;
-    }
-
-    public String getMaker() {
-        return maker;
-    }
-    public void setMaker(String _Maker) {
-        this.maker = _Maker;
-    }
-
-    public String getColor() {
-        return color;
-    }
-    public void setColor(String _Color) {
-        this.color = _Color;
-    }
-
-    public int getYear() {
-        return year;
-    }
-    public void setYear(int _carYear) {
-        this.year = _carYear;
-    }
-
-    public Ton setTon() {
+        public Ton setTon() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter tonage: ");
         tonage = Ton.valueOf(input.next().toLowerCase());
