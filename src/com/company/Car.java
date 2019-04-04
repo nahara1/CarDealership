@@ -3,8 +3,6 @@ package com.company;
 import java.util.*;
 
 public final class Car extends Vehicle {
-    private String maker, model, color;
-    private int year, cCount;
 
     //quantity
     public static int Quantity=0;

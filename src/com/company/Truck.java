@@ -3,11 +3,10 @@ package com.company;
 import java.util.Scanner;
 
 public final class Truck extends Vehicle {
-    private int itemQuantity, year;
-    private String maker, model, color;
+    private int itemQuantity;
     private Ton tonage;
-    public static int Quantity = 0;
-    private NumDoors numDoors;
+    public static int quantity = 0;
+
 
 
 // Constructor
