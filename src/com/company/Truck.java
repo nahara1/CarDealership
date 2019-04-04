@@ -34,10 +34,10 @@ public final class Truck extends Vehicle {
         truck.setTon();
         truck.setDoors();
 
-        /* not working ??
+
         System.out.println ("Please enter truck color: ");
         truck.setColor (scnr.nextLine ());
-        */
+
 
         return truck;
     }

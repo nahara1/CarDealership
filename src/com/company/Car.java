@@ -4,15 +4,19 @@ import java.util.*;
 
 public final class Car extends Vehicle {
 
+
     //quantity
     public static int Quantity=0;
 
     //
 
 
-    Car() {
+    public Car() {
 
+    }
 
+    public Car(String vin_) {
+        super.setVin(vin_);
     }
 
     public Car addCar() {
