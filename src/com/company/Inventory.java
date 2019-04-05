@@ -37,6 +37,7 @@ public class Inventory {
     }
 
 // add printInventory method
+    // use index to remov
 
 
     }

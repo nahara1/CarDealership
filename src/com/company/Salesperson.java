@@ -101,6 +101,8 @@ public class Salesperson {
         // get parts id to retrieve parts item from parts arrayList
         System.out.println("Enter part ID number: ");
 
+
+        // ?
         // remove vehicle from partsList
         // check if there's an item with given id ??
                /*

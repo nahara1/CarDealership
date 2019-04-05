@@ -91,6 +91,15 @@ public class Customers {
             System.out.printf("%-10s | %-12s | %-10s\n", cust.getCustID(), cust.getcustEmail(), cust.getPhoneNumber());
 
         }
+    }
+
+        public static void printCustomerById(ArrayList<Customers> cList, int custId) {
+            for (Customers cust : cList) {
+                if (cust.custID == custId) {
+                    System.out.printf("%-10s | %-12s | %-10s\n", cust.getCustID(), cust.getcustEmail(), cust.getPhoneNumber());
+                }
+            }
+        }
 
 
         // add method purchaseCar
