@@ -93,6 +93,8 @@ public class Customers {
         }
     }
 
+    // method to print a specific customer
+
         public static void printCustomerById(ArrayList<Customers> cList, int custId) {
             for (Customers cust : cList) {
                 if (cust.custID == custId) {
@@ -104,4 +106,4 @@ public class Customers {
 
         // add method purchaseCar
     }
-}
+
