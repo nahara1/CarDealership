@@ -51,20 +51,32 @@ public class Main {
         // Cars
 
         Car car1 = new Car ("1A2B3C");
-        //car1.addCarToInventory(car1);
+        carList.add(car1);
+        car1.setColor("Black");
+        car1.setYear(2013);
+        car1.setModel("Sedan");
+        car1.setMaker("Ford");
+        car1.setName("Name");
+        //car1.setDoors('two');
 
-
-        car1.setColor ("Black");
 
 
         Car car2 = new Car ("1A4K5L");
+        carList.add(car2);
+        car2.setColor("Red");
+        car2.setYear(2017);
+        car2.setModel("Hatchback");
+        car2.setMaker("Volkswagen");
+        car2.setName("Name2");
 
-
-        car2.setColor ("Red");
 
         Car car3 = new Car ("2B6F9S");
-
         car3.setColor ("White");
+        car2.setYear(2010);
+        car2.setModel("Hatchback");
+        car2.setMaker("Chevrolet");
+        car2.setName("Name3");
+
 
         Car car4 = new Car ("3D1G7T");
 
@@ -253,12 +265,13 @@ public class Main {
         final char ADD_PARTS = '7';
         final char SELL_CODE = '8';
         final char TRAN_CODE = '9';
+        final char SEARCH_CODE = 'S';
         final char HELP_CODE = '?';
         final char EXIT_CODE = '!';
 
         char userAction;
 
-        final String PROMPT_ACTION = "\n 1 - Add Customer\n 2 - Print List of Customers\n 3 - Print Sales Lead List \n 4 - Add Sales Lead\n 5 - List Inventory\n 6 - Add a Vehicle\n 7 - Add Parts\n 8 - Sell a Vehicle\n 9 - List Transactions\n ? - Help\n ";
+        final String PROMPT_ACTION = "\n 1 - Add Customer\n 2 - Print List of Customers\n 3 - Print Sales Lead List \n 4 - Add Sales Lead\n 5 - List Inventory\n 6 - Add a Vehicle\n 7 - Add Parts\n 8 - Sell a Vehicle\n 9 - List Transactions\n S - Search Vehicle and Parts\n ? - Help\n ";
 
 
         // prompt user
@@ -292,6 +305,13 @@ public class Main {
 
                 case INV_CODE:
 
+                    // cars
+
+                    Car.printCars(carList);
+
+
+
+
                     break;
 
                 case SELL_CODE:
@@ -302,6 +322,27 @@ public class Main {
                     System.out.println ("Enter your emp id: ");
                     String emp_id = input.next();
                     slList.add (sl.addSL(emp_id));
+
+                    break;
+
+                case SEARCH_CODE:
+
+                    Scanner scnr = new Scanner(System.in);
+                    System.out.println("Please enter color: ");
+                    String input_ = scnr.nextLine();
+
+                    // does not work //
+                    Car.printCarByColor(carList, input_);
+
+
+
+                    //This works
+                   // Car.printCarByColor(carList, "Black");
+
+
+                    /* create menu with car maker/color/year options and then hard code the method
+                     * for each option
+                     */
 
                     break;
 

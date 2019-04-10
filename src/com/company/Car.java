@@ -4,7 +4,7 @@ import java.util.*;
 
 public final class Car extends Vehicle {
 
-
+    String color;
     //quantity
     public static int Quantity=0;
 
@@ -50,9 +50,46 @@ public final class Car extends Vehicle {
         System.out.println(itemName + " " + itemQuantity);
     }
 
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String _Color) {
+        this.color = _Color;
+    }
+
+
     protected String itemName;
 
     protected int itemQuantity;
+
+
+    public static void printCars(ArrayList<Car> carList) {
+        for (Car car : carList) {
+            //System.out.println("Customer Id: " + cust.getCustomerId());
+            System.out.print(car);
+            System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-12s\n", car.getName(), car.getVin(), car.getModel(), car.getMaker(), car.getColor(), car.getYear() );
+
+        }
+    }
+
+    // methods to print specific car types by color, year, maker
+
+
+    public static void printCarByColor(ArrayList<Car> carList, String _color) {
+        for (Car car : carList) {
+
+            // cannot use super.color from a non static context, so added String color to Car class
+
+            if (car.color == _color) {
+               // System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s\n", car.getVin(), car.getYear(), car.getMaker(), car.getModel(), car.getName());
+                System.out.println("Car VIN number:" + car.getVin() + " Car color:" + car.getColor());
+            }
+        }
+    }
+
+
 
 
 

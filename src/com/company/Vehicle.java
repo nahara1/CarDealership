@@ -9,9 +9,8 @@ public abstract class Vehicle {
     private Wheeldrive wheeldrive;
     private NumDoors numDoors;
 
-    private String maker, model, color;
+    protected String maker, model, color;
     private int year;
-
 
 
     public String getVin() { return vin; }
