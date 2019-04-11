@@ -82,7 +82,7 @@ public final class Car extends Vehicle {
 
             // cannot use super.color from a non static context, so added String color to Car class
 
-            if (car.color == _color) {
+            if (car.color.equals(_color)) {
                // System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s\n", car.getVin(), car.getYear(), car.getMaker(), car.getModel(), car.getName());
                 System.out.println("Car VIN number:" + car.getVin() + " Car color:" + car.getColor());
             }
