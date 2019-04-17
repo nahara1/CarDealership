@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Customers {
@@ -18,23 +19,30 @@ public class Customers {
 
     // add customer method
 
+    /**
+     * addCustomer method adds a new car dealership customer
+     * @return a Customer object
+     */
+
+
+
     public Customers addCustomer() {
-        Customers cust = new Customers(cCount++);
-        Scanner scnr = new Scanner(System.in);
-        System.out.println("Please enter customer first name: ");
-        cust.setFirstName(scnr.nextLine());
-        System.out.println("Please enter customer last name: ");
-        cust.setLastName(scnr.nextLine());
-        System.out.println("Please enter customer phone number: ");
-        cust.setPhoneNumber(scnr.nextLine());
-        System.out.println("Please enter customer email: ");
-        cust.setCustEmail(scnr.nextLine());
+            Customers cust = new Customers(cCount++);
+            Scanner scnr = new Scanner(System.in);
+            System.out.println("Please enter customer first name: ");
+            cust.setFirstName(scnr.nextLine());
+            System.out.println("Please enter customer last name: ");
+            cust.setLastName(scnr.nextLine());
+            System.out.println("Please enter customer phone number: ");
+            cust.setPhoneNumber(scnr.nextLine());
+            System.out.println("Please enter customer email: ");
+            cust.setCustEmail(scnr.nextLine());
 
-        cust.setCustID(cCount);
+            cust.setCustID(cCount);
 
 
-        return cust;
-    }
+            return cust;
+        }
 
     //Group customers based on their last name (asd order).
     public String getGroupID() {
@@ -85,6 +93,12 @@ public class Customers {
         this.custEmail = _email;
     }
 
+
+    /**
+     * printCustomer method lists customers information
+     * @param cList customers Array List
+     */
+
     public static void printCustomer(ArrayList<Customers> cList) {
         for (Customers cust : cList) {
             //System.out.println("Customer Id: " + cust.getCustomerId());
@@ -92,6 +106,14 @@ public class Customers {
 
         }
     }
+
+
+
+    /**
+     * printCustomerById method lists customer information
+     * @param cList customers Array List
+     * @param custId an integer number
+     */
 
     // method to print a specific customer
 
@@ -102,6 +124,24 @@ public class Customers {
                 }
             }
         }
+
+    public static void testAlpha(String alphaCharacter) {
+        try {
+
+            if (alphaCharacter.matches("^[a-zA-Z]*$")) {
+                return;
+            }
+            else  {
+                throw new InputMismatchException("not alpha");
+            }
+
+
+        } catch (InputMismatchException notAnAlpha) {
+            System.out.println("Invalid input. You did not enter an alpha character. Please try again.\n");
+
+
+        }
+    }
 
 
         // add method purchaseCar

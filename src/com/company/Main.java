@@ -1,8 +1,15 @@
+
 package com.company;
 
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
+/**
+ * @authors
+ * @version
+ * @since
+ */
 
 public class Main {
 
@@ -71,6 +78,7 @@ public class Main {
 
 
         Car car3 = new Car ("2B6F9S");
+        carList.add(car3);
         car3.setColor ("White");
         car2.setYear(2010);
         car2.setModel("Hatchback");
@@ -185,46 +193,42 @@ public class Main {
         Customers cust3 = new Customers ();
         Customers cust4 = new Customers ();
         Customers cust5 = new Customers ();
-        Customers cust6 = new Customers ();
-        Customers cust7 = new Customers ();
-        Customers cust8 = new Customers ();
-        Customers cust9 = new Customers ();
-        Customers cust10 = new Customers ();
+
 
         cust1.setFirstName ("Ann");
         cust1.setGroupID ("A");
+        cust1.setPhoneNumber("(123)-456-7890");
+        cList.add(cust1);
+
 
         cust2.setFirstName ("Joe");
         cust2.setGroupID ("J");
+        cust1.setPhoneNumber("(321)-456-7890");
+        cList.add(cust2);
 
         cust3.setFirstName ("Alex");
         cust3.setGroupID ("Al");
+        cust1.setPhoneNumber("(213)-456-7890");
+        cList.add(cust3);
+
 
         cust4.setFirstName ("Ronald");
         cust4.setGroupID ("R");
+        cust1.setPhoneNumber("(111)-456-7890");
+        cList.add(cust4);
 
         cust5.setFirstName ("Hannah");
         cust5.setGroupID ("H");
+        cust1.setPhoneNumber("(111)-456-7890");
+        cList.add(cust5);
 
-        cust6.setFirstName ("Mia");
-        cust6.setGroupID ("M");
 
-        cust7.setFirstName ("Greg");
-        cust7.setGroupID ("G");
-
-        cust8.setFirstName ("Tony");
-        cust8.setGroupID ("T");
-
-        cust9.setFirstName ("Cody");
-        cust9.setGroupID ("C");
-
-        cust10.setFirstName ("Patricia");
-        cust10.setGroupID ("P");
 
 
 //SalesLead
         SalesLead s1 = new SalesLead ();
         s1.setSalesLeadID (0);
+
 
         SalesLead s2 = new SalesLead ();
         s2.setSalesLeadID (1);
@@ -238,20 +242,8 @@ public class Main {
         SalesLead s5 = new SalesLead ();
         s5.setSalesLeadID (4);
 
-        SalesLead s6 = new SalesLead ();
-        s6.setSalesLeadID (5);
 
-        SalesLead s7 = new SalesLead ();
-        s7.setSalesLeadID (6);
 
-        SalesLead s8 = new SalesLead ();
-        s8.setSalesLeadID (7);
-
-        SalesLead s9 = new SalesLead ();
-        s9.setSalesLeadID (8);
-
-        SalesLead s10 = new SalesLead ();
-        s10.setSalesLeadID (9);
 
 
         // Menu options
@@ -260,11 +252,20 @@ public class Main {
         final char CUST_PRNT = '2';
         final char SL_PRNT = '3';
         final char SL_CODE = '4';
+
+        // create methods to print cars and parts inventory
         final char INV_CODE = '5';
+
         final char ADD_VEHICLE = '6';
         final char ADD_PARTS = '7';
+
+        // add sell method to remove car/parts from array lists by vin and id
         final char SELL_CODE = '8';
+
+        // add method to print receipt
         final char TRAN_CODE = '9';
+
+
         final char SEARCH_CODE = 'S';
         final char HELP_CODE = '?';
         final char EXIT_CODE = '!';
