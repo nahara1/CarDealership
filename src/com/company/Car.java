@@ -7,9 +7,9 @@ public final class Car extends Vehicle {
 
     NumDoors numOfDoors;
     String color;
-    //quantity
+
     public static int Quantity=0;
-    //
+
 
     public Car() {
 
@@ -18,6 +18,12 @@ public final class Car extends Vehicle {
     public Car(String vin_) {
         super.setVin(vin_);
     }
+
+
+    /**
+     * addCar method adds a new car to the inventory
+     * @return a Car object
+     */
 
     public Car addCar() {
         Car car = new Car();
@@ -35,7 +41,6 @@ public final class Car extends Vehicle {
         // not working ??
         System.out.println("Please enter car color: ");
         car.setColor(scnr.nextLine());
-
 
 
         return car;
@@ -73,6 +78,13 @@ public final class Car extends Vehicle {
     protected int itemQuantity;
 
 
+    /**
+     * printCars method prints car inventory list
+     * @param carList car list Array List
+     */
+
+
+
     public static void printCars(ArrayList<Car> carList) {
         for (Car car : carList) {
             System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-12s\n", car.getName(), car.getVin(), car.getModel(), car.getMaker(), car.getColor(), car.getYear() );
@@ -81,6 +93,13 @@ public final class Car extends Vehicle {
     }
 
     // methods to print specific car types by color, year, maker
+
+
+    /**
+     * printCarsByColor method prints cars that are of a certain color
+     * @param carList car Array List
+     * @param _color a specific car color
+     */
 
 
     public static void printCarByColor(ArrayList<Car> carList, String _color) {
@@ -95,6 +114,12 @@ public final class Car extends Vehicle {
         }
     }
 
+    /**
+     * printCarsByNumDoors method prints cars by number of doors
+     * @param carList car Array List
+     * @param _doors number of doors
+     */
+
     public static void printCarByNumDoors(ArrayList<Car> carList, NumDoors _doors) {
         for (Car car : carList) {
 
@@ -104,6 +129,12 @@ public final class Car extends Vehicle {
             }
         }
     }
+
+    /**
+     * printCarsByMaker method prints cars by their maker
+     * @param carList car Array List
+     * @param _maker car maker
+     */
 
     public static void printCarByMaker(ArrayList<Car> carList, String _maker) {
         for (Car car : carList) {
@@ -115,6 +146,14 @@ public final class Car extends Vehicle {
         }
     }
 
+    /**
+     *
+     * printCarsByModel method prints cars by model
+     * @param carList car Array List
+     * @param _model car model type
+     *
+     */
+
     public static void printCarByModel(ArrayList<Car> carList, String _model) {
             for (Car car : carList) {
 
@@ -123,6 +162,16 @@ public final class Car extends Vehicle {
                     System.out.println("Car VIN number:" + car.getVin() + " Car color:" + car.getColor());
                 }
             }
+    }
+
+    public static void sellCar(ArrayList<Car> carList, String _VIN) {
+        for (Car car : carList) {
+
+            if (car.getVin().equals(_VIN)) {
+
+                carList.remove(car);
+            }
+        }
     }
 
 

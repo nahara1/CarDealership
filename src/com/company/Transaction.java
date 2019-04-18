@@ -1,8 +1,13 @@
 package com.company;
 
+
+enum PaymentType {credit, cash}
+
 public class Transaction {
 
     private float commission, salary;
+    int transactionId;
+    PaymentType payment;
 
 
     // Salary
@@ -31,6 +36,12 @@ public class Transaction {
 
 
     // Purchase
+
+
+    public Transaction(int _transactionId, PaymentType _pType){
+        this.transactionId = _transactionId;
+        this.payment = _pType;
+    }
 
 
 

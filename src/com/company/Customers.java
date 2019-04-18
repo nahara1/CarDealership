@@ -11,6 +11,11 @@ public class Customers {
     private String firstName, lastName, phoneNumber, custEmail, groupID;
     int cCount = 10;
 
+    /**
+     * Customer constructor
+     * @param custID customer ID
+     */
+
     Customers(int custID) {
     }
 
@@ -44,7 +49,7 @@ public class Customers {
             return cust;
         }
 
-    //Group customers based on their last name (asd order).
+    //Group customers based on their last name (asc order).
     public String getGroupID() {
         return groupID;
     }
@@ -110,7 +115,7 @@ public class Customers {
 
 
     /**
-     * printCustomerById method lists customer information
+     * printCustomerById method lists customer information based on a given ID
      * @param cList customers Array List
      * @param custId an integer number
      */

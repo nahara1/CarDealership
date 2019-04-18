@@ -2,10 +2,15 @@ package com.company;
 
 import java.util.Scanner;
 
+import java.util.ArrayList;
+
+
+
 public final class Truck extends Vehicle {
     private int itemQuantity;
     private Ton tonage;
     public static int quantity = 0;
+
 
 
 
@@ -61,6 +66,13 @@ public final class Truck extends Vehicle {
         tonage = Ton.valueOf(input.next().toLowerCase());
         // add if statement for cash payment to calculate change
         return tonage;
+    }
+
+    public static void printTrucks(ArrayList<Truck> truckArrayList) {
+        for (Truck truck : truckArrayList) {
+            System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-12s\n", truck.getName(), truck.getVin(), truck.getModel(), truck.getMaker(), truck.getColor(), truck.getYear());
+
+        }
     }
 }
 

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * @authors
+ * @author
  * @version
  * @since
  */
@@ -304,20 +304,31 @@ public class Main {
 
                     break;
 
-                case INV_CODE:
-
-                    // cars
-
-                    Car.printCars(carList);
-
-
-
-
-                    break;
-
                 case SELL_CODE:
+                    System.out.println ("Enter Type ('car'/'truck'/'parts'): ");
+                    String invType = input.nextLine().toLowerCase();
+                    // method to get car/truck/parts by id
+
+                    switch (invType) {
+                        case "car":
+                            String vinNum = input.nextLine();
+
+                            car.sellCar(carList, vinNum);
+
+
+                            break;
+                        case "truck":
+
+
+                            break;
+                        case "parts":
+
+
+                            break;
+                    }
 
                     break;
+
 
                 case SL_CODE:
                     System.out.println ("Enter your emp id: ");
