@@ -46,7 +46,7 @@ public class Main {
 
         Salesperson sp = new Salesperson ();
         SalesLead sl = new SalesLead ();
-        Transaction tr1 = new Transaction ();
+       // Transaction tr1 = new Transaction ();
 
 
         //SalesPeople
