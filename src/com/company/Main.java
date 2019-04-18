@@ -80,40 +80,22 @@ public class Main {
         Car car3 = new Car ("2B6F9S");
         carList.add(car3);
         car3.setColor ("White");
-        car2.setYear(2010);
-        car2.setModel("Hatchback");
-        car2.setMaker("Chevrolet");
-        car2.setName("Name3");
+        car3.setYear(2010);
+        car3.setModel("Hatchback");
+        car3.setMaker("Chevrolet");
+        car3.setName("Name3");
 
 
         Car car4 = new Car ("3D1G7T");
-
-        car4.setColor ("Black");
+        car4.setColor ("Green");
+        car4.setYear(2008);
+        car4.setModel("Coupe");
+        car4.setMaker("Honda");
+        car4.setName("Name4");
 
         Car car5 = new Car ("6H3M2X");
+        car5.setColor("Yellow");
 
-        car5.setColor ("Silver");
-
-        Car car6 = new Car ("9G5Z1E");
-
-        car6.setColor ("Purple");
-
-        Car car7 = new Car ("4Y3T8U");
-        //car7.addCarToInventory(car7);
-
-
-        car7.setColor ("Green");
-
-        Car car8 = new Car ("1D7C3J");
-        car8.setColor ("Maroon");
-
-        Car car9 = new Car ("3T9R5F");
-        //car9.addCarToInventory(car9);
-        car9.setColor ("Orange");
-
-        Car car10 = new Car ("5H2V9P");
-        //car10.addCarToInventory(car10);
-        car10.setColor ("Yellow");
 
         // Trucks
 
@@ -132,21 +114,6 @@ public class Main {
 
         Truck truck5 = new Truck ("8T2Z4G");
         truck5.setTon (Ton.two);
-
-        Truck truck6 = new Truck ("3V8C5K");
-        truck6.setTon (Ton.one);
-
-        Truck truck7 = new Truck ("7W4A3C");
-        truck7.setTon (Ton.one);
-
-        Truck truck8 = new Truck ("4G1D7J");
-        truck8.setTon (Ton.two);
-
-        Truck truck9 = new Truck ("2K6V8R");
-        truck9.setTon (Ton.two);
-
-        Truck truck10 = new Truck ("6T9C4F");
-        truck10.setTon (Ton.one);
 
 
         //Inventory
