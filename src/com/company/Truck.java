@@ -74,6 +74,17 @@ public final class Truck extends Vehicle {
 
         }
     }
+
+    public static void sellTruck(ArrayList<Truck> trucksList, String _VIN) {
+        for (Truck truck : trucksList) {
+
+            if (truck.getVin().equals(_VIN)) {
+
+                trucksList.remove(truck);
+            }
+        }
+    }
+
 }
 
 
