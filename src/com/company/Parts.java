@@ -84,6 +84,24 @@ public class Parts {
 
         }
     }
+/*
+    public static void sellParts(ArrayList<Parts> partsList, String _partName) {
+        for (Parts parts : partsList) {
+            if (parts.getPartName().equals(_partName)) {
+                partsList.remove(parts);
+            }
+        }
+    }
+*/
+    public static void sellParts(ArrayList<Parts> partsList, int _partID) {
+        for (Parts parts : partsList) {
+           //nt _partName = parts.getPartID();
+            if (parts.getPartID() == _partID) {
+                partsList.remove(parts);
+            }
+        }
+    }
+
 }
 
 

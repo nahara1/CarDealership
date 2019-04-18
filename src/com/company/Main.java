@@ -5,6 +5,8 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//import static com.company.Parts.sellTruck;
+
 /**
  * @author
  * @version
@@ -282,14 +284,15 @@ public class Main {
 
                             car.sellCar(carList, vinNum);
 
-
                             break;
                         case "truck":
 
 
                             break;
                         case "parts":
-
+                            //String partName = input.nextLine();
+                            int partID = input.nextInt();
+                            parts.sellParts(partsList, partID);
 
                             break;
                     }
