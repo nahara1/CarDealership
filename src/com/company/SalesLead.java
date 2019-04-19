@@ -119,4 +119,12 @@ public class SalesLead {
 
         }
     }
+
+    public static void printSalesLeadById(ArrayList<SalesLead> slList, int salesLeadID) {
+        for (SalesLead sl : slList) {
+            if (sl.salesLeadID == salesLeadID) {
+                System.out.printf("%-10s | %-12s | %-10s\n", sl.getSalesLeadID(), sl.getSl_Email(), sl.getSl_phoneNumber());
+            }
+        }
+    }
 }

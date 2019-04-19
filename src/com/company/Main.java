@@ -271,6 +271,7 @@ public class Main {
                     System.out.printf ("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", "ID", "Employee ID", "Name", "Phone Number", "Email", "Date Added");
                     SalesLead.printSalesLead(slList);
 
+                    SalesLead.printSalesLeadById(slList, 1);
                     break;
 
                 case SELL_CODE:
@@ -285,7 +286,8 @@ public class Main {
 
                             break;
                         case "truck":
-
+                            vinNum = input.nextLine();
+                            truck.sellTruck(truckList, vinNum);
 
                             break;
                         case "parts":
