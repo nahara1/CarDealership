@@ -281,7 +281,6 @@ public class Main {
                     switch (invType) {
                         case "car":
                             String vinNum = input.nextLine();
-
                             car.sellCar(carList, vinNum);
 
                             break;
