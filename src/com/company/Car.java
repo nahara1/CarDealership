@@ -29,8 +29,13 @@ public final class Car extends Vehicle {
         Car car = new Car();
         Scanner scnr = new Scanner(System.in);
         System.out.println("Please enter VIN number: ");
+
+        // try and catch ??
         car.setVin(scnr.nextLine());
         System.out.println("Please enter car model: ");
+
+
+
         car.setModel(scnr.nextLine());
         System.out.println("Please enter car maker: ");
         car.setMaker(scnr.nextLine());

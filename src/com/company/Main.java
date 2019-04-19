@@ -13,6 +13,8 @@ import java.util.Scanner;
  * @since
  */
 
+
+
 public class Main {
 
     public static void main(String[] args) {
@@ -252,14 +254,14 @@ public class Main {
             Scanner input = new Scanner (System.in);
             switch (userAction) {
                 case CUST_CODE:
-                    cList.add (cust.addCustomer ());
+                    cList.add(cust.addCustomer());
                     cust.printCustomerById(cList, 1);
 
 
                     break;
                 case CUST_PRNT:
-                    System.out.printf ("%-10s | %-12s | %-10s\n", "ID", "Name", "Phone Number");
-                    Customers.printCustomer (cList);
+                    System.out.printf("%-10s | %-12s | %-10s\n", "ID", "Name", "Phone Number");
+                    Customers.printCustomer(cList);
 
                     SalesLead.printSalesLead(slList);
 
@@ -268,14 +270,14 @@ public class Main {
                 case SL_PRNT:
 
                     // to do - print salesperson id as well
-                    System.out.printf ("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", "ID", "Employee ID", "Name", "Phone Number", "Email", "Date Added");
+                    System.out.printf("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", "ID", "Employee ID", "Name", "Phone Number", "Email", "Date Added");
                     SalesLead.printSalesLead(slList);
 
                     SalesLead.printSalesLeadById(slList, 1);
                     break;
 
                 case SELL_CODE:
-                    System.out.println ("Enter Type ('car'/'truck'/'parts'): ");
+                    System.out.println("Enter Type ('car'/'truck'/'parts'): ");
                     String invType = input.nextLine().toLowerCase();
                     // method to get car/truck/parts by id
 
@@ -302,11 +304,31 @@ public class Main {
 
 
                 case SL_CODE:
-                    System.out.println ("Enter your emp id: ");
+                    System.out.println("Enter your emp id: ");
                     String emp_id = input.next();
-                    slList.add (sl.addSL(emp_id));
+                    slList.add(sl.addSL(emp_id));
 
                     break;
+
+                case INV_CODE:
+                    System.out.println("Enter Vehicle Type ('car'/'truck'): ");
+                    String type = input.nextLine().toLowerCase();
+                    switch (type) {
+                        case "car":
+                            car.printCars(carList);
+
+                            break;
+                        case "truck":
+                            truck.printTrucks(truckList);
+
+                            break;
+                        case "parts":
+                            parts.printParts(partsList);
+
+                            break;
+                    }
+                    break;
+
 
                 case SEARCH_CODE:
 
@@ -341,9 +363,9 @@ public class Main {
                     //while (userAction != 'E') {
 
                     System.out.println ("Enter Vehicle Type ('car'/'truck'): ");
-                    String type = input.nextLine().toLowerCase();
+                    String inv_type = input.nextLine().toLowerCase();
 
-                    switch (type) {
+                    switch (inv_type) {
                         case "car":
                             carList.add (car.addCar());
 

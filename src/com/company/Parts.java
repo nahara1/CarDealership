@@ -1,6 +1,7 @@
 package com.company;
 
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import java.util.ArrayList;
@@ -40,10 +41,21 @@ public class Parts {
         Parts parts = new Parts();
         Scanner scnr = new Scanner(System.in);
         System.out.println("Please enter part name: ");
-        parts.setPartName(scnr.nextLine());
-        parts.setCategory();
+
+
+        try {
+            setPartName(scnr.nextLine());
+            parts.setCategory();
+            return parts;
+
+        } catch (InputMismatchException notAnAlpha) {
+
+            System.out.println("Invalid input. You did not enter an alpha character. Please try again.\n");
+        }
         return parts;
     }
+
+
 
     public int getPartID() {
         return partID;
