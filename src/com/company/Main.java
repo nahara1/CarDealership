@@ -138,20 +138,7 @@ public class Main {
         Inventory in8 = new Inventory ();
         Inventory in9 = new Inventory ();
         Inventory in10 = new Inventory ();
-//
 
-        /*
-        in1.setCar(car1);
-        in2.setCar(car2);
-        in3.setCar(car3);
-        in4.setCar(car4);
-        in5.setCar(car5);
-        in6.setCar(car6);
-        in7.setCar(car7);
-        in8.setCar(car8);
-        in9.setCar(car9);
-        in10.setCar(car10);
-            */
 
 //Get quantity in inventory
 
