@@ -30,7 +30,6 @@ public class Customers {
      */
 
 
-// exception added to addCustomers
   
     public Customers addCustomer() {
         Customers cust = new Customers(cCount++);
