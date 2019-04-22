@@ -8,7 +8,7 @@ import java.util.Scanner;
 //import static com.company.Parts.sellTruck;
 
 /**
- * @author
+ * @author Team 2
  * @version
  * @since
  */
@@ -18,11 +18,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        // random
-        // comment
-        // Main
-        // Do you see this?
-        // >
 
         ArrayList<Customers> cList = new ArrayList<> ();
         Customers cust = new Customers ();
