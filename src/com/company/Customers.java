@@ -30,7 +30,7 @@ public class Customers {
      */
 
 
-
+// exception added to addCustomers
   
     public Customers addCustomer() {
         Customers cust = new Customers(cCount++);
@@ -45,7 +45,7 @@ public class Customers {
         lastName = testAlpha(getInput());
         cust.setLastName(lastName);
 
-        System.out.println("Please enter customer phone number (123) 456-7890 : " );
+        System.out.println("Please enter customer phone number:  \n Please use this format: (012) 345-6789 ");
         phoneNumber = testPhone(getInput());
         cust.setPhoneNumber(phoneNumber);
 
@@ -149,6 +149,7 @@ public class Customers {
 
     public static String testAlpha(String alphaCharacter) {
         try {
+
             if (alphaCharacter.matches("^[a-zA-Z]*$")) {
                 return alphaCharacter;
             }
