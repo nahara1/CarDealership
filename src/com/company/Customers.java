@@ -45,7 +45,7 @@ public class Customers {
         lastName = testAlpha(getInput());
         cust.setLastName(lastName);
 
-        System.out.println("Please enter customer phone number:  \n(012) 345-6789 ");
+        System.out.println("Please enter customer phone number:  \n Please use this format: (012) 345-6789 ");
         phoneNumber = testPhone(getInput());
         cust.setPhoneNumber(phoneNumber);
 
