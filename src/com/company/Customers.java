@@ -115,7 +115,7 @@ public class Customers {
     public static void printCustomer(ArrayList<Customers> cList) {
         for (Customers cust : cList) {
             //System.out.println("Customer Id: " + cust.getCustomerId());
-            System.out.printf("%-10s | %-12s | %-10s\n", cust.getCustID(), cust.getcustEmail(), cust.getPhoneNumber());
+            System.out.printf("%-10s | %-12s | %-10s | %-10s \n", cust.getCustID(), cust.getFirstName(), cust.getcustEmail(), cust.getPhoneNumber());
 
         }
     }

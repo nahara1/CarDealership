@@ -254,7 +254,7 @@ public class Main {
                     System.out.printf("%-10s | %-12s | %-10s\n", "ID", "Name", "Phone Number");
                     Customers.printCustomer(cList);
 
-                    SalesLead.printSalesLead(slList);
+                    //SalesLead.printSalesLead(slList);
 
                     break;
 
