@@ -7,6 +7,7 @@ public final class Car extends Vehicle {
 
     NumDoors numOfDoors;
     String color;
+    double carPrice;
 
     public static int Quantity=0;
 
@@ -78,6 +79,15 @@ public final class Car extends Vehicle {
     }
 
 
+    public double getCarPrice() {
+        return carPrice;
+    }
+
+    public void setCarPrice(double _carPrice) {
+        this.carPrice = _carPrice;
+    }
+
+
     protected String itemName;
 
     protected int itemQuantity;
@@ -92,7 +102,7 @@ public final class Car extends Vehicle {
 
     public static void printCars(ArrayList<Car> carList) {
         for (Car car : carList) {
-            System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-12s\n", car.getName(), car.getVin(), car.getModel(), car.getMaker(), car.getColor(), car.getYear() );
+            System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-12s | %-10s \n", car.getName(), car.getVin(), car.getModel(), car.getMaker(), car.getColor(), car.getYear(), car.getCarPrice());
 
         }
     }

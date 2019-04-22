@@ -13,7 +13,6 @@ public class Customers {
 
     /**
      * Customer constructor
-     *
      * @param custID customer ID
      */
 
@@ -27,11 +26,12 @@ public class Customers {
 
     /**
      * addCustomer method adds a new car dealership customer
-     *
      * @return a Customer object
      */
 
 
+
+  
     public Customers addCustomer() {
         Customers cust = new Customers(cCount++);
         Scanner scnr = new Scanner(System.in);
@@ -57,8 +57,7 @@ public class Customers {
 
         return cust;
     }
-
-
+    
     //Group customers based on their last name (asc order).
     public String getGroupID() {
         return groupID;
@@ -111,36 +110,36 @@ public class Customers {
 
     /**
      * printCustomer method lists customers information
-     *
      * @param cList customers Array List
      */
 
     public static void printCustomer(ArrayList<Customers> cList) {
         for (Customers cust : cList) {
             //System.out.println("Customer Id: " + cust.getCustomerId());
-            System.out.printf("%-10s | %-12s | %-10s\n", cust.getCustID(), cust.getFirstName(), cust.getPhoneNumber());
+            System.out.printf("%-10s | %-12s | %-10s\n", cust.getCustID(), cust.getcustEmail(), cust.getPhoneNumber());
 
         }
     }
+
 
 
     /**
      * printCustomerById method lists customer information based on a given ID
-     *
-     * @param cList  customers Array List
+     * @param cList customers Array List
      * @param custId an integer number
      */
 
     // method to print a specific customer
-    public static void printCustomerById(ArrayList<Customers> cList, int custId) {
-        for (Customers cust : cList) {
-            if (cust.custID == custId) {
-                System.out.printf("%-10s | %-12s | %-10s\n", cust.getCustID(), cust.getcustEmail(), cust.getPhoneNumber());
+
+        public static void printCustomerById(ArrayList<Customers> cList, int custId) {
+            for (Customers cust : cList) {
+                if (cust.custID == custId) {
+                    System.out.printf("%-10s | %-12s | %-10s\n", cust.getCustID(), cust.getcustEmail(), cust.getPhoneNumber());
+                }
             }
         }
-    }
 
-
+   
     public static String getInput() {
         Scanner scnr = new Scanner(System.in);
         String input = scnr.nextLine();
@@ -204,12 +203,6 @@ public class Customers {
 
         }
     }
-
-
-
-
-
-    // add method purchaseCar //
-
-}
+        // add method purchaseCar
+    }
 
