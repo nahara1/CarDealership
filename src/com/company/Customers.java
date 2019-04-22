@@ -30,25 +30,34 @@ public class Customers {
      */
 
 
-
+// exception added //
+  
     public Customers addCustomer() {
-            Customers cust = new Customers(cCount++);
-            Scanner scnr = new Scanner(System.in);
-            System.out.println("Please enter customer first name: ");
-            cust.setFirstName(scnr.nextLine());
-            System.out.println("Please enter customer last name: ");
-            cust.setLastName(scnr.nextLine());
-            System.out.println("Please enter customer phone number: ");
-            cust.setPhoneNumber(scnr.nextLine());
-            System.out.println("Please enter customer email: ");
-            cust.setCustEmail(scnr.nextLine());
+        Customers cust = new Customers(cCount++);
+        Scanner scnr = new Scanner(System.in);
 
-            cust.setCustID(cCount);
+        System.out.println("Please enter customer first name: ");
+        firstName = testAlpha(getInput());
+        cust.setFirstName(firstName);
 
 
-            return cust;
-        }
+        System.out.println("Please enter customer last name: ");
+        lastName = testAlpha(getInput());
+        cust.setLastName(lastName);
 
+        System.out.println("Please enter customer phone number:  \n Please use this format: (012) 345-6789 ");
+        phoneNumber = testPhone(getInput());
+        cust.setPhoneNumber(phoneNumber);
+
+        System.out.println("Please enter customer email: ");
+        custEmail = testEmail(getInput());
+        cust.setCustEmail(custEmail);
+
+        cust.setCustID(cCount);
+
+        return cust;
+    }
+    
     //Group customers based on their last name (asc order).
     public String getGroupID() {
         return groupID;
@@ -130,25 +139,70 @@ public class Customers {
             }
         }
 
-    public static void testAlpha(String alphaCharacter) {
+   
+    public static String getInput() {
+        Scanner scnr = new Scanner(System.in);
+        String input = scnr.nextLine();
+        return input;
+
+    }
+
+    public static String testAlpha(String alphaCharacter) {
         try {
 
             if (alphaCharacter.matches("^[a-zA-Z]*$")) {
-                return;
+                return alphaCharacter;
             }
             else  {
                 throw new InputMismatchException("not alpha");
             }
 
-
         } catch (InputMismatchException notAnAlpha) {
-            System.out.println("Invalid input. You did not enter an alpha character. Please try again.\n");
+            System.out.println("Invalid input. Please try again.");
+            return getInput();
 
+        }
+
+    }
+
+
+    public static String testEmail(String email) {
+        try {
+
+            if (email.matches("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$")) {
+                return email;
+            }
+            else  {
+                throw new InputMismatchException("invalid");
+            }
+
+
+
+        } catch (InputMismatchException notAnEmail) {
+            System.out.println("Invalid input. Please try again.");
+            return getInput();
 
         }
     }
 
+    public static String testPhone(String phone) {
+        try {
 
+            if (phone.matches("^[(]+[0-9]+[)]+[\\s]+[0-9]+[-]+[0-9]+$")) {
+                return phone;
+            }
+            else  {
+                throw new InputMismatchException("invalid");
+            }
+
+
+
+        } catch (InputMismatchException notAnEmail) {
+            System.out.println("Invalid input. Please try again.");
+            return getInput();
+
+        }
+    }
         // add method purchaseCar
     }
 
