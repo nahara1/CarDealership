@@ -9,6 +9,7 @@ public class Inventory {
     protected ArrayList carsList;
     protected ArrayList partsList;
     protected ArrayList trucksList;
+    protected ArrayList transList;
 
 
     //Constructor Method
@@ -17,6 +18,7 @@ public class Inventory {
         carsList = new ArrayList<Car>();
         trucksList = new ArrayList<Truck>();
         partsList = new ArrayList<Parts>();
+        transList = new ArrayList<Transaction>();
     }
 
 

@@ -40,16 +40,19 @@ public class Main {
 
         ArrayList<Parts> partsList = new ArrayList<> ();
 
+        ArrayList<Transaction> transList = new ArrayList<> ();
+
         // objects for each class for adding them to arrayLists
         Car car = new Car ();
         Inventory inv = new Inventory ();
         Truck truck = new Truck ();
         Parts parts = new Parts ();
+        Transaction tran = new Transaction ();
 
 
         Salesperson sp = new Salesperson ();
         SalesLead sl = new SalesLead ();
-       // Transaction tr1 = new Transaction ();
+        Transaction tr1 = new Transaction ();
 
 
         //SalesPeople
@@ -180,12 +183,19 @@ public class Main {
         cList.add(cust5);
 
 
+        // Transactions
+
+        Transaction tran1 = new Transaction();
+        tran1.setTransactionId(1);
+        tran1.setSubTotal(19999);
+        tran1.setTotalPrice(21198.94);
+        tran1.setPaymentType(PaymentType.credit);
+        transList.add(tran1);
 
 
 //SalesLead
         SalesLead s1 = new SalesLead ();
         s1.setSalesLeadID (0);
-
 
         SalesLead s2 = new SalesLead ();
         s2.setSalesLeadID (1);
@@ -221,6 +231,7 @@ public class Main {
 
         // add method to print receipt
         final char TRAN_CODE = '9';
+        final char TRANLIST_CODE = '0';
 
 
         final char SEARCH_CODE = 'S';
@@ -229,7 +240,7 @@ public class Main {
 
         char userAction;
 
-        final String PROMPT_ACTION = "\n 1 - Add Customer\n 2 - Print List of Customers\n 3 - Print Sales Lead List \n 4 - Add Sales Lead\n 5 - List Inventory\n 6 - Add a Vehicle\n 7 - Add Parts\n 8 - Sell a Vehicle\n 9 - List Transactions\n S - Search Vehicle and Parts\n ? - Help\n ! - Quit\n";
+        final String PROMPT_ACTION = "\n 1 - Add Customer\n 2 - Print List of Customers\n 3 - Print Sales Lead List \n 4 - Add Sales Lead\n 5 - List Inventory\n 6 - Add a Vehicle\n 7 - Add Parts\n 8 - Sell a Vehicle\n 9 - Add a Transaction\n 0 - List Transactions\n S - Search Vehicle and Parts\n ? - Help\n ! - Quit\n";
 
 
         // prompt user
@@ -365,7 +376,11 @@ public class Main {
                     break;
 
                 case TRAN_CODE:
+                    transList.add(tran.addTransaction());
                     break;
+
+                case TRANLIST_CODE:
+                    tran.listTransactions(transList);
 
                 case HELP_CODE: //
                     break;
