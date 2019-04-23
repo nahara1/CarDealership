@@ -11,6 +11,7 @@ public class Inventory {
     protected ArrayList trucksList;
     protected ArrayList transList;
 
+    
 
     //Constructor Method
 

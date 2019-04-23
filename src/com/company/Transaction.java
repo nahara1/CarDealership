@@ -49,6 +49,7 @@ public class Transaction {
 
     // Price
 
+
     public double getSubTotal() { return subTotal; }
 
     public void setSubTotal(double _subTotal) {this.subTotal = _subTotal;}

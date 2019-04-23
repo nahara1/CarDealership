@@ -121,7 +121,6 @@ public class Main {
         Truck truck5 = new Truck ("8T2Z4G");
         truck5.setTon (Ton.two);
 
-
         //Inventory
 
         //    in1.setCar(car1);
