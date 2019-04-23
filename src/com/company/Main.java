@@ -13,8 +13,6 @@ import java.util.Scanner;
  * @since
  */
 
-// Does this work?
-
 public class Main {
 
     public static void main(String[] args) {
