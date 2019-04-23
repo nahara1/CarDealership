@@ -139,7 +139,7 @@ public class Main {
         Inventory in10 = new Inventory ();
 
 
-//Get quantity in inventory
+        //Get quantity in inventory
 
 
         //Customers
@@ -182,7 +182,7 @@ public class Main {
 
 
 
-//SalesLead
+        //SalesLead
         SalesLead s1 = new SalesLead ();
         s1.setSalesLeadID (0);
 
