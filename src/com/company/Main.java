@@ -13,7 +13,6 @@ import java.util.Scanner;
  * @since
  */
 
-
 public class Main {
 
     public static void main(String[] args) {
@@ -39,19 +38,16 @@ public class Main {
 
         ArrayList<Parts> partsList = new ArrayList<> ();
 
-        ArrayList<Transaction> transList = new ArrayList<> ();
-
         // objects for each class for adding them to arrayLists
         Car car = new Car ();
         Inventory inv = new Inventory ();
         Truck truck = new Truck ();
         Parts parts = new Parts ();
-        Transaction tran = new Transaction ();
 
 
         Salesperson sp = new Salesperson ();
         SalesLead sl = new SalesLead ();
-        Transaction tr1 = new Transaction ();
+       // Transaction tr1 = new Transaction ();
 
 
         //SalesPeople
@@ -92,15 +88,13 @@ public class Main {
 
 
         Car car4 = new Car ("3D1G7T");
-        carList.add(car4);
         car4.setColor ("Green");
         car4.setYear(2008);
         car4.setModel("Coupe");
         car4.setMaker("Honda");
-        car4.setName("name");
+        car4.setName("Name4");
 
         Car car5 = new Car ("6H3M2X");
-        carList.add(car5);
         car5.setColor("Yellow");
 
 
@@ -122,6 +116,7 @@ public class Main {
         Truck truck5 = new Truck ("8T2Z4G");
         truck5.setTon (Ton.two);
 
+
         //Inventory
 
         //    in1.setCar(car1);
@@ -142,7 +137,7 @@ public class Main {
         Inventory in10 = new Inventory ();
 
 
-//Get quantity in inventory
+        //Get quantity in inventory
 
 
         //Customers
@@ -155,10 +150,7 @@ public class Main {
         Customers cust5 = new Customers ();
 
 
-        // Ron: add last names, emails,
         cust1.setFirstName ("Ann");
-        cust1.setLastName ("Smith");
-        cust1.setCustID (1);
         cust1.setGroupID ("A");
         cust1.setPhoneNumber("(123)-456-7890");
         cList.add(cust1);
@@ -186,19 +178,12 @@ public class Main {
         cList.add(cust5);
 
 
-        // Transactions
-
-        Transaction tran1 = new Transaction();
-        tran1.setTransactionId(1);
-        tran1.setSubTotal(19999);
-        tran1.setTotalPrice(21198.94);
-        tran1.setPaymentType(PaymentType.credit);
-        transList.add(tran1);
 
 
-//SalesLead - add information (name, phone number, email, salespeople id)
+        //SalesLead
         SalesLead s1 = new SalesLead ();
         s1.setSalesLeadID (0);
+
 
         SalesLead s2 = new SalesLead ();
         s2.setSalesLeadID (1);
@@ -234,7 +219,6 @@ public class Main {
 
         // add method to print receipt
         final char TRAN_CODE = '9';
-        final char TRANLIST_CODE = '0';
 
 
         final char SEARCH_CODE = 'S';
@@ -243,7 +227,7 @@ public class Main {
 
         char userAction;
 
-        final String PROMPT_ACTION = "\n 1 - Add Customer\n 2 - Print List of Customers\n 3 - Print Sales Lead List \n 4 - Add Sales Lead\n 5 - List Inventory\n 6 - Add a Vehicle\n 7 - Add Parts\n 8 - Sell a Vehicle\n 9 - Add a Transaction\n 0 - List Transactions\n S - Search Vehicle and Parts\n ? - Help\n ! - Quit\n";
+        final String PROMPT_ACTION = "\n 1 - Add Customer\n 2 - Print List of Customers\n 3 - Print Sales Lead List \n 4 - Add Sales Lead\n 5 - List Inventory\n 6 - Add a Vehicle\n 7 - Add Parts\n 8 - Sell a Vehicle\n 9 - List Transactions\n S - Search Vehicle and Parts\n ? - Help\n ";
 
 
         // prompt user
@@ -260,17 +244,14 @@ public class Main {
 
                     break;
                 case CUST_PRNT:
-                    System.out.printf("%-10s | %-12s |  %-12s | %-12s | %-10s \n", "ID", "First Name", "Last Name", "Email", "Phone Number");
+                    System.out.printf("%-10s | %-12s | %-10s\n", "ID", "Name", "Phone Number");
                     Customers.printCustomer(cList);
-
 
                     //SalesLead.printSalesLead(slList);
 
                     break;
 
-
                 case SL_PRNT:
-                    // add saleslead
 
                     // to do - print salesperson id as well
                     System.out.printf("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", "ID", "Employee ID", "Name", "Phone Number", "Email", "Date Added");
@@ -286,11 +267,8 @@ public class Main {
 
                     switch (invType) {
                         case "car":
-                            System.out.println("Enter VIN:");
                             String vinNum = input.nextLine();
                             car.sellCar(carList, vinNum);
-
-
 
                             break;
                         case "truck":
@@ -305,6 +283,7 @@ public class Main {
 
                             break;
                     }
+
                     break;
 
 
@@ -338,51 +317,23 @@ public class Main {
                 case SEARCH_CODE:
 
                     Scanner scnr = new Scanner(System.in);
+                    System.out.println("Please enter color: ");
+                    String input_ = scnr.nextLine();
 
-                    System.out.println("Enter Type ('color'/'model'/'maker'/'VIN'): ");
-                    String searchType = input.nextLine().toLowerCase();
-                    // method to get car/truck/parts by id
-
-                    switch (searchType) {
-                        case "color":
-
-                            System.out.println("Please enter color: ");
-                            String input_ = scnr.nextLine();
-
-                            Car.printCarByColor(carList, input_);
+                    // does not work //
+                    Car.printCarByColor(carList, input_);
 
 
-                            break;
-                        case "maker":
 
-                            System.out.println("Please enter maker: ");
-                            input_ = scnr.nextLine();
-
-                            Car.printCarByColor(carList, input_);
-
-                            break;
-                        case "model":
-
-                            System.out.println("Please enter model: ");
-                            input_ = scnr.nextLine();
-
-                            Car.printCarByModel(carList, input_);
+                    //This works
+                   // Car.printCarByColor(carList, "Black");
 
 
-                            break;
-                        case "VIN":
+                    /* create menu with car maker/color/year options and then hard code the method
+                     * for each option
+                     */
 
-                            System.out.println("Please enter VIN: ");
-                            input_ = scnr.nextLine();
-
-                            //Car.printCarBy(carList, input_);
-
-
-                            break;
-                    }
                     break;
-
-
 
                 case ADD_PARTS:
                     partsList.add(parts.addParts());
@@ -413,12 +364,7 @@ public class Main {
                     break;
 
                 case TRAN_CODE:
-                    transList.add(tran.addTransaction());
-
                     break;
-
-                case TRANLIST_CODE:
-                    tran.listTransactions(transList);
 
                 case HELP_CODE: //
                     break;
