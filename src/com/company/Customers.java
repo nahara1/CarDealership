@@ -115,7 +115,7 @@ public class Customers {
     public static void printCustomer(ArrayList<Customers> cList) {
         for (Customers cust : cList) {
             //System.out.println("Customer Id: " + cust.getCustomerId());
-            System.out.printf("%-10s | %-12s | %-10s | %-10s \n", cust.getCustID(), cust.getFirstName(), cust.getcustEmail(), cust.getPhoneNumber());
+            System.out.printf("%-10s | %-12s |  %-12s | %-12s | %-10s \n", cust.getCustID(), cust.getFirstName(), cust.getLastName(), cust.getcustEmail(), cust.getPhoneNumber());
 
         }
     }
@@ -137,6 +137,13 @@ public class Customers {
                 }
             }
         }
+
+    public static void countCustomers(ArrayList<Customers> cList) {
+            System.out.println("Customers Total: " + cList.size());
+
+             }
+
+
 
    
     public static String getInput() {

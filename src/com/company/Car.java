@@ -124,7 +124,7 @@ public final class Car extends Vehicle {
 
             if (car.color.equals(_color)) {
                // System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s\n", car.getVin(), car.getYear(), car.getMaker(), car.getModel(), car.getName());
-                System.out.println("Car VIN number:" + car.getVin() + " Car color:" + car.getColor());
+                System.out.println(" Car VIN number: " + car.getVin() + " Car color: " + car.getColor() + " Car Maker: " + car.getMaker() + " Car Model: " + car.getModel());
             }
         }
     }
@@ -180,17 +180,24 @@ public final class Car extends Vehicle {
     }
 
     public static void sellCar(ArrayList<Car> carList, String _VIN) {
-        for (Car car : carList) {
 
-            if (car.getVin().equals(_VIN)) {
+        try {
+            for (Car car : carList) {
 
-                carList.remove(car);
+                if (car.getVin().equals(_VIN)) {
+
+                    carList.remove(car);
+                }
+            }
+        }
+        catch (ConcurrentModificationException e) {
+            sellCar(carList, _VIN);
             }
         }
     }
 
 
-}
+
 
 
 

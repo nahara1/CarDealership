@@ -67,7 +67,7 @@ public abstract class Vehicle {
 
     public NumDoors setDoors() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter number of doors: ");
+        System.out.println("Enter number of doors ('two' / 'four'): ");
         numDoors = NumDoors.valueOf(input.next().toLowerCase());
         // add if statement for cash payment to calculate change
         return numDoors;

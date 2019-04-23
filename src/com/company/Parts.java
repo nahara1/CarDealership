@@ -52,6 +52,9 @@ public class Parts {
 
             System.out.println("Invalid input. You did not enter an alpha character. Please try again.\n");
         }
+
+        // add part price
+
         return parts;
     }
 
@@ -84,7 +87,7 @@ public class Parts {
 
     public PartsCategory setCategory() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter Parts Type: ");
+        System.out.println("Enter Parts Type ('electronic', 'engine', 'interior', 'exterior', 'control'): ");
         partCategory = PartsCategory.valueOf(input.next().toLowerCase());
         // add if statement for cash payment to calculate change
         return partCategory;

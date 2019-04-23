@@ -14,7 +14,6 @@ import java.util.Scanner;
  */
 
 
-
 public class Main {
 
     public static void main(String[] args) {
@@ -93,13 +92,15 @@ public class Main {
 
 
         Car car4 = new Car ("3D1G7T");
+        carList.add(car4);
         car4.setColor ("Green");
         car4.setYear(2008);
         car4.setModel("Coupe");
         car4.setMaker("Honda");
-        car4.setName("Name4");
+        car4.setName("name");
 
         Car car5 = new Car ("6H3M2X");
+        carList.add(car5);
         car5.setColor("Yellow");
 
 
@@ -154,7 +155,10 @@ public class Main {
         Customers cust5 = new Customers ();
 
 
+        // Ron: add last names, emails,
         cust1.setFirstName ("Ann");
+        cust1.setLastName ("Smith");
+        cust1.setCustID (1);
         cust1.setGroupID ("A");
         cust1.setPhoneNumber("(123)-456-7890");
         cList.add(cust1);
@@ -192,7 +196,7 @@ public class Main {
         transList.add(tran1);
 
 
-//SalesLead
+//SalesLead - add information (name, phone number, email, salespeople id)
         SalesLead s1 = new SalesLead ();
         s1.setSalesLeadID (0);
 
@@ -256,14 +260,17 @@ public class Main {
 
                     break;
                 case CUST_PRNT:
-                    System.out.printf("%-10s | %-12s | %-10s\n", "ID", "Name", "Phone Number");
+                    System.out.printf("%-10s | %-12s |  %-12s | %-12s | %-10s \n", "ID", "First Name", "Last Name", "Email", "Phone Number");
                     Customers.printCustomer(cList);
+
 
                     //SalesLead.printSalesLead(slList);
 
                     break;
 
+
                 case SL_PRNT:
+                    // add saleslead
 
                     // to do - print salesperson id as well
                     System.out.printf("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", "ID", "Employee ID", "Name", "Phone Number", "Email", "Date Added");
@@ -279,8 +286,11 @@ public class Main {
 
                     switch (invType) {
                         case "car":
+                            System.out.println("Enter VIN:");
                             String vinNum = input.nextLine();
                             car.sellCar(carList, vinNum);
+
+
 
                             break;
                         case "truck":
@@ -328,23 +338,51 @@ public class Main {
                 case SEARCH_CODE:
 
                     Scanner scnr = new Scanner(System.in);
-                    System.out.println("Please enter color: ");
-                    String input_ = scnr.nextLine();
 
-                    // does not work //
-                    Car.printCarByColor(carList, input_);
+                    System.out.println("Enter Type ('color'/'model'/'maker'/'VIN'): ");
+                    String searchType = input.nextLine().toLowerCase();
+                    // method to get car/truck/parts by id
+
+                    switch (searchType) {
+                        case "color":
+
+                            System.out.println("Please enter color: ");
+                            String input_ = scnr.nextLine();
+
+                            Car.printCarByColor(carList, input_);
 
 
+                            break;
+                        case "maker":
 
-                    //This works
-                   // Car.printCarByColor(carList, "Black");
+                            System.out.println("Please enter maker: ");
+                            input_ = scnr.nextLine();
+
+                            Car.printCarByColor(carList, input_);
+
+                            break;
+                        case "model":
+
+                            System.out.println("Please enter model: ");
+                            input_ = scnr.nextLine();
+
+                            Car.printCarByModel(carList, input_);
 
 
-                    /* create menu with car maker/color/year options and then hard code the method
-                     * for each option
-                     */
+                            break;
+                        case "VIN":
 
+                            System.out.println("Please enter VIN: ");
+                            input_ = scnr.nextLine();
+
+                            //Car.printCarBy(carList, input_);
+
+
+                            break;
+                    }
                     break;
+
+
 
                 case ADD_PARTS:
                     partsList.add(parts.addParts());
@@ -376,6 +414,7 @@ public class Main {
 
                 case TRAN_CODE:
                     transList.add(tran.addTransaction());
+
                     break;
 
                 case TRANLIST_CODE:

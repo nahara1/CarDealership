@@ -62,7 +62,7 @@ public final class Truck extends Vehicle {
 
         public Ton setTon() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter tonage: ");
+        System.out.println("Enter tonage ('one' / 'two'): ");
         tonage = Ton.valueOf(input.next().toLowerCase());
         // add if statement for cash payment to calculate change
         return tonage;
