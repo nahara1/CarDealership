@@ -15,6 +15,7 @@ public abstract class Vehicle {
 
 
     public String getVin() { return vin; }
+
     public void setVin(String _Vin) { this.vin = _Vin; }
 
     public void setName(String _name) {
@@ -24,6 +25,7 @@ public abstract class Vehicle {
     public String getName() {
         return name;
     }
+
     public Date getBuiltDate() { return built;}
 
     public void setBuiltDate(Date _built){

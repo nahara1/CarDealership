@@ -72,7 +72,6 @@ public class Main {
         car1.setPrice(20000);
 
 
-
         Car car2 = new Car ("1A4K5L");
         carList.add(car2);
         car2.setColor("Red");

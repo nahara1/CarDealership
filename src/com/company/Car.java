@@ -72,7 +72,6 @@ public final class Car extends Vehicle {
     }
 
 
-
     protected String itemName;
 
     protected int itemQuantity;

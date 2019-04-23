@@ -87,7 +87,6 @@ public class Transaction {
         return totalPrice;
     }
 
-
     public Transaction addTransaction() {
         System.out.println("Enter transaction ID, subtotal");
         Transaction tran = new Transaction();
