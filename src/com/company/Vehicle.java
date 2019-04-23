@@ -8,6 +8,7 @@ public abstract class Vehicle {
     private Date built;
     private Wheeldrive wheeldrive;
     private NumDoors numDoors;
+    private double price;
 
     protected String maker, model, color;
     private int year;
@@ -64,6 +65,11 @@ public abstract class Vehicle {
     public void setYear(int _carYear) {
         this.year = _carYear;
     }
+
+    public double getPrice() { return price; }
+
+    public void setPrice(double _price) { this.price = _price; }
+
 
     public NumDoors setDoors() {
         Scanner input = new Scanner(System.in);
