@@ -69,6 +69,7 @@ public class Main {
         car1.setMaker("Ford");
         car1.setName("Name");
         //car1.setDoors('two');
+        car1.setPrice(20000);
 
 
 
