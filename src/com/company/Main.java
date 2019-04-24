@@ -50,7 +50,6 @@ public class Main {
 
         Salesperson sp = new Salesperson ();
         SalesLead sl = new SalesLead ();
-        Transaction tr1 = new Transaction ();
 
 
         //SalesPeople
@@ -69,6 +68,7 @@ public class Main {
         car1.setMaker("Ford");
         car1.setName("Name");
         //car1.setDoors('two');
+        car1.setPrice(20000);
 
 
 
@@ -79,6 +79,7 @@ public class Main {
         car2.setModel("Hatchback");
         car2.setMaker("Volkswagen");
         car2.setName("Name2");
+        car2.setPrice(30000);
 
 
         Car car3 = new Car ("2B6F9S");
@@ -88,6 +89,7 @@ public class Main {
         car3.setModel("Hatchback");
         car3.setMaker("Chevrolet");
         car3.setName("Name3");
+        car3.setPrice(21000);
 
 
         Car car4 = new Car ("3D1G7T");
@@ -97,10 +99,11 @@ public class Main {
         car4.setModel("Coupe");
         car4.setMaker("Honda");
         car4.setName("Name");
+        car4.setPrice(19000);
 
-        Car car5 = new Car ("6H3M2X");
-        carList.add(car5);
-        car5.setColor("Yellow");
+        //Car car5 = new Car ("6H3M2X");
+        //carList.add(car5);
+        //car5.setColor("Yellow");
 
 
         // Trucks
@@ -198,14 +201,27 @@ public class Main {
         tran1.setTransactionId(1);
         tran1.setSubTotal(19999);
         tran1.setTotalPrice(21198.94);
-        tran1.setPaymentType(PaymentType.credit);
+        tran1.setPaymentType(PaymentType.cash);
         transList.add(tran1);
+
+        Transaction tran2 = new Transaction();
+        tran2.setTransactionId(2);
+        tran2.setSubTotal(28000);
+        tran2.setTotalPrice(29680);
+        tran2.setPaymentType(PaymentType.credit);
+        transList.add(tran2);
+
+        Transaction tran3 = new Transaction();
+        tran3.setTransactionId(3);
+        tran3.setSubTotal(40000);
+        tran3.setTotalPrice(42400);
+        tran3.setPaymentType(PaymentType.credit);
+        transList.add(tran3);
 
 
         //SalesLead - add information (name, phone number, email, salespeople id)
         SalesLead s1 = new SalesLead ();
         s1.setSalesLeadID (0);
-
 
         SalesLead s2 = new SalesLead ();
         s2.setSalesLeadID (1);
@@ -218,8 +234,6 @@ public class Main {
 
         SalesLead s5 = new SalesLead ();
         s5.setSalesLeadID (4);
-
-
 
 
 

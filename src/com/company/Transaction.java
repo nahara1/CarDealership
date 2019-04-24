@@ -10,8 +10,8 @@ enum PaymentType {credit, cash,}
 public class Transaction {
 
     private float commission, salary;
-    int transactionId;
-    PaymentType payment;
+    private int transactionId;
+    private PaymentType payment;
     private double subTotal;
     private double totalPrice;
     private double tax = 1.06;
