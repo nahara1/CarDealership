@@ -147,46 +147,53 @@ public class Main {
 
         //Customers
         // Ron: add more customers' info (email, last name)
-
         Customers cust1 = new Customers ();
         Customers cust2 = new Customers ();
         Customers cust3 = new Customers ();
         Customers cust4 = new Customers ();
         Customers cust5 = new Customers ();
 
-
         cust1.setFirstName ("Ann");
         cust1.setLastName ("Smith");
-        cust1.setCustID (1);
+        cust1.setGroupID ("AS");
+        cust1.setCustID (00001);
         cust1.setGroupID ("A");
         cust1.setPhoneNumber("(123)-456-7890");
+        cust1.setCustEmail ("annsmith@aol.com");
         cList.add(cust1);
 
-
         cust2.setFirstName ("Joe");
-        cust2.setGroupID ("J");
-        cust1.setPhoneNumber("(321)-456-7890");
+        cust2.setLastName ("Oakes");
+        cust2.setCustID (00002);
+        cust2.setGroupID ("JO");
+        cust2.setPhoneNumber("(321)-456-7890");
+        cust2.setCustEmail ("jxo@psu.edu");
         cList.add(cust2);
 
         cust3.setFirstName ("Alex");
-        cust3.setGroupID ("Al");
-        cust1.setPhoneNumber("(213)-456-7890");
+        cust3.setLastName ("Hirsh");
+        cust3.setCustID (00003);
+        cust3.setGroupID ("AL");
+        cust4.setPhoneNumber("(213)-456-7890");
+        cust4.setCustEmail("ahirsh@psu.edu");
         cList.add(cust3);
 
-
         cust4.setFirstName ("Ronald");
-        cust4.setGroupID ("R");
-        cust1.setPhoneNumber("(111)-456-7890");
+        cust4.setLastName ("Salguero");
+        cust4.setGroupID ("RS");
+        cust4.setPhoneNumber("(111)-456-7890");
+        cust4.setCustEmail ("ris5534@psu.edu");
         cList.add(cust4);
 
         cust5.setFirstName ("Hannah");
-        cust5.setGroupID ("H");
-        cust1.setPhoneNumber("(111)-456-7890");
+        cust5.setLastName ("Montana");
+        cust5.setGroupID ("HM");
+        cust5.setPhoneNumber("(111)-456-7890");
+        cust5.setCustEmail ("hmontana@yahoo.com");
         cList.add(cust5);
 
 
         // Transactions
-
         Transaction tran1 = new Transaction();
         tran1.setTransactionId(1);
         tran1.setSubTotal(19999);
