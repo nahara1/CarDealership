@@ -38,16 +38,19 @@ public class Main {
 
         ArrayList<Parts> partsList = new ArrayList<> ();
 
+        ArrayList<Transaction> transList = new ArrayList<> ();
+
         // objects for each class for adding them to arrayLists
         Car car = new Car ();
         Inventory inv = new Inventory ();
         Truck truck = new Truck ();
         Parts parts = new Parts ();
+        Transaction tran = new Transaction ();
 
 
         Salesperson sp = new Salesperson ();
         SalesLead sl = new SalesLead ();
-       // Transaction tr1 = new Transaction ();
+        Transaction tr1 = new Transaction ();
 
 
         //SalesPeople
@@ -88,13 +91,15 @@ public class Main {
 
 
         Car car4 = new Car ("3D1G7T");
+        carList.add(car4);
         car4.setColor ("Green");
         car4.setYear(2008);
         car4.setModel("Coupe");
         car4.setMaker("Honda");
-        car4.setName("Name4");
+        car4.setName("Name");
 
         Car car5 = new Car ("6H3M2X");
+        carList.add(car5);
         car5.setColor("Yellow");
 
 
@@ -151,6 +156,8 @@ public class Main {
 
 
         cust1.setFirstName ("Ann");
+        cust1.setLastName ("Smith");
+        cust1.setCustID (1);
         cust1.setGroupID ("A");
         cust1.setPhoneNumber("(123)-456-7890");
         cList.add(cust1);
@@ -178,9 +185,17 @@ public class Main {
         cList.add(cust5);
 
 
+        // Transactions
+
+        Transaction tran1 = new Transaction();
+        tran1.setTransactionId(1);
+        tran1.setSubTotal(19999);
+        tran1.setTotalPrice(21198.94);
+        tran1.setPaymentType(PaymentType.credit);
+        transList.add(tran1);
 
 
-        //SalesLead
+        //SalesLead - add information (name, phone number, email, salespeople id)
         SalesLead s1 = new SalesLead ();
         s1.setSalesLeadID (0);
 
@@ -219,6 +234,7 @@ public class Main {
 
         // add method to print receipt
         final char TRAN_CODE = '9';
+        final char TRANLIST_CODE = '0';
 
 
         final char SEARCH_CODE = 'S';
@@ -227,7 +243,7 @@ public class Main {
 
         char userAction;
 
-        final String PROMPT_ACTION = "\n 1 - Add Customer\n 2 - Print List of Customers\n 3 - Print Sales Lead List \n 4 - Add Sales Lead\n 5 - List Inventory\n 6 - Add a Vehicle\n 7 - Add Parts\n 8 - Sell a Vehicle\n 9 - List Transactions\n S - Search Vehicle and Parts\n ? - Help\n ";
+        final String PROMPT_ACTION = "\n 1 - Add Customer\n 2 - Print List of Customers\n 3 - Print Sales Lead List \n 4 - Add Sales Lead\n 5 - List Inventory\n 6 - Add a Vehicle\n 7 - Add Parts\n 8 - Sell a Vehicle\n 9 - Add a Transaction\n 0 - Print List of Transactions\n S - Search Vehicle and Parts\n ? - Help\n ! - Quit\n ";
 
 
         // prompt user
@@ -244,7 +260,7 @@ public class Main {
 
                     break;
                 case CUST_PRNT:
-                    System.out.printf("%-10s | %-12s | %-10s\n", "ID", "Name", "Phone Number");
+                    System.out.printf("%-10s | %-12s |  %-12s | %-12s | %-10s \n", "ID", "First Name", "Last Name", "Email", "Phone Number");
                     Customers.printCustomer(cList);
 
                     //SalesLead.printSalesLead(slList);
@@ -267,6 +283,7 @@ public class Main {
 
                     switch (invType) {
                         case "car":
+                            System.out.println("Enter VIN:");
                             String vinNum = input.nextLine();
                             car.sellCar(carList, vinNum);
 
@@ -388,9 +405,16 @@ public class Main {
                     break;
 
                 case TRAN_CODE:
+                    transList.add(tran.addTransaction());
+
                     break;
 
-                case HELP_CODE: //
+                case TRANLIST_CODE:
+                    tran.listTransactions(transList);
+
+                    break;
+
+                case HELP_CODE:
                     break;
             }
 
