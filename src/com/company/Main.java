@@ -276,7 +276,7 @@ public class Main {
             switch (userAction) {
                 case CUST_CODE:
                     cList.add(cust.addCustomer());
-                    cust.printCustomerById(cList, 1);
+                    //cust.printCustomerById(cList, 1);
 
 
                     break;
