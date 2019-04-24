@@ -194,7 +194,7 @@ public class Main {
         tran1.setTransactionId(1);
         tran1.setSubTotal(19999);
         tran1.setTotalPrice(21198.94);
-        tran1.setPaymentType(PaymentType.credit);
+        tran1.setPaymentType(PaymentType.cash);
         transList.add(tran1);
 
         Transaction tran2 = new Transaction();
