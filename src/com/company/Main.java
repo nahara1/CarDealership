@@ -141,7 +141,7 @@ public class Main {
 
 
         //Customers
-
+        // Ron: add more customers' info (email, last name)
 
         Customers cust1 = new Customers ();
         Customers cust2 = new Customers ();
