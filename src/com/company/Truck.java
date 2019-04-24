@@ -13,6 +13,7 @@ public final class Truck extends Vehicle {
 
 
 
+
 // Constructor
 
     public Truck(String _Vin) {

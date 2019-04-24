@@ -8,14 +8,12 @@ public abstract class Vehicle {
     private Date built;
     private Wheeldrive wheeldrive;
     private NumDoors numDoors;
-    private double price;
 
     protected String maker, model, color;
     private int year;
 
 
     public String getVin() { return vin; }
-
     public void setVin(String _Vin) { this.vin = _Vin; }
 
     public void setName(String _name) {
@@ -25,7 +23,6 @@ public abstract class Vehicle {
     public String getName() {
         return name;
     }
-
     public Date getBuiltDate() { return built;}
 
     public void setBuiltDate(Date _built){
@@ -67,11 +64,6 @@ public abstract class Vehicle {
     public void setYear(int _carYear) {
         this.year = _carYear;
     }
-
-    public double getPrice() { return price; }
-
-    public void setPrice(double _price) { this.price = _price; }
-
 
     public NumDoors setDoors() {
         Scanner input = new Scanner(System.in);

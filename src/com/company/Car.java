@@ -6,6 +6,8 @@ public final class Car extends Vehicle {
 
 
     NumDoors numOfDoors;
+    String color;
+    double carPrice;
 
     public static int Quantity=0;
 
@@ -27,28 +29,25 @@ public final class Car extends Vehicle {
     public Car addCar() {
         Car car = new Car();
         Scanner scnr = new Scanner(System.in);
+        System.out.println("Please enter VIN number: ");
 
         // try and catch ??
-        System.out.println("Please enter VIN number: ");
         car.setVin(scnr.nextLine());
-
         System.out.println("Please enter car model: ");
-        car.setModel(scnr.nextLine());
 
+
+
+        car.setModel(scnr.nextLine());
         System.out.println("Please enter car maker: ");
         car.setMaker(scnr.nextLine());
-
         System.out.println("Please enter car year: ");
         car.setYear(scnr.nextInt());
-
         car.setDoors();
 
-        scnr.nextLine(); //IMPORTANT: do not remove, needed so that setColor works properly
+        // not working ??
         System.out.println("Please enter car color: ");
         car.setColor(scnr.nextLine());
 
-        System.out.println("Please enter car price: ");
-        car.setPrice(scnr.nextDouble());
 
         return car;
     }
@@ -63,12 +62,29 @@ public final class Car extends Vehicle {
     }
 
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String _Color) {
+        this.color = _Color;
+    }
+
     public NumDoors getNumOfDoors() {
         return numOfDoors;
     }
 
     public void setNumOfDoors(NumDoors _numOfDoors) {
         this.numOfDoors = _numOfDoors;
+    }
+
+
+    public double getCarPrice() {
+        return carPrice;
+    }
+
+    public void setCarPrice(double _carPrice) {
+        this.carPrice = _carPrice;
     }
 
 
@@ -86,7 +102,7 @@ public final class Car extends Vehicle {
 
     public static void printCars(ArrayList<Car> carList) {
         for (Car car : carList) {
-            System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-12s | %-10s \n", car.getName(), car.getVin(), car.getModel(), car.getMaker(), car.getColor(), car.getYear(), car.getPrice());
+            System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-12s | %-10s \n", car.getName(), car.getVin(), car.getModel(), car.getMaker(), car.getColor(), car.getYear(), car.getCarPrice());
 
         }
     }

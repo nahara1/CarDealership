@@ -39,6 +39,7 @@ public class Customers {
         firstName = testAlpha(getInput());
         cust.setFirstName(firstName);
 
+
         System.out.println("Please enter customer last name: ");
         lastName = testAlpha(getInput());
         cust.setLastName(lastName);

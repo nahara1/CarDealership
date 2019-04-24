@@ -1,6 +1,7 @@
 package com.company;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
@@ -127,4 +128,70 @@ public class SalesLead {
             }
         }
     }
+
+
+    public static String getInput() {
+        Scanner scnr = new Scanner(System.in);
+        String input = scnr.nextLine();
+        return input;
+
+    }
+
+    public static String testAlpha(String alphaCharacter) {
+        try {
+
+            if (alphaCharacter.matches("^[a-zA-Z]*$")) {
+                return alphaCharacter;
+            }
+            else  {
+                throw new InputMismatchException("not alpha");
+            }
+
+        } catch (InputMismatchException notAnAlpha) {
+            System.out.println("Invalid input. Please try again.");
+            return getInput();
+
+        }
+
+    }
+
+
+    public static String testEmail(String email) {
+        try {
+
+            if (email.matches("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$")) {
+                return email;
+            }
+            else  {
+                throw new InputMismatchException("invalid");
+            }
+
+
+
+        } catch (InputMismatchException notAnEmail) {
+            System.out.println("Invalid input. Please try again.");
+            return getInput();
+
+        }
+    }
+
+    public static String testPhone(String phone) {
+        try {
+
+            if (phone.matches("^[(]+[0-9]+[)]+[\\s]+[0-9]+[-]+[0-9]+$")) {
+                return phone;
+            }
+            else  {
+                throw new InputMismatchException("invalid");
+            }
+
+
+
+        } catch (InputMismatchException notAnEmail) {
+            System.out.println("Invalid input. Please try again.");
+            return getInput();
+
+        }
+    }
+    
 }
