@@ -21,12 +21,21 @@ public class Main {
 
 
         //Dealerships
-        Dealership dealer1 = new Dealership ("Car Dealership Abington", "123 St Ave Town, PA 12345", "1234567890");
-        Dealership dealer2 = new Dealership ("Car Dealership Bensalem", "123 St Ave Town, PA 12345", "1234567890");
+        Dealership dealer1 = new Dealership ();
+        dealer1.setDealershipID(1);
+        dealer1.setName("Car Dealership Abington");
+        dealer1.setAddress("123 St Ave Town, PA 12345");
+        dealer1.setPhoneNumber("123456789");
 
-        //ArrayList<Dealership> listDealerships = new ArrayList<>();
-        //listDealerships.add(dealer1);
-        //listDealerships.add(dealer2);
+        Dealership dealer2 = new Dealership ();
+        dealer2.setDealershipID(2);
+        dealer2.setName("Car Dealership Bensalem");
+        dealer2.setAddress("234 St Ave Town, PA 54232");
+        dealer2.setPhoneNumber("234567890");
+
+        ArrayList<Dealership> dealerList = new ArrayList<>();
+        dealerList.add(dealer1);
+        dealerList.add(dealer2);
 
 
         ArrayList<SalesLead> slList = new ArrayList<> ();
@@ -45,6 +54,7 @@ public class Main {
         Truck truck = new Truck ();
         Parts parts = new Parts ();
         Transaction tran = new Transaction ();
+        Dealership deal = new Dealership();
 
 
         Salesperson sp = new Salesperson ();
@@ -265,9 +275,12 @@ public class Main {
         final char HELP_CODE = '?';
         final char EXIT_CODE = '!';
 
+        // list dealerships
+        final char DEAL_CODE = 'D';
+
         char userAction;
 
-        final String PROMPT_ACTION = "\n 1 - Add Customer\n 2 - Print List of Customers\n 3 - Print Sales Lead List \n 4 - Add Sales Lead\n 5 - List Inventory\n 6 - Add a Vehicle\n 7 - Add Parts\n 8 - Sell a Vehicle\n 9 - Add a Transaction\n 0 - Print List of Transactions\n S - Search Vehicle and Parts\n ? - Help\n ! - Quit\n ";
+        final String PROMPT_ACTION = "\n 1 - Add Customer\n 2 - Print List of Customers\n 3 - Print Sales Lead List \n 4 - Add Sales Lead\n 5 - List Inventory\n 6 - Add a Vehicle\n 7 - Add Parts\n 8 - Sell a Vehicle\n 9 - Add a Transaction\n 0 - Print List of Transactions\n S - Search Vehicle and Parts\n D - List Dealerships\n ? - Help\n ! - Quit\n ";
 
 
         // prompt user
@@ -425,6 +438,11 @@ public class Main {
 
                             break;
                     }
+
+                    break;
+
+                case DEAL_CODE:
+                    deal.listDealerships(dealerList);
 
                     break;
 
