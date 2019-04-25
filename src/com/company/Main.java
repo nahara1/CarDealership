@@ -124,13 +124,10 @@ public class Main {
 
 
         //Inventory
-
         //    in1.setCar(car1);
 
 
         //Get quantity in inventory
-
-
         Inventory in1 = new Inventory ();
         Inventory in2 = new Inventory ();
         Inventory in3 = new Inventory ();
