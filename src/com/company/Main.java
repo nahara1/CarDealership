@@ -5,7 +5,6 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//import static com.company.Parts.sellTruck;
 
 /**
  * @author Team 2
