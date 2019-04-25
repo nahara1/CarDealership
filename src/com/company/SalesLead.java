@@ -1,15 +1,14 @@
 package com.company;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
 public class SalesLead {
     protected int salesLeadID;
-    protected String sl_firstName, sl_lastName, sl_phoneNumber, sl_Email, empID;
+    protected String sl_firstName, sl_lastName, sl_phoneNumber, sl_Email;
     protected Boolean salesLeadActive;
-    protected String salesLeadDate;
+    protected String salesLeadDate, empID;
     int cCount;
 
     private int salesPersonID;
@@ -32,7 +31,7 @@ public class SalesLead {
         Scanner scnr = new Scanner(System.in);
         // fix this
         System.out.println("Employee ID: " + _empID);
-        sl.setSL_empID(_empID);
+        sl.setSL_empID(empID);
         System.out.println("Please enter SL first name: ");
         sl.setSl_firstName(scnr.nextLine());
         System.out.println("Please enter SL last name: ");
@@ -98,11 +97,11 @@ public class SalesLead {
         this.salesLeadDate = _sl_Date;
     }
 
-    private void setSL_empID(String _empID) {
+    public void setSL_empID(String _empID) {
         this.empID = _empID;
     }
 
-    private String getSL_empID() {
+    public String getSL_empID() {
         return empID;
     }
 
@@ -112,7 +111,7 @@ public class SalesLead {
            // System.out.println(sales_lead.getSalesLeadID(), sales_lead.getSl_firstName(), sales_lead.getSl_lastName());
 
             // index of each object
-            System.out.println("Index: " + slList.indexOf(sales_lead));
+            // System.out.println("Index: " + slList.indexOf(sales_lead));
 
             // use this to count sales lead -
             System.out.println("Number of Sales Lead: " + slList.size());
