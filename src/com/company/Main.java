@@ -148,8 +148,7 @@ public class Main {
         //Get quantity in inventory
 
 
-        //Customers
-        // Ron: add more customers' info (email, last name)
+        //Customer's information
         Customers cust1 = new Customers ();
         Customers cust2 = new Customers ();
         Customers cust3 = new Customers ();
@@ -177,12 +176,13 @@ public class Main {
         cust3.setLastName ("Hirsh");
         cust3.setCustID (00003);
         cust3.setGroupID ("AL");
-        cust4.setPhoneNumber("(213)-456-7890");
-        cust4.setCustEmail("ahirsh@psu.edu");
+        cust3.setPhoneNumber("(213)-456-7890");
+        cust3.setCustEmail("ahirsh@psu.edu");
         cList.add(cust3);
 
         cust4.setFirstName ("Ronald");
         cust4.setLastName ("Salguero");
+        cust4.setCustID (00004);
         cust4.setGroupID ("RS");
         cust4.setPhoneNumber("(111)-456-7890");
         cust4.setCustEmail ("ris5534@psu.edu");
@@ -190,6 +190,7 @@ public class Main {
 
         cust5.setFirstName ("Hannah");
         cust5.setLastName ("Montana");
+        cust5.setCustID (5);
         cust5.setGroupID ("HM");
         cust5.setPhoneNumber("(111)-456-7890");
         cust5.setCustEmail ("hmontana@yahoo.com");
