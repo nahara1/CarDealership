@@ -9,8 +9,7 @@ import java.util.Scanner;
 enum PaymentType {credit, cash,}
 
 public class Transaction {
-
-    private float salary;
+    
     private double commission;
     private int transactionId;
     private PaymentType payment;
@@ -23,14 +22,6 @@ public class Transaction {
     public int getTransactionId() { return transactionId; }
 
     public void setTransactionId(int _transactionId) {this.transactionId = _transactionId;}
-
-    // Salary
-
-    public float getSalary() {
-        return salary;
-    }
-
-    public void setSalary(float _Salary) {this.salary = _Salary;}
 
     // Commission
 
