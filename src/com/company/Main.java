@@ -195,6 +195,7 @@ public class Main {
         tran1.setSubTotal(19999);
         tran1.setTotalPrice(21198.94);
         tran1.setPaymentType(PaymentType.cash);
+        tran1.setCommission(1999.90);
         transList.add(tran1);
 
         Transaction tran2 = new Transaction();
@@ -202,6 +203,7 @@ public class Main {
         tran2.setSubTotal(28000);
         tran2.setTotalPrice(29680);
         tran2.setPaymentType(PaymentType.credit);
+        tran2.setCommission(2800);
         transList.add(tran2);
 
         Transaction tran3 = new Transaction();
@@ -209,6 +211,7 @@ public class Main {
         tran3.setSubTotal(40000);
         tran3.setTotalPrice(42400);
         tran3.setPaymentType(PaymentType.credit);
+        tran3.setCommission(4000);
         transList.add(tran3);
 
 

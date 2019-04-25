@@ -3,13 +3,15 @@ package com.company;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 enum PaymentType {credit, cash,}
 
 public class Transaction {
 
-    private float commission, salary;
+    private float salary;
+    private double commission;
     private int transactionId;
     private PaymentType payment;
     private double subTotal;
@@ -26,29 +28,20 @@ public class Transaction {
     // Salary
 
     public float getSalary() {
-        return commission;
+        return salary;
     }
 
-    public void setSalary(float _Salary) {this.commission = _Salary;}
+    public void setSalary(float _Salary) {this.salary = _Salary;}
 
     // Commission
 
-    public float getCommission() {
+    public double getCommission() {
         return commission;
     }
 
-    public void setCommission(float _Commission) {this.commission = _Commission;}
-
-    public void commission(int inventoryID, float price, int empID) {
-        commission = price*0.1f;
-    }
-
-    public void commission(int inventoryID, float price) {
-        commission = price*0.1f;
-    }
+    public void setCommission(double _Commission) {this.commission = _Commission * 0.1;}
 
     // Price
-
 
     public double getSubTotal() { return subTotal; }
 
@@ -87,22 +80,29 @@ public class Transaction {
         return totalPrice;
     }
 
+    private static DecimalFormat df2 = new DecimalFormat("#.00");
 
     public Transaction addTransaction() {
         System.out.println("Enter transaction ID, subtotal");
         Transaction tran = new Transaction();
         Scanner scnr = new Scanner(System.in);
-        tran.setTransactionId(scnr.nextInt());
+
+        try {
+            tran.setTransactionId(scnr.nextInt());
+        }
+        catch (InputMismatchException notInt) {
+            System.out.println("Not a number");
+        }
+
         tran.setSubTotal(scnr.nextDouble());
         tran.setPaymentType();
         tran.setTotalPrice(calculateTransaction(tran.getSubTotal(), tax));
         System.out.println("Total price is: $" + getTotalPrice());
+        tran.setCommission(tran.getSubTotal());
+        System.out.println("Salesperson earned $" + df2.format(tran.getCommission()) + " commission");
         System.out.println("Transaction recorded");
-        System.out.println();
         return tran;
     }
-
-    private static DecimalFormat df2 = new DecimalFormat("#.00");
 
     public static void listTransactions(ArrayList<Transaction> transList) {
         System.out.println("Transaction History:");
@@ -112,6 +112,7 @@ public class Transaction {
             System.out.println("Subtotal: $" + df2.format(tran.getSubTotal()));
             System.out.println("Total price: $" + df2.format(tran.getTotalPrice()));
             System.out.println("Payment type: " + tran.getPaymentType());
+            System.out.println("Commission from sale: $" + df2.format(tran.getCommission()));
             System.out.println();
         }
     }
