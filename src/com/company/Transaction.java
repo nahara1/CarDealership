@@ -79,23 +79,31 @@ public class Transaction {
      */
 
     public Transaction addTransaction() {
-        System.out.println("Enter transaction ID, subtotal");
+        System.out.println("Enter transaction ID");
         Transaction tran = new Transaction();
         Scanner scnr = new Scanner(System.in);
 
-        try {
-            tran.setTransactionId(scnr.nextInt());
+        while (!scnr.hasNextInt()) {
+            scnr.next();
+            System.out.println("Enter an integer");
         }
-        catch (InputMismatchException notInt) {
-            System.out.println("Not a number");
-        }
+        tran.setTransactionId(scnr.nextInt());
 
+        System.out.println("Enter subtotal");
+        while (!scnr.hasNextInt()) {
+            scnr.next();
+            System.out.println("Enter a double");
+        }
         tran.setSubTotal(scnr.nextDouble());
+
         tran.setPaymentType();
+
         tran.setTotalPrice(calculateTransaction(tran.getSubTotal(), tax));
         System.out.println("Total price is: $" + getTotalPrice());
+
         tran.setCommission(tran.getSubTotal());
         System.out.println("Salesperson earned $" + df2.format(tran.getCommission()) + " commission");
+
         System.out.println("Transaction recorded");
         return tran;
     }
@@ -107,36 +115,13 @@ public class Transaction {
 
     public static void listTransactions(ArrayList<Transaction> transList) {
         System.out.println("Transaction History:");
-        System.out.println();
         for (Transaction tran : transList) {
+            System.out.println();
             System.out.println("Transaction ID: " + tran.getTransactionId());
             System.out.println("Subtotal: $" + df2.format(tran.getSubTotal()));
             System.out.println("Total price: $" + df2.format(tran.getTotalPrice()));
             System.out.println("Payment type: " + tran.getPaymentType());
             System.out.println("Commission from sale: $" + df2.format(tran.getCommission()));
-            System.out.println();
-        }
-    }
-
-    public static String getInput() {
-        Scanner scnr = new Scanner(System.in);
-        String input = scnr.nextLine();
-        return input;
-    }
-
-    public static String testAlpha(String alphaCharacter) {
-        try {
-
-            if (alphaCharacter.matches("^[a-zA-Z]*$")) {
-                return alphaCharacter;
-            }
-            else  {
-                throw new InputMismatchException("not alpha");
-            }
-
-        } catch (InputMismatchException notAnAlpha) {
-            System.out.println("Invalid input. Please try again.");
-            return getInput();
         }
     }
 }
