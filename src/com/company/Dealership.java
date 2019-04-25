@@ -1,53 +1,47 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Dealership {
     private String name, address, phoneNumber;
+    private int dealershipID;
 
-    // Dealership constructor
-   public Dealership (String name, String address, String phoneNumber) {}
+    // dealership constructor
 
-   // setters and getters
+    public Dealership() {}
 
-            public String getName() {
-                return name;
-            }
+    // setters and getters
 
-            public void setName(String _Name) {
-                this.name = _Name;
-            }
+    public int getDealershipID() { return dealershipID; }
 
-            public String getAddress() {
-                return address;
-            }
+    public void setDealershipID(int _DealershipID) { this.dealershipID = _DealershipID; }
 
-            public void setAddress(String _Address) {
-                this.address = _Address;
-            }
+    public String getName() { return name; }
 
-            public String getPhoneNumber() {
-                return phoneNumber;
-            }
+    public void setName(String _Name) { this.name = _Name; }
 
-            public void setPhoneNumber(String _PhoneNumber) {
-                this.phoneNumber = _PhoneNumber;
-            }
+    public String getAddress() { return address; }
 
+    public void setAddress(String _Address) { this.address = _Address; }
 
-            // stores customers info ///
+    public String getPhoneNumber() { return phoneNumber; }
 
-    // paysEmployees
+    public void setPhoneNumber(String _PhoneNumber) { this.phoneNumber = _PhoneNumber; }
 
-    // stores employees info
+    // list information for all dealerships
 
-    // orders new cars and parts
-
-    // car insurance
-
-    // warranty
-
-
-
+    public void listDealerships(ArrayList<Dealership> dealerList) {
+        System.out.println("Dealership Locations:");
+        for (Dealership dealer : dealerList) {
+            System.out.println();
+            System.out.println("Dealership ID: " + dealer.getDealershipID());
+            System.out.println("Name: " + dealer.getName());
+            System.out.println("Address: " + dealer.getAddress());
+            System.out.println("Phone Number: " + dealer.getPhoneNumber());
         }
+    }
+}
+
 
 
 

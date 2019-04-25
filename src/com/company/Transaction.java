@@ -9,7 +9,7 @@ import java.util.Scanner;
 enum PaymentType {credit, cash,}
 
 public class Transaction {
-    
+
     private double commission;
     private int transactionId;
     private PaymentType payment;
@@ -57,12 +57,6 @@ public class Transaction {
     // Transaction
 
     public Transaction() {}
-
-    public Transaction(int _transactionId, PaymentType _pType, double _subTotal){
-        this.transactionId = _transactionId;
-        this.payment = _pType;
-        this.subTotal = _subTotal;
-    }
 
     private double calculateTransaction(double transactionSubtotal, double tax) {
         totalPrice = transactionSubtotal * tax;
