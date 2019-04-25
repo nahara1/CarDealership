@@ -4,12 +4,17 @@ import java.util.ArrayList;
 
 public class Dealership {
     private String name, address, phoneNumber;
+    private int dealershipID;
 
     // dealership constructor
 
     public Dealership() {}
 
     // setters and getters
+
+    public int getDealershipID() { return dealershipID; }
+
+    public void setDealershipID(int _DealershipID) { this.dealershipID = _DealershipID; }
 
     public String getName() { return name; }
 
@@ -27,12 +32,12 @@ public class Dealership {
 
     public void listDealerships(ArrayList<Dealership> dealerList) {
         System.out.println("Dealership Locations:");
-        System.out.println();
         for (Dealership dealer : dealerList) {
+            System.out.println();
+            System.out.println("Dealership ID: " + dealer.getDealershipID());
             System.out.println("Name: " + dealer.getName());
             System.out.println("Address: " + dealer.getAddress());
             System.out.println("Phone Number: " + dealer.getPhoneNumber());
-            System.out.println();
         }
     }
 }

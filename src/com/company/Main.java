@@ -22,11 +22,13 @@ public class Main {
 
         //Dealerships
         Dealership dealer1 = new Dealership ();
+        dealer1.setDealershipID(1);
         dealer1.setName("Car Dealership Abington");
         dealer1.setAddress("123 St Ave Town, PA 12345");
         dealer1.setPhoneNumber("123456789");
 
         Dealership dealer2 = new Dealership ();
+        dealer2.setDealershipID(2);
         dealer2.setName("Car Dealership Bensalem");
         dealer2.setAddress("234 St Ave Town, PA 54232");
         dealer2.setPhoneNumber("234567890");
