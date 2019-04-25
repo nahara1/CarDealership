@@ -74,7 +74,7 @@ public class Transaction {
     private static DecimalFormat df2 = new DecimalFormat("#.00");
 
     /**
-     * addTransaction will add a new transaction to the array list of transactios
+     * addTransaction will add a new transaction to the array list of transactions
      * @return transaction
      */
 
