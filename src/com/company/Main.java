@@ -5,7 +5,6 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//import static com.company.Parts.sellTruck;
 
 /**
  * @author Team 2
@@ -59,7 +58,6 @@ public class Main {
         //Vehicles - objects [done]
 
         // Cars
-
         Car car1 = new Car ("1A2B3C");
         carList.add(car1);
         car1.setColor("Black");
@@ -70,8 +68,6 @@ public class Main {
         //car1.setDoors('two');
         car1.setPrice(20000);
 
-
-
         Car car2 = new Car ("1A4K5L");
         carList.add(car2);
         car2.setColor("Red");
@@ -80,7 +76,6 @@ public class Main {
         car2.setMaker("Volkswagen");
         car2.setName("Name2");
         car2.setPrice(30000);
-
 
         Car car3 = new Car ("2B6F9S");
         carList.add(car3);
@@ -91,24 +86,26 @@ public class Main {
         car3.setName("Name3");
         car3.setPrice(21000);
 
-
         Car car4 = new Car ("3D1G7T");
         carList.add(car4);
         car4.setColor ("Green");
         car4.setYear(2008);
         car4.setModel("Coupe");
         car4.setMaker("Honda");
-        car4.setName("Name");
+        car4.setName("Name4");
         car4.setPrice(19000);
 
-        //Car car5 = new Car ("6H3M2X");
-        //carList.add(car5);
-        //car5.setColor("Yellow");
+        Car car5 = new Car ("6H3M2X");
+        carList.add(car5);
+        car5.setColor("Yellow");
+        car5.setYear(2008);
+        car5.setModel("Minivan");
+        car5.setMaker ("Toyota");
+        car5.setName("Name5");
+        car5.setPrice(39000);
 
 
         // Trucks
-
-
         Truck truck1 = new Truck ("5C6D7E");
         truck1.setTon (Ton.one);
 
@@ -126,13 +123,10 @@ public class Main {
 
 
         //Inventory
-
         //    in1.setCar(car1);
 
 
         //Get quantity in inventory
-
-
         Inventory in1 = new Inventory ();
         Inventory in2 = new Inventory ();
         Inventory in3 = new Inventory ();
@@ -148,48 +142,56 @@ public class Main {
         //Get quantity in inventory
 
 
-        //Customers
-        // Ron: add more customers' info (email, last name)
-
+        //Customer's information
         Customers cust1 = new Customers ();
         Customers cust2 = new Customers ();
         Customers cust3 = new Customers ();
         Customers cust4 = new Customers ();
         Customers cust5 = new Customers ();
 
-
         cust1.setFirstName ("Ann");
         cust1.setLastName ("Smith");
-        cust1.setCustID (1);
+        cust1.setGroupID ("AS");
+        cust1.setCustID (00001);
         cust1.setGroupID ("A");
         cust1.setPhoneNumber("(123)-456-7890");
+        cust1.setCustEmail ("annsmith@aol.com");
         cList.add(cust1);
 
-
         cust2.setFirstName ("Joe");
-        cust2.setGroupID ("J");
-        cust1.setPhoneNumber("(321)-456-7890");
+        cust2.setLastName ("Oakes");
+        cust2.setCustID (00002);
+        cust2.setGroupID ("JO");
+        cust2.setPhoneNumber("(321)-456-7890");
+        cust2.setCustEmail ("jxo@psu.edu");
         cList.add(cust2);
 
         cust3.setFirstName ("Alex");
-        cust3.setGroupID ("Al");
-        cust1.setPhoneNumber("(213)-456-7890");
+        cust3.setLastName ("Hirsh");
+        cust3.setCustID (00003);
+        cust3.setGroupID ("AL");
+        cust3.setPhoneNumber("(213)-456-7890");
+        cust3.setCustEmail("ahirsh@psu.edu");
         cList.add(cust3);
 
-
         cust4.setFirstName ("Ronald");
-        cust4.setGroupID ("R");
-        cust1.setPhoneNumber("(111)-456-7890");
+        cust4.setLastName ("Salguero");
+        cust4.setCustID (00004);
+        cust4.setGroupID ("RS");
+        cust4.setPhoneNumber("(111)-456-7890");
+        cust4.setCustEmail ("ris5534@psu.edu");
         cList.add(cust4);
 
         cust5.setFirstName ("Hannah");
-        cust5.setGroupID ("H");
-        cust1.setPhoneNumber("(111)-456-7890");
+        cust5.setLastName ("Montana");
+        cust5.setCustID (5);
+        cust5.setGroupID ("HM");
+        cust5.setPhoneNumber("(111)-456-7890");
+        cust5.setCustEmail ("hmontana@yahoo.com");
         cList.add(cust5);
 
 
         // Transactions
-
         Transaction tran1 = new Transaction();
         tran1.setTransactionId(1);
         tran1.setSubTotal(19999);
@@ -272,7 +274,7 @@ public class Main {
             switch (userAction) {
                 case CUST_CODE:
                     cList.add(cust.addCustomer());
-                    cust.printCustomerById(cList, 1);
+                    //cust.printCustomerById(cList, 1);
 
 
                     break;
@@ -449,9 +451,7 @@ public class Main {
         answer = scnr.nextLine().toUpperCase() + " ";
         char firstChar = answer.charAt(0);
         return firstChar;
-
     }
-
  }
 
 
