@@ -59,7 +59,6 @@ public class Main {
         //Vehicles - objects [done]
 
         // Cars
-
         Car car1 = new Car ("1A2B3C");
         carList.add(car1);
         car1.setColor("Black");
@@ -70,8 +69,6 @@ public class Main {
         //car1.setDoors('two');
         car1.setPrice(20000);
 
-
-
         Car car2 = new Car ("1A4K5L");
         carList.add(car2);
         car2.setColor("Red");
@@ -80,7 +77,6 @@ public class Main {
         car2.setMaker("Volkswagen");
         car2.setName("Name2");
         car2.setPrice(30000);
-
 
         Car car3 = new Car ("2B6F9S");
         carList.add(car3);
@@ -91,24 +87,26 @@ public class Main {
         car3.setName("Name3");
         car3.setPrice(21000);
 
-
         Car car4 = new Car ("3D1G7T");
         carList.add(car4);
         car4.setColor ("Green");
         car4.setYear(2008);
         car4.setModel("Coupe");
         car4.setMaker("Honda");
-        car4.setName("Name");
+        car4.setName("Name4");
         car4.setPrice(19000);
 
-        //Car car5 = new Car ("6H3M2X");
-        //carList.add(car5);
-        //car5.setColor("Yellow");
+        Car car5 = new Car ("6H3M2X");
+        carList.add(car5);
+        car5.setColor("Yellow");
+        car5.setYear(2008);
+        car5.setModel("Minivan");
+        car5.setMaker ("Toyota");
+        car5.setName("Name5");
+        car5.setPrice(39000);
 
 
         // Trucks
-
-
         Truck truck1 = new Truck ("5C6D7E");
         truck1.setTon (Ton.one);
 
