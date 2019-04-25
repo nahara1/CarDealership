@@ -44,7 +44,7 @@ public class Customers {
         lastName = testAlpha(getInput());
         cust.setLastName(lastName);
 
-        System.out.println("Please enter customer phone number:  \n Please use this format: (012) 345-6789 ");
+        System.out.println("Please enter customer phone number:  \nPlease use this format: (012) 345-6789 ");
         phoneNumber = testPhone(getInput());
         cust.setPhoneNumber(phoneNumber);
 
@@ -139,9 +139,8 @@ public class Customers {
         }
 
     public static void countCustomers(ArrayList<Customers> cList) {
-            System.out.println("Customers Total: " + cList.size());
-
-             }
+        System.out.println ("Customers Total: " + cList.size ());
+    }
 
 
 
@@ -150,25 +149,19 @@ public class Customers {
         Scanner scnr = new Scanner(System.in);
         String input = scnr.nextLine();
         return input;
-
     }
 
     public static String testAlpha(String alphaCharacter) {
         try {
-
             if (alphaCharacter.matches("^[a-zA-Z]*$")) {
                 return alphaCharacter;
-            }
-            else  {
+            } else  {
                 throw new InputMismatchException("not alpha");
             }
-
         } catch (InputMismatchException notAnAlpha) {
             System.out.println("Invalid input. Please try again.");
             return getInput();
-
         }
-
     }
 
 

@@ -454,9 +454,7 @@ public class Main {
         answer = scnr.nextLine().toUpperCase() + " ";
         char firstChar = answer.charAt(0);
         return firstChar;
-
     }
-
  }
 
 
