@@ -59,50 +59,50 @@ public class Main {
 
         // Cars
         Car car1 = new Car ("1A2B3C");
-        carList.add(car1);
-        car1.setColor("Black");
-        car1.setYear(2013);
-        car1.setModel("Sedan");
-        car1.setMaker("Ford");
-        car1.setName("Name");
+        carList.add (car1);
+        car1.setColor ("Black");
+        car1.setYear (2013);
+        car1.setModel ("Sedan");
+        car1.setMaker ("Ford");
+        car1.setName ("Name");
         //car1.setDoors('two');
-        car1.setPrice(20000);
+        car1.setPrice (20000);
 
         Car car2 = new Car ("1A4K5L");
-        carList.add(car2);
-        car2.setColor("Red");
-        car2.setYear(2017);
-        car2.setModel("Hatchback");
-        car2.setMaker("Volkswagen");
-        car2.setName("Name2");
-        car2.setPrice(30000);
+        carList.add (car2);
+        car2.setColor ("Red");
+        car2.setYear (2017);
+        car2.setModel ("Hatchback");
+        car2.setMaker ("Volkswagen");
+        car2.setName ("Name2");
+        car2.setPrice (30000);
 
         Car car3 = new Car ("2B6F9S");
-        carList.add(car3);
+        carList.add (car3);
         car3.setColor ("White");
-        car3.setYear(2010);
-        car3.setModel("Hatchback");
-        car3.setMaker("Chevrolet");
-        car3.setName("Name3");
-        car3.setPrice(21000);
+        car3.setYear (2010);
+        car3.setModel ("Hatchback");
+        car3.setMaker ("Chevrolet");
+        car3.setName ("Name3");
+        car3.setPrice (21000);
 
         Car car4 = new Car ("3D1G7T");
-        carList.add(car4);
+        carList.add (car4);
         car4.setColor ("Green");
-        car4.setYear(2008);
-        car4.setModel("Coupe");
-        car4.setMaker("Honda");
-        car4.setName("Name4");
-        car4.setPrice(19000);
+        car4.setYear (2008);
+        car4.setModel ("Coupe");
+        car4.setMaker ("Honda");
+        car4.setName ("Name4");
+        car4.setPrice (19000);
 
         Car car5 = new Car ("6H3M2X");
-        carList.add(car5);
-        car5.setColor("Yellow");
-        car5.setYear(2008);
-        car5.setModel("Minivan");
+        carList.add (car5);
+        car5.setColor ("Yellow");
+        car5.setYear (2008);
+        car5.setModel ("Minivan");
         car5.setMaker ("Toyota");
-        car5.setName("Name5");
-        car5.setPrice(39000);
+        car5.setName ("Name5");
+        car5.setPrice (39000);
 
 
         // Trucks
@@ -154,72 +154,78 @@ public class Main {
         cust1.setGroupID ("AS");
         cust1.setCustID (00001);
         cust1.setGroupID ("A");
-        cust1.setPhoneNumber("(123)-456-7890");
+        cust1.setPhoneNumber ("(123)-456-7890");
         cust1.setCustEmail ("annsmith@aol.com");
-        cList.add(cust1);
+        cList.add (cust1);
 
         cust2.setFirstName ("Joe");
         cust2.setLastName ("Oakes");
         cust2.setCustID (00002);
         cust2.setGroupID ("JO");
-        cust2.setPhoneNumber("(321)-456-7890");
+        cust2.setPhoneNumber ("(321)-456-7890");
         cust2.setCustEmail ("jxo@psu.edu");
-        cList.add(cust2);
+        cList.add (cust2);
 
         cust3.setFirstName ("Alex");
         cust3.setLastName ("Hirsh");
         cust3.setCustID (00003);
         cust3.setGroupID ("AL");
-        cust3.setPhoneNumber("(213)-456-7890");
-        cust3.setCustEmail("ahirsh@psu.edu");
-        cList.add(cust3);
+        cust3.setPhoneNumber ("(213)-456-7890");
+        cust3.setCustEmail ("ahirsh@psu.edu");
+        cList.add (cust3);
 
         cust4.setFirstName ("Ronald");
         cust4.setLastName ("Salguero");
         cust4.setCustID (00004);
         cust4.setGroupID ("RS");
-        cust4.setPhoneNumber("(111)-456-7890");
+        cust4.setPhoneNumber ("(111)-456-7890");
         cust4.setCustEmail ("ris5534@psu.edu");
-        cList.add(cust4);
+        cList.add (cust4);
 
         cust5.setFirstName ("Hannah");
         cust5.setLastName ("Montana");
         cust5.setCustID (5);
         cust5.setGroupID ("HM");
-        cust5.setPhoneNumber("(111)-456-7890");
+        cust5.setPhoneNumber ("(111)-456-7890");
         cust5.setCustEmail ("hmontana@yahoo.com");
-        cList.add(cust5);
+        cList.add (cust5);
 
 
         // Transactions
-        Transaction tran1 = new Transaction();
-        tran1.setTransactionId(1);
-        tran1.setSubTotal(19999);
-        tran1.setTotalPrice(21198.94);
-        tran1.setPaymentType(PaymentType.cash);
-        tran1.setCommission(1999.90);
-        transList.add(tran1);
+        Transaction tran1 = new Transaction ();
+        tran1.setTransactionId (1);
+        tran1.setSubTotal (19999);
+        tran1.setTotalPrice (21198.94);
+        tran1.setPaymentType (PaymentType.cash);
+        tran1.setCommission (1999.90);
+        transList.add (tran1);
 
-        Transaction tran2 = new Transaction();
-        tran2.setTransactionId(2);
-        tran2.setSubTotal(28000);
-        tran2.setTotalPrice(29680);
-        tran2.setPaymentType(PaymentType.credit);
-        tran2.setCommission(2800);
-        transList.add(tran2);
+        Transaction tran2 = new Transaction ();
+        tran2.setTransactionId (2);
+        tran2.setSubTotal (28000);
+        tran2.setTotalPrice (29680);
+        tran2.setPaymentType (PaymentType.credit);
+        tran2.setCommission (2800);
+        transList.add (tran2);
 
-        Transaction tran3 = new Transaction();
-        tran3.setTransactionId(3);
-        tran3.setSubTotal(40000);
-        tran3.setTotalPrice(42400);
-        tran3.setPaymentType(PaymentType.credit);
-        tran3.setCommission(4000);
-        transList.add(tran3);
+        Transaction tran3 = new Transaction ();
+        tran3.setTransactionId (3);
+        tran3.setSubTotal (40000);
+        tran3.setTotalPrice (42400);
+        tran3.setPaymentType (PaymentType.credit);
+        tran3.setCommission (4000);
+        transList.add (tran3);
 
 
-        //SalesLead - add information (name, phone number, email, salespeople id)
+        //SalesLead - add information (name, phone number, email, Saleslead id)
         SalesLead s1 = new SalesLead ();
-        s1.setSalesLeadID (0);
+        s1.setSl_firstName("Narrara");
+        s1.setSl_lastName("Melo");
+        s1.setSalesLeadID(2378);
+        s1.setSL_empID("00001");
+        s1.setSl_phoneNumber ("(716) 464-2290");
+        s1.setSl_Email("narraram@psudealers.com");
+        slList.add(s1);
 
         SalesLead s2 = new SalesLead ();
         s2.setSalesLeadID (1);
@@ -232,7 +238,6 @@ public class Main {
 
         SalesLead s5 = new SalesLead ();
         s5.setSalesLeadID (4);
-
 
 
         // Menu options
@@ -273,14 +278,14 @@ public class Main {
             Scanner input = new Scanner (System.in);
             switch (userAction) {
                 case CUST_CODE:
-                    cList.add(cust.addCustomer());
+                    cList.add (cust.addCustomer ());
                     //cust.printCustomerById(cList, 1);
 
 
                     break;
                 case CUST_PRNT:
-                    System.out.printf("%-10s | %-12s |  %-12s | %-12s | %-10s \n", "ID", "First Name", "Last Name", "Email", "Phone Number");
-                    Customers.printCustomer(cList);
+                    System.out.printf ("%-10s | %-12s |  %-12s | %-12s | %-10s \n", "ID", "First Name", "Last Name", "Email", "Phone Number");
+                    Customers.printCustomer (cList);
 
                     //SalesLead.printSalesLead(slList);
 
@@ -289,33 +294,33 @@ public class Main {
                 case SL_PRNT:
 
                     // to do - print salesperson id as well
-                    System.out.printf("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", "ID", "Employee ID", "Name", "Phone Number", "Email", "Date Added");
-                    SalesLead.printSalesLead(slList);
+                    System.out.printf ("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", "ID", "Employee ID", "Name", "Phone Number", "Email", "Date Added");
+                    SalesLead.printSalesLead (slList);
 
-                    SalesLead.printSalesLeadById(slList, 1);
+                    SalesLead.printSalesLeadById (slList, 1);
                     break;
 
                 case SELL_CODE:
-                    System.out.println("Enter Type ('car'/'truck'/'parts'): ");
-                    String invType = input.nextLine().toLowerCase();
+                    System.out.println ("Enter Type ('car'/'truck'/'parts'): ");
+                    String invType = input.nextLine ().toLowerCase ();
                     // method to get car/truck/parts by id
 
                     switch (invType) {
                         case "car":
-                            System.out.println("Enter VIN:");
-                            String vinNum = input.nextLine();
-                            car.sellCar(carList, vinNum);
+                            System.out.println ("Enter VIN:");
+                            String vinNum = input.nextLine ();
+                            car.sellCar (carList, vinNum);
 
                             break;
                         case "truck":
-                            vinNum = input.nextLine();
-                            truck.sellTruck(truckList, vinNum);
+                            vinNum = input.nextLine ();
+                            truck.sellTruck (truckList, vinNum);
 
                             break;
                         case "parts":
                             //String partName = input.nextLine();
-                            int partID = input.nextInt();
-                            parts.sellParts(partsList, partID);
+                            int partID = input.nextInt ();
+                            parts.sellParts (partsList, partID);
 
                             break;
                     }
@@ -324,26 +329,26 @@ public class Main {
 
 
                 case SL_CODE:
-                    System.out.println("Enter your emp id: ");
-                    String emp_id = input.next();
-                    slList.add(sl.addSL(emp_id));
+                    System.out.println ("Enter your emp id: ");
+                    String emp_id = input.nextLine ();
+                    slList.add (sl.addSL (emp_id));
 
                     break;
 
                 case INV_CODE:
-                    System.out.println("Enter Vehicle Type ('car'/'truck'): ");
-                    String type = input.nextLine().toLowerCase();
+                    System.out.println ("Enter Vehicle Type ('car'/'truck'): ");
+                    String type = input.nextLine ().toLowerCase ();
                     switch (type) {
                         case "car":
-                            car.printCars(carList);
+                            car.printCars (carList);
 
                             break;
                         case "truck":
-                            truck.printTrucks(truckList);
+                            truck.printTrucks (truckList);
 
                             break;
                         case "parts":
-                            parts.printParts(partsList);
+                            parts.printParts (partsList);
 
                             break;
                     }
@@ -352,41 +357,41 @@ public class Main {
 
                 case SEARCH_CODE:
 
-                    Scanner scnr = new Scanner(System.in);
+                    Scanner scnr = new Scanner (System.in);
 
-                    System.out.println("Enter Type ('color'/'model'/'maker'/'VIN'): ");
-                    String searchType = input.nextLine().toLowerCase();
+                    System.out.println ("Enter Type ('color'/'model'/'maker'/'VIN'): ");
+                    String searchType = input.nextLine ().toLowerCase ();
                     // method to get car/truck/parts by id
 
                     switch (searchType) {
                         case "color":
 
-                            System.out.println("Please enter color: ");
-                            String input_ = scnr.nextLine();
+                            System.out.println ("Please enter color: ");
+                            String input_ = scnr.nextLine ();
 
-                            Car.printCarByColor(carList, input_);
+                            Car.printCarByColor (carList, input_);
 
 
                             break;
                         case "maker":
 
-                            System.out.println("Please enter maker: ");
-                            input_ = scnr.nextLine();
+                            System.out.println ("Please enter maker: ");
+                            input_ = scnr.nextLine ();
 
-                            Car.printCarByColor(carList, input_);
+                            Car.printCarByColor (carList, input_);
 
                             break;
                         case "model":
 
-                            System.out.println("Please enter model: ");
-                            input_ = scnr.nextLine();
+                            System.out.println ("Please enter model: ");
+                            input_ = scnr.nextLine ();
 
-                            Car.printCarByModel(carList, input_);
+                            Car.printCarByModel (carList, input_);
 
                             break;
                         case "VIN":
-                            System.out.println("Please enter VIN: ");
-                            input_ = scnr.nextLine();
+                            System.out.println ("Please enter VIN: ");
+                            input_ = scnr.nextLine ();
 
                             //Car.printCarBy(carList, input_);
 
@@ -396,7 +401,7 @@ public class Main {
 
 
                 case ADD_PARTS:
-                    partsList.add(parts.addParts());
+                    partsList.add (parts.addParts ());
 
                     break;
 
@@ -407,16 +412,16 @@ public class Main {
                     //while (userAction != 'E') {
 
                     System.out.println ("Enter Vehicle Type ('car'/'truck'): ");
-                    String inv_type = input.nextLine().toLowerCase();
+                    String inv_type = input.nextLine ().toLowerCase ();
 
                     switch (inv_type) {
                         case "car":
-                            carList.add (car.addCar());
+                            carList.add (car.addCar ());
 
 
                             break;
                         case "truck":
-                            truckList.add (truck.addTruck());
+                            truckList.add (truck.addTruck ());
 
                             break;
                     }
@@ -424,12 +429,12 @@ public class Main {
                     break;
 
                 case TRAN_CODE:
-                    transList.add(tran.addTransaction());
+                    transList.add (tran.addTransaction ());
 
                     break;
 
                 case TRANLIST_CODE:
-                    tran.listTransactions(transList);
+                    tran.listTransactions (transList);
 
                     break;
 
@@ -440,7 +445,6 @@ public class Main {
             userAction = getAction (PROMPT_ACTION);
         }
     }
-
 
 
     public static char getAction(String prompt) {
