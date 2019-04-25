@@ -5,8 +5,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Customers {
-
-
     private int custID;
     private String firstName, lastName, phoneNumber, custEmail, groupID;
     int cCount = 10;
@@ -116,7 +114,6 @@ public class Customers {
         for (Customers cust : cList) {
             //System.out.println("Customer Id: " + cust.getCustomerId());
             System.out.printf("%-10s | %-12s |  %-12s | %-12s | %-10s \n", cust.getCustID(), cust.getFirstName(), cust.getLastName(), cust.getcustEmail(), cust.getPhoneNumber());
-
         }
     }
 
@@ -199,7 +196,6 @@ public class Customers {
         } catch (InputMismatchException notAnEmail) {
             System.out.println("Invalid input. Please try again.");
             return getInput();
-
         }
     }
         // add method purchaseCar
