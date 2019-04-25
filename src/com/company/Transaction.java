@@ -9,7 +9,7 @@ import java.util.Scanner;
 enum PaymentType {credit, cash,}
 
 public class Transaction {
-    
+
     private double commission;
     private int transactionId;
     private PaymentType payment;
