@@ -8,7 +8,9 @@ public class Dealership {
 
     // dealership constructor
 
-    public Dealership() {}
+    public Dealership(name, address, phoneNumber) {
+
+    }
 
     // setters and getters
 

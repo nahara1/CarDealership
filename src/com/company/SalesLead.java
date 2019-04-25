@@ -44,6 +44,7 @@ public class SalesLead {
         sl.setSl_Email(scnr.nextLine());
         sl.setSalesLeadID(cCount);
 
+
         return sl;
     }
 
@@ -115,6 +116,7 @@ public class SalesLead {
 
             // use this to count sales lead -
             System.out.println("Number of Sales Lead: " + slList.size());
+
         }
     }
 
@@ -131,6 +133,7 @@ public class SalesLead {
         Scanner scnr = new Scanner(System.in);
         String input = scnr.nextLine();
         return input;
+
     }
 
     public static String testAlpha(String alphaCharacter) {
@@ -146,7 +149,9 @@ public class SalesLead {
         } catch (InputMismatchException notAnAlpha) {
             System.out.println("Invalid input. Please try again.");
             return getInput();
+
         }
+
     }
 
 
@@ -165,6 +170,7 @@ public class SalesLead {
         } catch (InputMismatchException notAnEmail) {
             System.out.println("Invalid input. Please try again.");
             return getInput();
+
         }
     }
 
@@ -183,6 +189,8 @@ public class SalesLead {
         } catch (InputMismatchException notAnEmail) {
             System.out.println("Invalid input. Please try again.");
             return getInput();
+
         }
     }
+    
 }
