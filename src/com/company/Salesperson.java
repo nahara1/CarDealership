@@ -73,7 +73,7 @@ public class Salesperson {
     public void setPhoneNumber(String _PhoneNumber){this.phoneNumber = _PhoneNumber;}
 
     public String getEmpEmail() {return empEmail;}
-    public void setEmpEmail(String _empEmail) {this.empEmail = _empEmail;}
+    public void setEmpEmail(String _empEmail){this.empEmail = _empEmail;}
 
     //public void sellCar()
 

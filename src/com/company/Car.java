@@ -8,9 +8,6 @@ public final class Car extends Vehicle {
     NumDoors numOfDoors;
 
     public static int Quantity=0;
-    private String vinNum, carMaker, carColor;
-    private int carYear;
-    private double carPrice;
 
 
     public Car() {
@@ -33,9 +30,15 @@ public final class Car extends Vehicle {
 
         // try and catch ??
 
+        // ask for dealership id
+
+
+
         System.out.println("Please enter VIN number: ");
-        vinNum = testVin(getInput());
-        car.setVin(vinNum);
+        car.setVin(scnr.nextLine());
+
+        System.out.println("Please enter VIN number: ");
+        car.setVin(scnr.nextLine());
 
         System.out.println("Please enter car model: ");
         car.setModel(scnr.nextLine());
@@ -58,11 +61,6 @@ public final class Car extends Vehicle {
         return car;
     }
 
-    public static String getInput() {
-        Scanner scnr = new Scanner(System.in);
-        String input = scnr.nextLine();
-        return input;
-    }
 
     public void setQuantity(int newQty) {
         itemQuantity = newQty;
@@ -189,27 +187,7 @@ public final class Car extends Vehicle {
             sellCar(carList, _VIN);
             }
         }
-
-    public static String testVin(String vin) {
-        try {
-
-            if (vin.matches("^[a-zA-Z0-9]")) {
-                return vin;
-            }
-            else  {
-                throw new InputMismatchException("Invalid, Please enter only letters and numbers.");
-            }
-
-
-
-        } catch (InputMismatchException notAnVin) {
-            System.out.println(notAnVin.getMessage());
-            return getInput();
-
-        }
     }
-}
-// h
 
 
 

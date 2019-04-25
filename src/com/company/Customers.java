@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Customers {
 
 
-    private int custID;
+    private int custID,dealershipID;
     private String firstName, lastName, phoneNumber, custEmail, groupID;
     int cCount = 10;
 
@@ -34,6 +34,10 @@ public class Customers {
     public Customers addCustomer() {
         Customers cust = new Customers(cCount++);
         Scanner scnr = new Scanner(System.in);
+
+        // ask for dealership id
+
+        System.out.println("Enter Dealership ID: ");
 
         System.out.println("Please enter customer first name: ");
         firstName = testAlpha(getInput());
