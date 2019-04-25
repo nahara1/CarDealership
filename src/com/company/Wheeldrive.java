@@ -1,3 +1,3 @@
 package com.company;
 
-public enum Wheeldrive {one, four}
+public enum Wheeldrive {two, four}
