@@ -20,7 +20,6 @@ public class Main {
         ArrayList<Customers> cList = new ArrayList<> ();
         Customers cust = new Customers ();
 
-
         //Dealerships
         Dealership dealer1 = new Dealership ("Car Dealership Abington", "123 St Ave Town, PA 12345", "1234567890");
         Dealership dealer2 = new Dealership ("Car Dealership Bensalem", "123 St Ave Town, PA 12345", "1234567890");
@@ -28,7 +27,6 @@ public class Main {
         //ArrayList<Dealership> listDealerships = new ArrayList<>();
         //listDealerships.add(dealer1);
         //listDealerships.add(dealer2);
-
 
         ArrayList<SalesLead> slList = new ArrayList<> ();
 

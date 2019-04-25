@@ -47,7 +47,6 @@ public final class Truck extends Vehicle {
         return truck;
     }
 
-
         public void setTon (Ton _tonage){
             tonage = _tonage;
         }

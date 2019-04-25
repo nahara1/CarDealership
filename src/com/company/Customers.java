@@ -35,9 +35,11 @@ public class Customers {
         Customers cust = new Customers(cCount++);
         Scanner scnr = new Scanner(System.in);
 
-        // ask for dealership id
+        // ask for dealership id / location ??
 
         System.out.println("Enter Dealership ID: ");
+        int dealershipID = scnr.nextInt();
+        cust.setDealershipID(dealershipID);
 
         System.out.println("Please enter customer first name: ");
         firstName = testAlpha(getInput());
@@ -213,6 +215,15 @@ public class Customers {
 
         }
     }
-        // add method purchaseCar
+
+
+    private void setDealershipID(int _dealershipID) {
+        this.dealershipID = _dealershipID;
+    }
+
+    private int getDealershipID() {
+        return dealershipID;
+    }
+
     }
 
