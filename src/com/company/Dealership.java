@@ -7,8 +7,6 @@ public class Dealership {
 
     // Dealership constructor
 
-    public Dealership (String name, String address, String phoneNumber) {}
-
     public Dealership() {}
 
     // setters and getters

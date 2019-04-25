@@ -58,12 +58,6 @@ public class Transaction {
 
     public Transaction() {}
 
-    public Transaction(int _transactionId, PaymentType _pType, double _subTotal){
-        this.transactionId = _transactionId;
-        this.payment = _pType;
-        this.subTotal = _subTotal;
-    }
-
     private double calculateTransaction(double transactionSubtotal, double tax) {
         totalPrice = transactionSubtotal * tax;
         totalPrice = Math.round(totalPrice*100.0)/100.0;
