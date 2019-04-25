@@ -30,6 +30,11 @@ public class Dealership {
 
     // list information for all dealerships
 
+    /**
+     * listDealerships will print information for dealerships
+     * @param dealerList dealership array list
+     */
+
     public void listDealerships(ArrayList<Dealership> dealerList) {
         System.out.println("Dealership Locations:");
         for (Dealership dealer : dealerList) {

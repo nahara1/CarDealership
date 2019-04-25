@@ -58,6 +58,13 @@ public class Transaction {
 
     public Transaction() {}
 
+    /**
+     * calculateTransaction multiplies subtotal and tax, then rounds
+     * @param transactionSubtotal subTotal
+     * @param tax flat rate 6%
+     * @return totalPrice
+     */
+
     private double calculateTransaction(double transactionSubtotal, double tax) {
         totalPrice = transactionSubtotal * tax;
         totalPrice = Math.round(totalPrice*100.0)/100.0;
@@ -65,6 +72,11 @@ public class Transaction {
     }
 
     private static DecimalFormat df2 = new DecimalFormat("#.00");
+
+    /**
+     * addTransaction will add a new transaction to the array list of transactios
+     * @return transaction
+     */
 
     public Transaction addTransaction() {
         System.out.println("Enter transaction ID, subtotal");
@@ -87,6 +99,11 @@ public class Transaction {
         System.out.println("Transaction recorded");
         return tran;
     }
+
+    /**
+     * listTransactions will print list of previous transactions
+     * @param transList Transaction array list
+     */
 
     public static void listTransactions(ArrayList<Transaction> transList) {
         System.out.println("Transaction History:");
