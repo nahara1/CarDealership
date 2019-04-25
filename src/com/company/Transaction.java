@@ -18,7 +18,6 @@ public class Transaction {
     private double totalPrice;
     private double tax = 1.06;
 
-
     // Transaction ID
 
     public int getTransactionId() { return transactionId; }
@@ -64,7 +63,7 @@ public class Transaction {
         return payment;
     }
 
-    // Purchase
+    // Transaction
 
     public Transaction() {}
 
