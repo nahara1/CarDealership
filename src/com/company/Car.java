@@ -9,7 +9,6 @@ public final class Car extends Vehicle {
 
     public static int Quantity=0;
 
-
     public Car() {
 
     }
