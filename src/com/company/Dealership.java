@@ -10,14 +10,9 @@ public class Dealership {
 
     // dealership constructor
 
-    public Dealership(String name, String address, String phoneNumber) {
+    public Dealership(String name, String address, String phoneNumber) {}
 
-    }
-
-
-    public Dealership() {
-
-    }
+    public Dealership() {}
 
     // setters and getters
 
@@ -71,15 +66,12 @@ public class Dealership {
             else  {
                 throw new InputMismatchException("not alpha");
             }
-
-        } catch (InputMismatchException notAnAlpha) {
+        }
+        catch (InputMismatchException notAnAlpha) {
             System.out.println("Invalid input. Please try again.");
             return getInput();
-
         }
-
     }
-
 }
 
 
