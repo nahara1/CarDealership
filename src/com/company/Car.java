@@ -72,6 +72,10 @@ public final class Car extends Vehicle {
         System.out.println(itemName + " " + itemQuantity);
     }
 
+    @Override
+    protected void setDoors() {
+
+    }
 
 
     /**
