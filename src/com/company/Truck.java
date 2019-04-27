@@ -12,8 +12,6 @@ public final class Truck extends Vehicle {
     public static int quantity = 0;
 
 
-
-
 // Constructor
 
     public Truck(String _Vin) {
@@ -37,7 +35,7 @@ public final class Truck extends Vehicle {
         System.out.println ("Please enter truck year: ");
         truck.setYear (scnr.nextInt ());
         truck.setTon();
-        truck.setDoors();
+        truck.setNumOfDoors();
 
 
         System.out.println ("Please enter truck color: ");
