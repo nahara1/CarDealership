@@ -32,7 +32,6 @@ public final class Car extends Vehicle {
         // ask for dealership id
 
 
-
         System.out.println("Please enter VIN number: ");
         car.setVin(scnr.nextLine());
 
@@ -48,7 +47,7 @@ public final class Car extends Vehicle {
         System.out.println("Please enter car year: ");
         car.setYear(scnr.nextInt());
 
-        car.setDoors();
+        car.setNumOfDoors();
 
         scnr.nextLine(); //IMPORTANT: do not remove, needed so that setColor works properly
         System.out.println("Please enter car color: ");

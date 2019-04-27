@@ -67,11 +67,13 @@ public abstract class Vehicle {
 
     public int getYear() { return year; }
 
-    public void setYear(int _carYear) {
-        this.year = _carYear;
-    }
+    public void setYear(int _carYear) { this.year = _carYear; }
 
-    public NumDoors setDoors() {
+    public void setNumOfDoors(NumDoors _numDoors) { this.numDoors = _numDoors; }
+
+    public NumDoors getNumOfDoors(NumDoors _numDoors) { return numDoors; }
+
+    public NumDoors setNumOfDoors() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter number of doors ('two' / 'four'): ");
         numDoors = NumDoors.valueOf(input.next().toLowerCase());

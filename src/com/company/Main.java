@@ -20,6 +20,10 @@ public class Main {
         ArrayList<Customers> cList = new ArrayList<> ();
         Customers cust = new Customers ();
 
+
+        ArrayList<Dealership> listDealerships = new ArrayList<>();
+
+
         //Dealerships
         Dealership dealer1 = new Dealership ();
         dealer1.setDealershipID(1);
@@ -55,8 +59,6 @@ public class Main {
         Parts parts = new Parts ();
         Transaction tran = new Transaction ();
         Dealership deal = new Dealership();
-
-
         Salesperson sp = new Salesperson ();
         SalesLead sl = new SalesLead ();
 
@@ -76,7 +78,7 @@ public class Main {
         car1.setModel("Sedan");
         car1.setMaker("Ford");
         car1.setName("Name");
-        //car1.setDoors('two');
+        car1.setNumOfDoors(NumDoors.two);
         car1.setPrice(20000);
 
 
@@ -88,6 +90,7 @@ public class Main {
         car2.setModel("Hatchback");
         car2.setMaker("Volkswagen");
         car2.setName("Name2");
+        car2.setNumOfDoors(NumDoors.four);
         car2.setPrice(30000);
 
 
@@ -98,6 +101,7 @@ public class Main {
         car3.setModel("Hatchback");
         car3.setMaker("Chevrolet");
         car3.setName("Name3");
+        car3.setNumOfDoors(NumDoors.two);
         car3.setPrice(21000);
 
 
@@ -108,11 +112,17 @@ public class Main {
         car4.setModel("Coupe");
         car4.setMaker("Honda");
         car4.setName("Name");
+        car4.setNumOfDoors(NumDoors.four);
         car4.setPrice(19000);
 
-        //Car car5 = new Car ("6H3M2X");
-        //carList.add(car5);
-        //car5.setColor("Yellow");
+        Car car5 = new Car ("6H3M2X");
+        carList.add(car5);
+        car5.setColor("Yellow");
+        car4.setYear(2008);
+        car4.setModel("Sedan");
+        car4.setMaker("Volkswagen");
+        car4.setName("Name");
+        car1.setNumOfDoors(NumDoors.two);
 
 
         // Trucks
