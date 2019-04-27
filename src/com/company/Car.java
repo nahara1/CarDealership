@@ -6,6 +6,10 @@ public final class Car extends Vehicle {
 
 
     NumDoors numOfDoors;
+    protected String itemName;
+
+    protected int itemQuantity;
+
 
     public static int Quantity=0;
 
@@ -68,20 +72,6 @@ public final class Car extends Vehicle {
         System.out.println(itemName + " " + itemQuantity);
     }
 
-
-    public NumDoors getNumOfDoors() {
-        return numOfDoors;
-    }
-
-    public void setNumOfDoors(NumDoors _numOfDoors) {
-        this.numOfDoors = _numOfDoors;
-    }
-
-
-
-    protected String itemName;
-
-    protected int itemQuantity;
 
 
     /**
@@ -169,6 +159,15 @@ public final class Car extends Vehicle {
                 }
             }
     }
+
+    /**
+     *
+     * sellCar method removes a car item from the car array list
+     * @param carList car Array List
+     * @param _VIN Vehicle Identification Number
+     *
+     */
+
 
     public static void sellCar(ArrayList<Car> carList, String _VIN) {
 
