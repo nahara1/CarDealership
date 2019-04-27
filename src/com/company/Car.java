@@ -184,7 +184,12 @@ public final class Car extends Vehicle {
             sellCar(carList, _VIN);
             }
         }
+
+    @Override
+    protected void setDoors() {
+
     }
+}
 
 
 
