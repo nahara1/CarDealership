@@ -6,7 +6,16 @@ import java.util.Scanner;
 
 import java.util.ArrayList;
 
-public class Parts {
+/**
+ * <h1>Parts</h1>
+ *
+ * The Parts program contains setters, getter, and methods that add, modify,
+ * and remove auto parts items
+ * <p>
+ *
+ */
+
+ public class Parts {
 
 
     private int partID;
@@ -35,8 +44,7 @@ public class Parts {
     /**
      * addParts method adds parts to inventory
      * <p>
-     * Longer description. If there were any, it would be    (2)
-     * here.
+     *
      * </p>
      *
      * @return parts object of the Parts class
@@ -82,6 +90,18 @@ public class Parts {
     public void setPartName(String anyName) {
         this.name = anyName;
     }
+
+
+    /**
+     * setCategory method sets category type for an auto part
+     *
+     * <p>
+     * This method asks user to enter a category type predetermined by the
+     * PartsCategory enum
+     * </p>
+     *
+     * @return part Category
+     */
 
     public PartsCategory setCategory() {
         Scanner input = new Scanner(System.in);
