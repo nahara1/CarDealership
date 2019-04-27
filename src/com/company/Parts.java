@@ -89,7 +89,6 @@ public class Parts {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter Parts Type ('electronic', 'engine', 'interior', 'exterior', 'control'): ");
         partCategory = PartsCategory.valueOf(input.next().toLowerCase());
-        // add if statement for cash payment to calculate change
         return partCategory;
     }
 
@@ -110,7 +109,6 @@ public class Parts {
 */
     public static void sellParts(ArrayList<Parts> partsList, int _partID) {
         for (Parts parts : partsList) {
-           //nt _partName = parts.getPartID();
             if (parts.getPartID() == _partID) {
                 partsList.remove(parts);
             }
