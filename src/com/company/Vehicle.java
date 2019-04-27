@@ -81,6 +81,7 @@ public abstract class Vehicle {
         return numDoors;
     }
 
+    protected abstract void setDoors();
 
 
 //public abstract void addCarToInventory(Car car1);

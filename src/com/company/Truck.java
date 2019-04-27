@@ -80,6 +80,10 @@ public final class Truck extends Vehicle {
         }
     }
 
+    @Override
+    protected void setDoors() {
+
+    }
 }
 
 
