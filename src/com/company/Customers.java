@@ -9,7 +9,7 @@ public class Customers {
 
     private int custID,dealershipID;
     private String firstName, lastName, phoneNumber, custEmail, groupID;
-    int cCount = 10;
+    int cCount = 00001;
 
     /**
      * Customer constructor
