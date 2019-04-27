@@ -77,6 +77,10 @@ public final class Car extends Vehicle {
         this.numOfDoors = _numOfDoors;
     }
 
+    @Override
+    protected void setDoors() {
+
+    }
 
 
     protected String itemName;
