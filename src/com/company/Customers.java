@@ -6,16 +6,30 @@ import java.util.Scanner;
 
 public class Customers {
 
+    /**
+     * Unique identification numbers of customers and dealerships
+     */
+    private int custID, dealershipID;
 
-    private int custID,dealershipID;
+    /**
+     * The first and last names, phone number, and email of customers
+     *
+     * Group ID is a unique number that groups customers based on their first
+     * last name initials
+     *
+     */
     private String firstName, lastName, phoneNumber, custEmail, groupID;
+
+
+    /**
+     * Counter to automatically generate customer IDs
+     */
     int cCount = 00001;
 
     /**
      * Customer constructor
      * @param custID customer ID
      */
-
     Customers(int custID) {
     }
 
@@ -28,7 +42,6 @@ public class Customers {
      * addCustomer method adds a new car dealership customer
      * @return a Customer object
      */
-
 
   
     public Customers addCustomer() {
@@ -144,14 +157,33 @@ public class Customers {
             }
         }
 
+    /**
+     * countCustomers method counts the number of dealership customers
+     * @param cList customers Array List
+     */
+
+
     public static void countCustomers(ArrayList<Customers> cList) {
             System.out.println("Customers Total: " + cList.size());
 
              }
+/*
 
 
+    public static void countCustomersByDealership(ArrayList<Customers> cList, int _cdID) {
+        System.out.println("Customers Total: " + cList.size());
 
-   
+    }
+*/
+
+    /**
+     * getInput method prompts user for an input
+     * <p>
+     *  This method is used inside the addCustomer method to
+     *  ask for customer information and add that information
+     *  in the customer array list.
+     * </p>
+     */
     public static String getInput() {
         Scanner scnr = new Scanner(System.in);
         String input = scnr.nextLine();
@@ -217,6 +249,7 @@ public class Customers {
     }
 
 
+    // still working on this
     private void setDealershipID(int _dealershipID) {
         this.dealershipID = _dealershipID;
     }
@@ -224,6 +257,7 @@ public class Customers {
     private int getDealershipID() {
         return dealershipID;
     }
+
 
     }
 

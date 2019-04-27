@@ -5,7 +5,16 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Dealership {
+
+    /**
+     * The name, address, and phone number of teh dealership
+     */
     private String name, address, phoneNumber;
+
+    /**
+     * The dealership unique identification number
+     */
+
     private int dealershipID;
 
     // dealership constructor
@@ -15,6 +24,11 @@ public class Dealership {
     public Dealership() {}
 
     // setters and getters
+
+    /**
+     * getDealershipID method lists customers information
+     *
+     */
 
     public int getDealershipID() { return dealershipID; }
 
