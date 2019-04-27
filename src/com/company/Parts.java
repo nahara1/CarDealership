@@ -12,11 +12,16 @@ public class Parts {
     private int partID;
     private String name;
     private PartsCategory partCategory;
+    int cCount = 00001;
 
 
     // constructors
 
     public Parts() {
+
+    }
+
+    public Parts(int _partsID) {
 
     }
 
@@ -28,7 +33,7 @@ public class Parts {
     }
 
     /**
-     * addParts method adds parts to inventory               (1)
+     * addParts method adds parts to inventory
      * <p>
      * Longer description. If there were any, it would be    (2)
      * here.
@@ -38,27 +43,20 @@ public class Parts {
      */
 
     public Parts addParts() {
-        Parts parts = new Parts();
+        Parts parts = new Parts(cCount++);
         Scanner scnr = new Scanner(System.in);
         System.out.println("Please enter part name: ");
+        name = testAlpha(getInput());
+        parts.setPartName(name);
 
-
-        try {
-            setPartName(scnr.nextLine());
-            parts.setCategory();
-            return parts;
-
-        } catch (InputMismatchException notAnAlpha) {
-
-            System.out.println("Invalid input. You did not enter an alpha character. Please try again.\n");
-        }
+        parts.setCategory();
 
         // add part price
 
+        parts.setPartID(cCount);
+
         return parts;
     }
-
-
 
     public int getPartID() {
         return partID;
@@ -89,7 +87,6 @@ public class Parts {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter Parts Type ('electronic', 'engine', 'interior', 'exterior', 'control'): ");
         partCategory = PartsCategory.valueOf(input.next().toLowerCase());
-        // add if statement for cash payment to calculate change
         return partCategory;
     }
 
@@ -110,11 +107,35 @@ public class Parts {
 */
     public static void sellParts(ArrayList<Parts> partsList, int _partID) {
         for (Parts parts : partsList) {
-           //nt _partName = parts.getPartID();
             if (parts.getPartID() == _partID) {
                 partsList.remove(parts);
             }
         }
+    }
+
+    public static String getInput() {
+        Scanner scnr = new Scanner(System.in);
+        String input = scnr.nextLine();
+        return input;
+
+    }
+
+    public static String testAlpha(String alphaCharacter) {
+        try {
+
+            if (alphaCharacter.matches("^[a-zA-Z]*$")) {
+                return alphaCharacter;
+            }
+            else  {
+                throw new InputMismatchException("not alpha");
+            }
+
+        } catch (InputMismatchException notAnAlpha) {
+            System.out.println("Invalid input. Please try again.");
+            return getInput();
+
+        }
+
     }
 
 }

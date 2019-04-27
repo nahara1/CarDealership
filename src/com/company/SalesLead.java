@@ -33,16 +33,27 @@ public class SalesLead {
         // fix this
         System.out.println("Employee ID: " + _empID);
         sl.setSL_empID(_empID);
+
         System.out.println("Please enter SL first name: ");
-        sl.setSl_firstName(scnr.nextLine());
+        sl_firstName = testAlpha(getInput());
+        sl.setSl_firstName(sl_firstName);
+
         System.out.println("Please enter SL last name: ");
-        sl.setSl_lastName(scnr.nextLine());
+        sl_lastName = testAlpha(getInput());
+        sl.setSl_lastName(sl_lastName);
+
         System.out.println("Please enter date: ");
-        sl.setSl_Date(scnr.nextLine());
+        salesLeadDate = testDate(getInput());
+        sl.setSl_Date(salesLeadDate);
+
         System.out.println("Please enter SL phone number: ");
-        sl.setSl_phoneNumber(scnr.nextLine());
+        sl_phoneNumber = testPhone(getInput());
+        sl.setSl_phoneNumber(sl_phoneNumber);
+
         System.out.println("Please enter SL email: ");
-        sl.setSl_Email(scnr.nextLine());
+        sl_Email = testEmail(getInput());
+        sl.setSl_Email(sl_Email);
+
         sl.setSalesLeadID(cCount);
 
 
@@ -180,6 +191,25 @@ public class SalesLead {
 
             if (phone.matches("^[(]+[0-9]+[)]+[\\s]+[0-9]+[-]+[0-9]+$")) {
                 return phone;
+            }
+            else  {
+                throw new InputMismatchException("invalid");
+            }
+
+
+
+        } catch (InputMismatchException notAnEmail) {
+            System.out.println("Invalid input. Please try again.");
+            return getInput();
+
+        }
+    }
+
+    public static String testDate(String date) {
+        try {
+
+            if (date.matches("/\\d+[/][\\d][/][\\d]+$")) {
+                return date;
             }
             else  {
                 throw new InputMismatchException("invalid");

@@ -35,7 +35,7 @@ public class Dealership {
     // list information for all dealerships
 
     /**
-     * listDealerships will print information for dealerships
+     * listDealerships prints dealership information
      * @param dealerList dealership array list
      */
 

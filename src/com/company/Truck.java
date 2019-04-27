@@ -36,8 +36,6 @@ public final class Truck extends Vehicle {
         truck.setYear (scnr.nextInt ());
         truck.setTon();
         truck.setNumOfDoors();
-
-
         System.out.println ("Please enter truck color: ");
         truck.setColor (scnr.nextLine ());
 
