@@ -185,8 +185,8 @@ public class Customers {
      *
      * <p>
      *  This method is used inside the addCustomer method to
-     *  ask for customer information and add that information
-     *  in the customer array list.
+     *  ask for customer information and then through setters
+     *  add that information into the customer array list.
      * </p>
      *
      * @return input
