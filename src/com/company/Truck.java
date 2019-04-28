@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.*;
 
 import java.util.ArrayList;
 
@@ -88,12 +89,12 @@ public final class Truck extends Vehicle {
 
     /**
      * <p>
-     * printTrucks method
-     * and convert it to lowercase
+     * printTrucks method have a for each method to
+     * print out all trucks' name, vin number, module, maker, color
+     * that are in the inventory on certain format
      * <p>
      *
-     *
-     * @return tonage object
+     *@param truckArrayList
      */
     public static void printTrucks(ArrayList<Truck> truckArrayList) {
         for (Truck truck : truckArrayList) {
@@ -102,14 +103,30 @@ public final class Truck extends Vehicle {
         }
     }
 
+    /**
+     *
+     * sellTruck method removes a truck item from the truck array list
+     * @param trucksList car Array List
+     * @param _VIN Vehicle Identification Number
+     * @throws ConcurrentModificationException if VIN does not correspond
+     *                                         to any truck in the inventory
+     *
+     */
     public static void sellTruck(ArrayList<Truck> trucksList, String _VIN) {
-        for (Truck truck : trucksList) {
+        try {
+            for (Truck truck : trucksList) {
 
-            if (truck.getVin().equals(_VIN)) {
+                if (truck.getVin().equals(_VIN)) {
 
-                trucksList.remove(truck);
+                    trucksList.remove(truck);
+                }
             }
         }
+        catch (ConcurrentModificationException e){
+            System.out.println("Invalid input. Make sure you entered the correct VIN.");
+            sellTruck(trucksList, _VIN);
+        }
+
     }
 
     @Override
