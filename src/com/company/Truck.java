@@ -45,13 +45,17 @@ public final class Truck extends Vehicle {
         System.out.println ("Please enter truck maker: ");
         truck.setMaker (scnr.nextLine ());
         System.out.println ("Please enter truck year: ");
-        truck.setYear (scnr.nextInt ());
+        String _year = testInt(getInput());
+        year = Integer.parseInt(_year);
+        truck.setYear(year);
         truck.setTon();
         truck.setNumOfDoors();
         System.out.println ("Please enter truck color: ");
         truck.setColor (scnr.nextLine ());
         System.out.println("Please enter truck price: ");
-        super.price = Double.parseDouble(getInput());
+        price = Double.parseDouble(getInput());
+        String _price = testDouble(getInput());
+        price = Double.parseDouble(_price);
         truck.setPrice(price);
 
         return truck;
@@ -105,7 +109,21 @@ public final class Truck extends Vehicle {
 
     }
 
-    public static String testNum(String price) {
+    /**
+     * testDouble method tests if input is a double
+     *
+     * <p>
+     *  This method consists of a try and catch block
+     *  to assure user input for setting an auto part price
+     *  is a double.
+     * </p>
+     *
+     * @param price user input
+     * @return a price
+     * @throws InputMismatchException if input tested is not a double
+     *
+     */
+    public static String testDouble(String price) {
         try {
 
             if (price.matches("\\d+\\.\\d*$")) {
@@ -121,6 +139,20 @@ public final class Truck extends Vehicle {
 
         }
 
+    }
+
+    public static String testInt(String input) {
+        try {
+            if (input.matches("\\d*$")) {
+                return input;
+            }
+            else  {
+                throw new NumberFormatException("not an integer");
+            }
+        } catch (NumberFormatException notAnInt) {
+            System.out.println("Invalid input. You did not enter an integer number. Please try again. \n");
+            return getInput();
+        }
     }
 }
 

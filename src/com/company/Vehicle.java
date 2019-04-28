@@ -13,7 +13,7 @@ public abstract class Vehicle {
     protected int dealershipID;
 
     protected String maker, model, color;
-    private int year;
+    protected int year;
 
     public double getPrice() { return price; }
 

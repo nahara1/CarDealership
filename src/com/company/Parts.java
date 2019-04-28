@@ -91,9 +91,7 @@ import java.util.ArrayList;
         System.out.println("Please enter part name: ");
         name = testAlpha(getInput());
         parts.setPartName(name);
-
         parts.setCategory();
-
         System.out.println("Please enter part price: ");
         price = Double.parseDouble(getInput());
         parts.setPrice(price);

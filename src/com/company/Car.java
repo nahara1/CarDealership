@@ -44,25 +44,32 @@ public final class Car extends Vehicle {
         car.setDealershipID(scnr.nextInt());
 
         System.out.println("Please enter VIN number: ");
-        car.setVin(scnr.nextLine());
+        car.setVin(scnr.next());
 
         System.out.println("Please enter car model: ");
-        car.setModel(scnr.nextLine());
+        model = testAlpha(getInput());
+        car.setModel(model);
 
         System.out.println("Please enter car maker: ");
-        car.setMaker(scnr.nextLine());
+        maker = testAlpha(getInput());
+        car.setMaker(maker);
 
         System.out.println("Please enter car year: ");
-        car.setYear(scnr.nextInt());
+        String _year = testInt(getInput());
+        year = Integer.parseInt(_year);
+        car.setYear(year);
 
         car.setNumOfDoors();
 
-        scnr.nextLine(); //IMPORTANT: do not remove, needed so that setColor works properly
+        //scnr.nextLine(); //IMPORTANT: do not remove, needed so that setColor works properly
+
         System.out.println("Please enter car color: ");
-        car.setColor(scnr.nextLine());
+        color = testAlpha(getInput());
+        car.setColor(color);
 
         System.out.println("Please enter car price: ");
-        super.price = Double.parseDouble(getInput());
+        String _price = testDouble(getInput());
+        price = Double.parseDouble(_price);
         car.setPrice(price);
 
         return car;
@@ -198,8 +205,55 @@ public final class Car extends Vehicle {
         return input;
 
     }
+    /**
+     * testAlpha method tests if input contains alpha characters
+     *
+     * <p>
+     *  This method consists of a try and catch block
+     *  to assure user input contains only alpha characters.
+     * </p>
+     *
+     * @param alphaCharacter user input
+     * @return a String of alpha characters
+     * @throws InputMismatchException if string tested does not contain
+     *                                alpha characters
+     *
+     */
 
-    public static String testNum(String price) {
+    public static String testAlpha(String alphaCharacter) {
+        try {
+
+            if (alphaCharacter.matches("^[a-zA-Z]*$")) {
+                return alphaCharacter;
+            }
+            else  {
+                throw new InputMismatchException("not alpha");
+            }
+
+        } catch (InputMismatchException notAnAlpha) {
+            System.out.println("Invalid input. Please try again.");
+            return getInput();
+
+        }
+
+    }
+
+
+    /**
+     * testDouble method tests if input is a double
+     *
+     * <p>
+     *  This method consists of a try and catch block
+     *  to assure user input for setting an auto part price
+     *  is a double.
+     * </p>
+     *
+     * @param price user input
+     * @return a price
+     * @throws InputMismatchException if input tested is not a double
+     *
+     */
+    public static String testDouble(String price) {
         try {
 
             if (price.matches("\\d+\\.\\d*$")) {
@@ -215,6 +269,20 @@ public final class Car extends Vehicle {
 
         }
 
+    }
+
+    public static String testInt(String input) {
+        try {
+            if (input.matches("\\d*$")) {
+                return input;
+            }
+            else  {
+                throw new NumberFormatException("not an integer");
+            }
+        } catch (NumberFormatException notAnInt) {
+            System.out.println("Invalid input. You did not enter an integer number. Please try again. \n");
+            return getInput();
+        }
     }
 }
 
