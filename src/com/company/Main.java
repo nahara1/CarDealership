@@ -6,7 +6,6 @@ Team: 2
 Date Developed: 2/15
 Last Date Changed: 4/27
 Rev:
-Checking to see if updates to Git
 */
 
 
@@ -16,7 +15,6 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//import static com.company.Parts.sellTruck;
 
 /**
  * @author Team 2
@@ -30,7 +28,6 @@ public class Main {
 
         ArrayList<Customers> cList = new ArrayList<> ();
         Customers cust = new Customers ();
-
 
         ArrayList<Dealership> listDealerships = new ArrayList<>();
 

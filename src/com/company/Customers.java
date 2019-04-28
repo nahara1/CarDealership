@@ -40,10 +40,14 @@ public class Customers {
 
     /**
      * addCustomer method adds a new car dealership customer
+     *
+     * <p>
+     *    The addCustomer method prompts user for multiple inputs
+     *    to get customer information to be stored in an array list.
+     * </p>
+     *
      * @return a Customer object
      */
-
-  
     public Customers addCustomer() {
         Customers cust = new Customers(cCount++);
         Scanner scnr = new Scanner(System.in);
@@ -178,11 +182,14 @@ public class Customers {
 
     /**
      * getInput method prompts user for an input
+     *
      * <p>
      *  This method is used inside the addCustomer method to
      *  ask for customer information and add that information
      *  in the customer array list.
      * </p>
+     *
+     * @return input
      */
     public static String getInput() {
         Scanner scnr = new Scanner(System.in);
@@ -191,6 +198,21 @@ public class Customers {
 
     }
 
+
+    /**
+     * testAlpha method tests if input contains alpha characters
+     *
+     * <p>
+     *  This method consists of a try and catch block
+     *  to assure user input contains only alpha characters.
+     * </p>
+     *
+     * @param alphaCharacter user input
+     * @return a String of alpha characters
+     * @throws InputMismatchException if string tested does not contain
+     *                                alpha characters
+     *
+     */
     public static String testAlpha(String alphaCharacter) {
         try {
 
@@ -209,7 +231,20 @@ public class Customers {
 
     }
 
-
+    /**
+     * testEmail method tests if input matches an email format
+     *
+     * <p>
+     *  This method consists of a try and catch block
+     *  to assure user input follows a standard email format.
+     * </p>
+     *
+     * @param email user input
+     * @return an email address
+     * @throws InputMismatchException if string tested does not match
+     *                                email format
+     *
+     */
     public static String testEmail(String email) {
         try {
 
@@ -229,6 +264,20 @@ public class Customers {
         }
     }
 
+    /**
+     * testPhone method tests if input matches a phone number format
+     *
+     * <p>
+     *  This method consists of a try and catch block
+     *  to assure user input follows a standard phone number format.
+     * </p>
+     *
+     * @param phone user input
+     * @return a phone number
+     * @throws InputMismatchException if input tested does not match
+     *                                phone number format
+     *
+     */
     public static String testPhone(String phone) {
         try {
 
