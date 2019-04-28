@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import java.util.ArrayList;
@@ -35,6 +36,8 @@ public final class Truck extends Vehicle {
     public Truck addTruck() {
         Truck truck = new Truck ();
         Scanner scnr = new Scanner (System.in);
+        System.out.println("Enter Dealership ID: ");
+        truck.setDealershipID(scnr.nextInt());
         System.out.println ("Please enter VIN number: ");
         truck.setVin (scnr.nextLine ());
         System.out.println ("Please enter truck model: ");
@@ -48,8 +51,8 @@ public final class Truck extends Vehicle {
         System.out.println ("Please enter truck color: ");
         truck.setColor (scnr.nextLine ());
         System.out.println("Please enter truck price: ");
-        truck.setPrice(scnr.nextDouble());
-
+        super.price = Double.parseDouble(getInput());
+        truck.setPrice(price);
 
         return truck;
     }
@@ -70,7 +73,6 @@ public final class Truck extends Vehicle {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter tonage ('one' / 'two'): ");
         tonage = Ton.valueOf(input.next().toLowerCase());
-        // add if statement for cash payment to calculate change
         return tonage;
     }
 
@@ -93,6 +95,31 @@ public final class Truck extends Vehicle {
 
     @Override
     protected void setDoors() {
+
+    }
+
+    public static String getInput() {
+        Scanner scnr = new Scanner(System.in);
+        String input = scnr.nextLine();
+        return input;
+
+    }
+
+    public static String testNum(String price) {
+        try {
+
+            if (price.matches("\\d+\\.\\d*$")) {
+                return price;
+            }
+            else  {
+                throw new InputMismatchException("not price");
+            }
+
+        } catch (InputMismatchException notAnAlpha) {
+            System.out.println("Invalid input. Please try again.");
+            return getInput();
+
+        }
 
     }
 }

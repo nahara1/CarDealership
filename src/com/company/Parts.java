@@ -94,7 +94,7 @@ import java.util.ArrayList;
 
         parts.setCategory();
 
-        System.out.println("Please enter part name: ");
+        System.out.println("Please enter part price: ");
         price = Double.parseDouble(getInput());
         parts.setPrice(price);
 

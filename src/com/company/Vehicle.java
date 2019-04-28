@@ -8,8 +8,9 @@ public abstract class Vehicle {
     private String name;
     private Date built;
     private Wheeldrive wheeldrive;
-    private NumDoors numDoors;
-    private double price;
+    protected NumDoors numDoors;
+    protected double price;
+    protected int dealershipID;
 
     protected String maker, model, color;
     private int year;
@@ -71,18 +72,13 @@ public abstract class Vehicle {
     public void setYear(int _carYear) { this.year = _carYear; }
 
     public void setNumOfDoors(NumDoors _numDoors) { this.numDoors = _numDoors; }
+
     public NumDoors getNumOfDoors(NumDoors _numDoors) { return numDoors; }
 
-    /**
-     * setNumOfDoors prompts user for an input
-     *
-     * <p>
-     * setNumOfDoors method ask for number of doors
-     * and convert it to lowercase
-     * <p>
-     *
-     * @return numDoors object
-     */
+    public void setDealershipID(int _dealershipID) { this.dealershipID = _dealershipID; }
+
+    public int getDealershipID() { return dealershipID; }
+
     public NumDoors setNumOfDoors() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter number of doors ('two' / 'four'): ");
@@ -93,30 +89,7 @@ public abstract class Vehicle {
 
     protected abstract void setDoors();
 
-    public static String getInput() {
-        Scanner scnr = new Scanner(System.in);
-        String input = scnr.nextLine();
-        return input;
 
-    }
-
-    public static String testNum(String price) {
-        try {
-
-            if (price.matches("\\d+\\.\\d*$")) {
-                return price;
-            }
-            else  {
-                throw new InputMismatchException("not price");
-            }
-
-        } catch (InputMismatchException notAnAlpha) {
-            System.out.println("Invalid input. Please try again.");
-            return getInput();
-
-        }
-
-    }
 
 
    //public abstract void addCarToInventory(Car car1);

@@ -40,6 +40,8 @@ public final class Car extends Vehicle {
 
         // ask for dealership id
 
+        System.out.println("Enter Dealership ID: ");
+        car.setDealershipID(scnr.nextInt());
 
         System.out.println("Please enter VIN number: ");
         car.setVin(scnr.nextLine());
@@ -60,7 +62,8 @@ public final class Car extends Vehicle {
         car.setColor(scnr.nextLine());
 
         System.out.println("Please enter car price: ");
-        car.setPrice(scnr.nextDouble());
+        super.price = Double.parseDouble(getInput());
+        car.setPrice(price);
 
         return car;
     }
@@ -187,7 +190,33 @@ public final class Car extends Vehicle {
             sellCar(carList, _VIN);
             }
         }
+
+
+    public static String getInput() {
+        Scanner scnr = new Scanner(System.in);
+        String input = scnr.nextLine();
+        return input;
+
     }
+
+    public static String testNum(String price) {
+        try {
+
+            if (price.matches("\\d+\\.\\d*$")) {
+                return price;
+            }
+            else  {
+                throw new InputMismatchException("not price");
+            }
+
+        } catch (InputMismatchException notAnAlpha) {
+            System.out.println("Invalid input. Please try again.");
+            return getInput();
+
+        }
+
+    }
+}
 
 
 
