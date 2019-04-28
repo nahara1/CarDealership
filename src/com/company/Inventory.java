@@ -5,16 +5,21 @@ import java.util.*;
 
 public class Inventory {
 
-    //Data Members
+    /**
+     * Protected Data Members
+     * Inventory have ArrayList of carsList, partsList, trucksList, transList
+     */
     protected ArrayList carsList;
     protected ArrayList partsList;
     protected ArrayList trucksList;
     protected ArrayList transList;
 
-    
 
-    //Constructor Method
-
+    /**
+     * Constructor Method
+     * Create ArrayList named carsList, trucksList, partsList, and transList
+     * of types of Car, Truck, Parts, and Transaction
+     */
     public Inventory() {
         carsList = new ArrayList<Car>();
         trucksList = new ArrayList<Truck>();
@@ -28,12 +33,18 @@ public class Inventory {
 
 // getters and setters
 
-
+    /**
+     * addCarToInventory method adds a car to carsList
+     * @param _car
+     */
     public void addCarToInventory(Car _car) {
         carsList.add(_car);
     }
 
-
+    /**
+     * setParts method adds parts to partsList
+     * @param _parts
+     */
 
     public void setParts(Parts _parts) {
         partsList.add(_parts);
