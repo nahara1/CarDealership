@@ -82,9 +82,6 @@ public final class Car extends Vehicle {
      * printCars method prints car inventory list
      * @param carList car list Array List
      */
-
-
-
     public static void printCars(ArrayList<Car> carList) {
         for (Car car : carList) {
             System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-12s | %-10s \n", car.getName(), car.getVin(), car.getModel(), car.getMaker(), car.getColor(), car.getYear(), car.getPrice());
@@ -100,8 +97,6 @@ public final class Car extends Vehicle {
      * @param carList car Array List
      * @param _color a specific car color
      */
-
-
     public static void printCarByColor(ArrayList<Car> carList, String _color) {
         for (Car car : carList) {
 
@@ -171,7 +166,6 @@ public final class Car extends Vehicle {
      * @param _VIN Vehicle Identification Number
      *
      */
-
 
     public static void sellCar(ArrayList<Car> carList, String _VIN) {
 

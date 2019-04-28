@@ -12,7 +12,7 @@ public class Customers {
     private int custID, dealershipID;
 
     /**
-     * The first and last names, phone number, and email of customers
+     * Customers first and last names, phone number, and email
      *
      * Group ID is a unique number that groups customers based on their first
      * last name initials
@@ -185,8 +185,8 @@ public class Customers {
      *
      * <p>
      *  This method is used inside the addCustomer method to
-     *  ask for customer information and add that information
-     *  in the customer array list.
+     *  ask for customer information and then through setters
+     *  add that information into the customer array list.
      * </p>
      *
      * @return input
