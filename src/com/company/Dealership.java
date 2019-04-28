@@ -20,7 +20,7 @@ public class Dealership {
     // Dealership class constructors
 
     /**
-     * Constructor of the Dealership class
+     * Dealership Constructor requiring name, address, phone number
      * @param name         dealership name
      * @param address      dealership address
      * @param phoneNumber  dealership phone number
@@ -30,7 +30,7 @@ public class Dealership {
 
 
     /**
-     * Constructor of the Dealership class
+     * Dealership Constructor
      */
     public Dealership() {}
 

@@ -7,7 +7,7 @@ public class Inventory {
 
     /**
      * Protected Data Members
-     * Inventory have ArrayList of carsList, partsList, trucksList, transList
+     * Car, trucks, and parts ArrayLists
      */
     protected ArrayList carsList;
     protected ArrayList partsList;

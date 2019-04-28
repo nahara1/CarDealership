@@ -21,9 +21,18 @@ public class SalesLead {
 
 
     // Constructors
+
+    /**
+     * SalesLead constructor requiring sales lead ID
+     * @param _id
+     */
     public SalesLead(int _id) {
         this.salesLeadID = _id;
     }
+
+    /**
+     * SalesLead constructor
+     */
     public SalesLead() { }
 
     /**

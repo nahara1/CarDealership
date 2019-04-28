@@ -27,12 +27,15 @@ public class Customers {
     int cCount = 00001;
 
     /**
-     * Customer constructor
-     * @param custID customer ID
+     * Customers constructor requiring Customer ID
+     * @param custID Customer ID
      */
     Customers(int custID) {
     }
 
+    /**
+     * Customers constructor
+     */
     Customers() {
     }
 

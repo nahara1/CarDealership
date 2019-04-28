@@ -1,6 +1,6 @@
 package com.company;
 
 /**
- * Enumeration for wheeldrive that contains the preset values of two and four
+ * Enumeration that contains the preset values of two and four to set vehicle wheeldrive
  */
 public enum Wheeldrive {two, four}

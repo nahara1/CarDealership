@@ -27,7 +27,7 @@ public final class Car extends Vehicle {
     public Car() { }
 
     /**
-     * Car Constructor
+     * Car Constructor requiring VIN
      * @param vin_
      */
     public Car(String vin_) {
