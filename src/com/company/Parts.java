@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * <h1>Parts</h1>
  *<p>
  * The Parts program contains setters, getters, and methods that add, modify,
- * and remove auto parts items
+ * and remove auto parts.
  *</p>
  *
  */
@@ -18,22 +18,54 @@ import java.util.ArrayList;
  public class Parts {
 
 
+    /**
+     * Auto part unique identification number
+     */
     private int partID;
+
+    /**
+     * Auto part name
+     */
     private String name;
+
+    /**
+     * Auto part price
+     */
     private double price;
+
+    /**
+     * Auto part category
+     */
     private PartsCategory partCategory;
+
+    /**
+     * Counter that initializes parts ID
+     */
     int cCount = 00001;
 
 
-    // constructors
+    /**
+     * Parts Constructor
+     */
 
     public Parts() {
 
     }
 
+    /**
+     * Parts Constructor
+     * @param _partsID
+     */
     public Parts(int _partsID) {
 
     }
+
+    /**
+     * Parts Constructor
+     * @param _partID
+     * @param _partCategory
+     * @param _name
+     */
 
     public Parts(int _partID, PartsCategory _partCategory, String _name) {
         this.name = _name;
@@ -45,7 +77,9 @@ import java.util.ArrayList;
     /**
      * addParts method adds parts to inventory
      * <p>
-     *
+     *  The addParts method prompts user to enter
+     *  a Parts name, category, and price to be stored
+     *  in the inventory.
      * </p>
      *
      * @return parts object of the Parts class
@@ -69,14 +103,28 @@ import java.util.ArrayList;
         return parts;
     }
 
+    /**
+     * Parts ID getter
+     * @return auto part ID
+     */
+
     public int getPartID() {
         return partID;
     }
+
+    /**
+     * Parts ID setter
+     * @param randomID auto part ID
+     */
 
     public void setPartID(int randomID) {
         this.partID = randomID;
     }
 
+    /**
+     * Parts Category getter
+     * @return auto part category
+     */
     public PartsCategory getPartCategory() {
         return partCategory;
     }
@@ -86,15 +134,36 @@ import java.util.ArrayList;
             this.partCategory = anyPartCategory;
         }
     */
+
+
+    /**
+     * Parts name getter
+     * @return auto part name
+     */
     public String getPartName() {
         return name;
     }
+
+    /**
+     * Parts name setter
+     * @param anyName auto part name
+     */
 
     public void setPartName(String anyName) {
         this.name = anyName;
     }
 
+
+    /**
+     * Parts price getter
+     * @return auto part price
+     */
     public double getPrice() { return price; }
+
+    /**
+     * Parts price setter
+     * @param _price auto part price
+     */
 
     public void setPrice(double _price) { this.price = _price; }
 
