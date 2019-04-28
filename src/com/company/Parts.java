@@ -17,23 +17,28 @@ import java.util.ArrayList;
 
  public class Parts {
 
-
     private int partID;
     private String name;
     private PartsCategory partCategory;
     int cCount = 00001;
 
+    /**
+     * Constructors
+     */
+    public Parts() { }
 
-    // constructors
+    /**
+     * Constructors
+     * @param _partsID
+     */
+    public Parts(int _partsID) { }
 
-    public Parts() {
-
-    }
-
-    public Parts(int _partsID) {
-
-    }
-
+    /**
+     * Constructors
+     * @param _partID
+     * @param _partCategory
+     * @param _name
+     */
     public Parts(int _partID, PartsCategory _partCategory, String _name) {
         this.name = _name;
         this.partCategory = _partCategory;
