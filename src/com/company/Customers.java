@@ -12,7 +12,7 @@ public class Customers {
     private int custID, dealershipID;
 
     /**
-     * The first and last names, phone number, and email of customers
+     * Customers first and last names, phone number, and email
      *
      * Group ID is a unique number that groups customers based on their first
      * last name initials

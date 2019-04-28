@@ -1,5 +1,6 @@
 package com.company;
 import java.util.Date;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public abstract class Vehicle {
@@ -83,6 +84,31 @@ public abstract class Vehicle {
 
     protected abstract void setDoors();
 
+    public static String getInput() {
+        Scanner scnr = new Scanner(System.in);
+        String input = scnr.nextLine();
+        return input;
 
-//public abstract void addCarToInventory(Car car1);
+    }
+
+    public static String testNum(String price) {
+        try {
+
+            if (price.matches("\\d+\\.\\d*$")) {
+                return price;
+            }
+            else  {
+                throw new InputMismatchException("not price");
+            }
+
+        } catch (InputMismatchException notAnAlpha) {
+            System.out.println("Invalid input. Please try again.");
+            return getInput();
+
+        }
+
+    }
+
+
+   //public abstract void addCarToInventory(Car car1);
 }

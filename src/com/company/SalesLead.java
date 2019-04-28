@@ -6,7 +6,14 @@ import java.util.Scanner;
 
 
 public class SalesLead {
+    /**
+     * Sales Lead unique identification number
+     */
     protected int salesLeadID;
+
+    /**
+     *
+     */
     protected String sl_firstName, sl_lastName, sl_phoneNumber, sl_Email, empID;
     protected Boolean salesLeadActive;
     protected String salesLeadDate;
