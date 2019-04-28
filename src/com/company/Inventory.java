@@ -49,8 +49,6 @@ public class Inventory {
         partsList.add(_parts);
     }
 
-// add printInventory method
-    // use index to remove
 
 
     }
