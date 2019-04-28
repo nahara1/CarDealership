@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.*;
 
 import java.util.ArrayList;
 
@@ -73,6 +74,16 @@ public final class Truck extends Vehicle {
             setWheeldrive (Wheeldrive.four);
         }
 
+    /**
+     * setTon prompts user for an input
+     *
+     * <p>
+     * setTon method ask for number of tons
+     * and convert it to lowercase
+     * <p>
+     *
+     * @return tonage object
+     */
         public Ton setTon() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter tonage ('one' / 'two'): ");
@@ -80,6 +91,15 @@ public final class Truck extends Vehicle {
         return tonage;
     }
 
+    /**
+     * <p>
+     * printTrucks method have a for each method to
+     * print out all trucks' name, vin number, module, maker, color
+     * that are in the inventory on certain format
+     * <p>
+     *
+     *@param truckArrayList
+     */
     public static void printTrucks(ArrayList<Truck> truckArrayList) {
         for (Truck truck : truckArrayList) {
             System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-12s\n", truck.getName(), truck.getVin(), truck.getModel(), truck.getMaker(), truck.getColor(), truck.getYear());
@@ -87,20 +107,34 @@ public final class Truck extends Vehicle {
         }
     }
 
+    /**
+     *
+     * sellTruck method removes a truck item from the truck array list
+     * @param trucksList car Array List
+     * @param _VIN Vehicle Identification Number
+     * @throws ConcurrentModificationException if VIN does not correspond
+     *                                         to any truck in the inventory
+     *
+     */
     public static void sellTruck(ArrayList<Truck> trucksList, String _VIN) {
-        for (Truck truck : trucksList) {
+        try {
+            for (Truck truck : trucksList) {
 
-            if (truck.getVin().equals(_VIN)) {
+                if (truck.getVin().equals(_VIN)) {
 
-                trucksList.remove(truck);
+                    trucksList.remove(truck);
+                }
             }
         }
+        catch (ConcurrentModificationException e){
+            System.out.println("Invalid input. Make sure you entered the correct VIN.");
+            sellTruck(trucksList, _VIN);
+        }
+
     }
 
     @Override
-    protected void setDoors() {
-
-    }
+    protected void setDoors() { }
 
     public static String getInput() {
         Scanner scnr = new Scanner(System.in);
