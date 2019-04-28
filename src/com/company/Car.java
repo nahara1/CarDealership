@@ -24,6 +24,11 @@ public final class Car extends Vehicle {
 
     /**
      * addCar method adds a new car to the inventory
+     * <p>
+     *   The addCar method prompts user to enter
+     *   a car VIN, model, maker, year, color, and price,
+     *   to be stored in the inventory.
+     * </p>
      * @return a Car object
      */
 
@@ -35,9 +40,6 @@ public final class Car extends Vehicle {
 
         // ask for dealership id
 
-
-        System.out.println("Please enter VIN number: ");
-        car.setVin(scnr.nextLine());
 
         System.out.println("Please enter VIN number: ");
         car.setVin(scnr.nextLine());
@@ -164,6 +166,8 @@ public final class Car extends Vehicle {
      * sellCar method removes a car item from the car array list
      * @param carList car Array List
      * @param _VIN Vehicle Identification Number
+     * @throws ConcurrentModificationException if VIN does not correspond
+     *                                         to any car in the inventory
      *
      */
 
@@ -179,6 +183,7 @@ public final class Car extends Vehicle {
             }
         }
         catch (ConcurrentModificationException e) {
+            System.out.println("Invalid input. Make sure you entered the correct VIN.");
             sellCar(carList, _VIN);
             }
         }
