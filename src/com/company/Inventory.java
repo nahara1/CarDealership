@@ -16,9 +16,8 @@ public class Inventory {
 
 
     /**
-     * Constructor Method
-     * Create ArrayList named carsList, trucksList, partsList, and transList
-     * of types of Car, Truck, Parts, and Transaction
+     * Constructor Method creates ArrayLists named carsList, trucksList, partsList, and transList
+     * of Car, Truck, Parts, and Transaction types
      */
     public Inventory() {
         carsList = new ArrayList<Car>();
