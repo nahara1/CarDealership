@@ -136,6 +136,17 @@ public final class Truck extends Vehicle {
     @Override
     protected void setDoors() { }
 
+    /**
+     * getInput method prompts user for an input
+     *
+     * <p>
+     *  This method is used inside the addCar method to
+     *  ask for truck information and then through setters
+     *  add that information into the truck array list.
+     * </p>
+     *
+     * @return input
+     */
     public static String getInput() {
         Scanner scnr = new Scanner(System.in);
         String input = scnr.nextLine();
@@ -175,6 +186,19 @@ public final class Truck extends Vehicle {
 
     }
 
+    /**
+     * testInt method tests if input matches numeric characters
+     *
+     * <p>
+     *  This method consists of a try and catch block
+     *  to assure user input for setting year contains digits.
+     * </p>
+     *
+     * @param input user input
+     * @return year
+     * @throws InputMismatchException if input tested is not an integer
+     *
+     */
     public static String testInt(String input) {
         try {
             if (input.matches("\\d*$")) {
