@@ -71,9 +71,18 @@ public abstract class Vehicle {
     public void setYear(int _carYear) { this.year = _carYear; }
 
     public void setNumOfDoors(NumDoors _numDoors) { this.numDoors = _numDoors; }
-
     public NumDoors getNumOfDoors(NumDoors _numDoors) { return numDoors; }
 
+    /**
+     * setNumOfDoors prompts user for an input
+     *
+     * <p>
+     * setNumOfDoors method ask for number of doors
+     * and convert it to lowercase
+     * <p>
+     *
+     * @return numDoors object
+     */
     public NumDoors setNumOfDoors() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter number of doors ('two' / 'four'): ");
