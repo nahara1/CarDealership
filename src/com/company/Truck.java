@@ -69,6 +69,16 @@ public final class Truck extends Vehicle {
             setWheeldrive (Wheeldrive.four);
         }
 
+    /**
+     * setTon prompts user for an input
+     *
+     * <p>
+     * setTon method ask for number of tons
+     * and convert it to lowercase
+     * <p>
+     *
+     * @return tonage object
+     */
         public Ton setTon() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter tonage ('one' / 'two'): ");
@@ -76,6 +86,15 @@ public final class Truck extends Vehicle {
         return tonage;
     }
 
+    /**
+     * <p>
+     * printTrucks method
+     * and convert it to lowercase
+     * <p>
+     *
+     *
+     * @return tonage object
+     */
     public static void printTrucks(ArrayList<Truck> truckArrayList) {
         for (Truck truck : truckArrayList) {
             System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-12s\n", truck.getName(), truck.getVin(), truck.getModel(), truck.getMaker(), truck.getColor(), truck.getYear());
