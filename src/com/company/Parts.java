@@ -1,6 +1,7 @@
 package com.company;
 
 
+import java.util.ConcurrentModificationException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -17,11 +18,29 @@ import java.util.ArrayList;
 
  public class Parts {
 
-
+    /**
+     * Auto part unique identification number
+     */
     private int partID;
+
+    /**
+     * Auto part name
+     */
     private String name;
+
+    /**
+     * Auto part price
+     */
     private double price;
+
+    /**
+     * Auto part category
+     */
     private PartsCategory partCategory;
+
+    /**
+     * counter that initializes parts id
+     */
     int cCount = 00001;
 
 
@@ -45,7 +64,9 @@ import java.util.ArrayList;
     /**
      * addParts method adds parts to inventory
      * <p>
-     *
+     *  The addParts method prompts user to enter
+     *  parts name, category and price to be stored
+     *  in the inventory.
      * </p>
      *
      * @return parts object of the Parts class
@@ -68,6 +89,9 @@ import java.util.ArrayList;
 
         return parts;
     }
+
+
+    // setters and getters
 
     public int getPartID() {
         return partID;
@@ -117,6 +141,11 @@ import java.util.ArrayList;
         return partCategory;
     }
 
+    /**
+     * printParts method prints dealership parts inventory
+     * @param PartsArrayList Parts array list
+     */
+
     public static void printParts(ArrayList<Parts> PartsArrayList) {
         for (Parts parts : PartsArrayList) {
             System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-12s\n", parts.getPartName());
@@ -132,13 +161,30 @@ import java.util.ArrayList;
         }
     }
 */
+
+    /**
+     *
+     * sellParts method removes an auto part item from the parts array list
+     * @param partsList parts Array List
+     * @param _partID parts id
+     *
+     */
     public static void sellParts(ArrayList<Parts> partsList, int _partID) {
-        for (Parts parts : partsList) {
-            if (parts.getPartID() == _partID) {
-                partsList.remove(parts);
+
+        try {
+
+            for (Parts parts : partsList) {
+                if (parts.getPartID() == _partID) {
+                    partsList.remove(parts);
+                }
             }
         }
+        catch (ConcurrentModificationException e) {
+            System.out.println("Invalid input. Make sure you entered the correct ID number.");
+            sellParts(partsList, _partID);
+        }
     }
+
 
     /**
      * getInput method prompts user for an input
