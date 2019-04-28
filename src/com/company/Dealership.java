@@ -30,7 +30,9 @@ public class Dealership {
      *
      */
 
-
+    /**
+     * @return dealership id
+     */
 
     public int getDealershipID() { return dealershipID; }
 
