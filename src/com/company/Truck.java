@@ -23,6 +23,15 @@ public final class Truck extends Vehicle {
 
     }
 
+    /**
+     * addTruck method adds a new truck to the inventory
+     * <p>
+     *   The addTruck method prompts user to enter
+     *   a truck VIN, model, maker, year, color, and price,
+     *   to be stored in the inventory.
+     * </p>
+     * @return a truck object
+     */
     public Truck addTruck() {
         Truck truck = new Truck ();
         Scanner scnr = new Scanner (System.in);
@@ -38,6 +47,8 @@ public final class Truck extends Vehicle {
         truck.setNumOfDoors();
         System.out.println ("Please enter truck color: ");
         truck.setColor (scnr.nextLine ());
+        System.out.println("Please enter truck price: ");
+        truck.setPrice(scnr.nextDouble());
 
 
         return truck;
