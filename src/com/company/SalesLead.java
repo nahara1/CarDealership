@@ -19,9 +19,6 @@ public class SalesLead {
     protected String salesLeadDate;
     int cCount;
 
-    private int salesPersonID;
-    public ArrayList<SalesLead> slList = new ArrayList<>();
-
 
     // Constructors
     public SalesLead(int _id) {
@@ -157,6 +154,17 @@ public class SalesLead {
         }
     }
 
+    /**
+     * getInput method prompts user for an input
+     *
+     * <p>
+     *  This method is used inside the addSL method to
+     *  ask for information and then through setters
+     *  add that information into the sales lead array list.
+     * </p>
+     *
+     * @return input
+     */
 
     public static String getInput() {
         Scanner scnr = new Scanner(System.in);
@@ -268,7 +276,7 @@ public class SalesLead {
      *
      * <p>
      *  This method consists of a try and catch block
-     *  to assure user input contains only number.
+     *  to assure user input contains only numbers in a date format.
      * </p>
      *
      * @param date user input

@@ -275,7 +275,6 @@ public class Main {
         final char ADD_VEHICLE = '6';
         final char ADD_PARTS = '7';
         final char SELL_CODE = '8';
-        // add method to print receipt
         final char TRAN_CODE = '9';
         final char TRANLIST_CODE = '0';
 
@@ -475,7 +474,6 @@ public class Main {
             userAction = getAction (PROMPT_ACTION);
         }
     }
-
 
 
     public static char getAction(String prompt) {

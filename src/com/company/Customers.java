@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Customers {
 
     /**
-     * Unique identification numbers of customers and dealerships
+     * Unique identification number of each customer and dealership
      */
     private int custID, dealershipID;
 

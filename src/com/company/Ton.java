@@ -1,6 +1,6 @@
 package com.company;
 
 /**
- * Enumeration of ton that contains one and two
+ * Enumeration that contains the preset values of one and two to set truck tonage
  */
 public enum Ton {one, two}

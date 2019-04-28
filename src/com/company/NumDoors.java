@@ -1,7 +1,8 @@
 package com.company;
 
 /**
- * Enumeration of NumDoors that contains two and four
+ * Enumeration that contains the preset two and four values to set
+ * a vehicle number of doors
  */
 public enum NumDoors {two, four}
 

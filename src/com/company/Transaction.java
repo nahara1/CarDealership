@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-enum PaymentType {credit, cash,}
+enum PaymentType {credit, cash}
 
 public class Transaction {
 

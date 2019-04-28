@@ -2,15 +2,34 @@ package com.company;
 
 import java.util.*;
 
+/**
+ * <h1>Cars</h1>
+ *<p>
+ * The Car class is a child class of the Vehicle class.
+ * It contains methods that add, remove, and search for cars
+ * in the dealership inventory.
+ *</p>
+ *
+ */
+
 public final class Car extends Vehicle {
 
 
+    /**
+     * Number of doors
+     */
     NumDoors numOfDoors;
-    protected String itemName;
-    protected int itemQuantity;
-    public static int Quantity=0;
+
+    /**
+     * Car Constructor
+     */
 
     public Car() { }
+
+    /**
+     * Car Constructor
+     * @param vin_
+     */
     public Car(String vin_) {
         super.setVin(vin_);
     }
@@ -30,9 +49,6 @@ public final class Car extends Vehicle {
         Car car = new Car();
         Scanner scnr = new Scanner(System.in);
 
-        // try and catch ??
-
-        // ask for dealership id
 
         System.out.println("Enter Dealership ID: ");
         car.setDealershipID(scnr.nextInt());
@@ -67,20 +83,6 @@ public final class Car extends Vehicle {
         car.setPrice(price);
 
         return car;
-    }
-
-
-    public void setQuantity(int newQty) {
-        itemQuantity = newQty;
-    }
-
-    public void printCars() {
-        System.out.println(itemName + " " + itemQuantity);
-    }
-
-    @Override
-    protected void setDoors() {
-
     }
 
 

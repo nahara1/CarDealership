@@ -6,21 +6,39 @@ import java.util.*;
 
 import java.util.ArrayList;
 
+/**
+ * <h1>Trucks</h1>
+ *<p>
+ * The Truck class is a child of the Vehicle class.
+ * It contains setters, getters, and methods that add, modify,
+ * remove, and search for trucks in the dealership inventory.
+ *</p>
+ *
+ */
 
 
 public final class Truck extends Vehicle {
-    private int itemQuantity;
+
+    /**
+     * Truck tonage
+     */
     private Ton tonage;
-    public static int quantity = 0;
+
 
 
 // Constructor
 
+    /**
+     * Truck constructor
+     * @param _Vin VIN
+     */
     public Truck(String _Vin) {
         setVin (_Vin);
-        itemQuantity += 1;
     }
 
+    /**
+     * Truck constructor
+     */
     public Truck() {
 
     }
@@ -62,24 +80,37 @@ public final class Truck extends Vehicle {
         return truck;
     }
 
-        public void setTon (Ton _tonage){
-            tonage = _tonage;
-        }
+    /**
+     * Truck tonage setter
+     * @param _tonage
+     */
 
-        public Ton getTon () {
+    public void setTon (Ton _tonage){
+        tonage = _tonage;
+    }
+
+    /**
+     * Truck tonage getter
+     * @return tonage
+     */
+    public Ton getTon () {
             return tonage;
         }
 
-        public void move () {
-            setWheeldrive (Wheeldrive.four);
-        }
+    /**
+     * move method sets wheeldrive
+     */
+    public void move () {
+        setWheeldrive (Wheeldrive.four);
+    }
 
     /**
      * setTon prompts user for an input
      *
      * <p>
-     * setTon method ask for number of tons
-     * and convert it to lowercase
+     * setTon method asks for user input to set truck tonage
+     * and converts the input to lowercase to assure it matches
+     * the Ton enum values.
      * <p>
      *
      * @return tonage object
@@ -110,7 +141,7 @@ public final class Truck extends Vehicle {
     /**
      *
      * sellTruck method removes a truck item from the truck array list
-     * @param trucksList car Array List
+     * @param trucksList truck Array List
      * @param _VIN Vehicle Identification Number
      * @throws ConcurrentModificationException if VIN does not correspond
      *                                         to any truck in the inventory
@@ -132,9 +163,6 @@ public final class Truck extends Vehicle {
         }
 
     }
-
-    @Override
-    protected void setDoors() { }
 
     /**
      * getInput method prompts user for an input
