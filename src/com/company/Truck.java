@@ -130,9 +130,7 @@ public final class Truck extends Vehicle {
     }
 
     @Override
-    protected void setDoors() {
-
-    }
+    protected void setDoors() { }
 
     public static String getInput() {
         Scanner scnr = new Scanner(System.in);

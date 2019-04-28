@@ -7,16 +7,10 @@ public final class Car extends Vehicle {
 
     NumDoors numOfDoors;
     protected String itemName;
-
     protected int itemQuantity;
-
-
     public static int Quantity=0;
 
-    public Car() {
-
-    }
-
+    public Car() { }
     public Car(String vin_) {
         super.setVin(vin_);
     }

@@ -20,7 +20,6 @@ public class SalesLead {
     int cCount;
 
     private int salesPersonID;
-
     public ArrayList<SalesLead> slList = new ArrayList<>();
 
 
@@ -28,11 +27,17 @@ public class SalesLead {
     public SalesLead(int _id) {
         this.salesLeadID = _id;
     }
+    public SalesLead() { }
 
-    public SalesLead() {
-    }
-
-
+    /**
+     * addSL method adds a new SalesLead
+     * <p>
+     *   The addSL method prompts user to enter
+     *   Employee ID, SalesLead full name, date, phone number, and email,
+     *   to be stored in the inventory.
+     * </p>
+     * @return a sl object
+     */
     // add salesPeople id to know which one added a salesLead
     public SalesLead addSL(String _empID) {
         SalesLead sl = new SalesLead(cCount++);
@@ -139,6 +144,11 @@ public class SalesLead {
         }
     }
 
+    /**
+     * printSalesLeadById method prints SalesLead that are of a certain ID
+     * @param slList
+     * @param salesLeadID
+     */
     public static void printSalesLeadById(ArrayList<SalesLead> slList, int salesLeadID) {
         for (SalesLead sl : slList) {
             if (sl.salesLeadID == salesLeadID) {
@@ -155,6 +165,20 @@ public class SalesLead {
 
     }
 
+    /**
+     * testAlpha method tests if input contains alpha characters
+     *
+     * <p>
+     *  This method consists of a try and catch block
+     *  to assure user input contains only alpha characters.
+     * </p>
+     *
+     * @param alphaCharacter user input
+     * @return a String of alpha characters
+     * @throws InputMismatchException if string tested does not contain
+     *                                alpha characters
+     *
+     */
     public static String testAlpha(String alphaCharacter) {
         try {
 
@@ -173,7 +197,20 @@ public class SalesLead {
 
     }
 
-
+    /**
+     * testEmail method tests if input matches an email format
+     *
+     * <p>
+     *  This method consists of a try and catch block
+     *  to assure user input follows a standard email format.
+     * </p>
+     *
+     * @param email user input
+     * @return an email address
+     * @throws InputMismatchException if string tested does not match
+     *                                email format
+     *
+     */
     public static String testEmail(String email) {
         try {
 
@@ -193,6 +230,20 @@ public class SalesLead {
         }
     }
 
+    /**
+     * testPhone method tests if input matches a phone number format
+     *
+     * <p>
+     *  This method consists of a try and catch block
+     *  to assure user input follows a standard phone number format.
+     * </p>
+     *
+     * @param phone user input
+     * @return a phone number
+     * @throws InputMismatchException if input tested does not match
+     *                                phone number format
+     *
+     */
     public static String testPhone(String phone) {
         try {
 
@@ -212,6 +263,20 @@ public class SalesLead {
         }
     }
 
+    /**
+     * testDate method tests if input contains numbers
+     *
+     * <p>
+     *  This method consists of a try and catch block
+     *  to assure user input contains only number.
+     * </p>
+     *
+     * @param date user input
+     * @return number
+     * @throws InputMismatchException if string tested does not contain
+     *                                numbers
+     *
+     */
     public static String testDate(String date) {
         try {
 
