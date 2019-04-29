@@ -4,7 +4,9 @@ import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-
+/**
+ *
+ */
 public class SalesLead {
     /**
      * Sales Lead unique identification number
@@ -78,11 +80,20 @@ public class SalesLead {
         return sl;
     }
 
+    /**
+     * Sales Lead ID getter
+     * @return Sales Lead ID
+     */
 
 
     public int getSalesLeadID() {
         return salesLeadID;
     }
+
+    /**
+     * Sales Lead ID setter
+     * @param _salesLeadID
+     */
 
     public void setSalesLeadID(int _salesLeadID) {
         this.salesLeadID = _salesLeadID;

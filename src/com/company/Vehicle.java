@@ -197,18 +197,58 @@ public abstract class Vehicle {
         this.color = _Color;
     }
 
+    /**
+     * Vehicle year getter
+     * @return
+     */
+
     public int getYear() { return year; }
 
-    public void setYear(int _carYear) { this.year = _carYear; }
+    /**
+     * Vehicle year setter
+     * @param _Year year
+     */
+    public void setYear(int _Year) { this.year = _Year; }
 
+
+    /**
+     * Vehicle number of doors setter
+     * @param _numDoors number of doors
+     */
     public void setNumOfDoors(NumDoors _numDoors) { this.numDoors = _numDoors; }
 
-    public NumDoors getNumOfDoors(NumDoors _numDoors) { return numDoors; }
 
+    /**
+     * Vehicle number of doors getter
+     * @return number of doors
+     */
+    public NumDoors getNumOfDoors() { return numDoors; }
+
+    /**
+     * Dealership ID setter
+     * @param _dealershipID dealership ID
+     */
     public void setDealershipID(int _dealershipID) { this.dealershipID = _dealershipID; }
 
+
+    /**
+     * Dealership ID getter
+     * @return Dealership ID
+     */
     public int getDealershipID() { return dealershipID; }
 
+
+    /**
+     * setNumOfDoors sets vehicle door number
+     * <p>
+     *     It asks for user input and then returns the number
+     *     of doors, which are preset by the NumDoors enumeration.
+     *     This method is used inside the methods to add cars and trucks
+     *     so that after user enters the specific number, car and trucks setters
+     *     are store this information to the Car or Truck object being created.
+     * </p>
+     * @return Number of doors
+     */
     public NumDoors setNumOfDoors() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter number of doors ('two' / 'four'): ");
