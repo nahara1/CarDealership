@@ -11,12 +11,6 @@ public class Salesperson {
     String input;
 
 
-
-    // sellCar - to remove car object from ArrayList CarList - remove from inventory and receive money
-
-
-    // for loop
-
     // create method getSalespersonByID() find sp by their id
 
 
