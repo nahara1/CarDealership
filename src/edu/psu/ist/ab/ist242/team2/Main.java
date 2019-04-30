@@ -17,7 +17,7 @@ import java.util.Scanner;
 
 
 /**
- * @author Team 2
+ * @author
  * @version
  * @since
  */
