@@ -74,7 +74,7 @@ public final class Truck extends Vehicle {
         System.out.println ("Please enter truck maker: ");
         truck.setMaker (scnr.nextLine ());
         System.out.println ("Please enter truck year: ");
-        String _year = testInt(getInput());
+        String _year = Exception.testInt(Exception.getInput());
         year = Integer.parseInt(_year);
         truck.setYear(year);
         truck.setTon();
@@ -82,8 +82,8 @@ public final class Truck extends Vehicle {
         System.out.println ("Please enter truck color: ");
         truck.setColor (scnr.nextLine ());
         System.out.println("Please enter truck price: ");
-        price = Double.parseDouble(getInput());
-        String _price = testDouble(getInput());
+        price = Double.parseDouble(Exception.getInput());
+        String _price = Exception.testDouble(Exception.getInput());
         price = Double.parseDouble(_price);
         truck.setPrice(price);
 
@@ -172,83 +172,6 @@ public final class Truck extends Vehicle {
             sellTruck(trucksList, _VIN);
         }
 
-    }
-
-    /**
-     * getInput method prompts user for an input
-     *
-     * <p>
-     *  This method is used inside the addCar method to
-     *  ask for truck information and then through setters
-     *  add that information into the truck array list.
-     * </p>
-     *
-     * @return input
-     */
-    public static String getInput() {
-        Scanner scnr = new Scanner(System.in);
-        String input = scnr.nextLine();
-        return input;
-
-    }
-
-    /**
-     * testDouble method tests if input is a double
-     *
-     * <p>
-     *  This method consists of a try and catch block
-     *  to assure user input for setting an auto part price
-     *  is a double.
-     * </p>
-     *
-     * @param price user input
-     * @return a price
-     * @throws InputMismatchException if input tested is not a double
-     *
-     */
-    public static String testDouble(String price) {
-        try {
-
-            if (price.matches("\\d+\\.\\d*$")) {
-                return price;
-            }
-            else  {
-                throw new InputMismatchException("not price");
-            }
-
-        } catch (InputMismatchException notAnAlpha) {
-            System.out.println("Invalid input. Please try again.");
-            return getInput();
-
-        }
-
-    }
-
-    /**
-     * testInt method tests if input matches numeric characters
-     *
-     * <p>
-     *  This method consists of a try and catch block
-     *  to assure user input for setting year contains digits.
-     * </p>
-     *
-     * @param input user input
-     * @return year
-     * @throws InputMismatchException if input tested is not an integer
-     *
-     */
-    public static String testInt(String input) {
-        try {
-            if (input.matches("\\d*$")) {
-                return input;
-            }
-            else  {
-                throw new NumberFormatException("not an integer");
-            }
-        } catch (NumberFormatException notAnInt) {
-            System.out.println("Invalid input. You did not enter an integer number. Please try again. \n");
-            return getInput();
-        }
     }
 }
 
