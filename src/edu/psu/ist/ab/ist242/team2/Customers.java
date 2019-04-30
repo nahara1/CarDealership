@@ -34,7 +34,7 @@ public class Customers {
     /**
      * Counter to automatically generate customer IDs
      */
-    int cCount = 00001;
+    int cCount = 00005;
 
     /**
      * Customers constructor requiring Customer ID
