@@ -64,7 +64,7 @@ public class Transaction {
      * @return totalPrice
      */
 // junit
-    private double calculateTransaction(double transactionSubtotal, double tax) {
+    public double calculateTransaction(double transactionSubtotal, double tax) {
         totalPrice = transactionSubtotal * tax;
         totalPrice = Math.round(totalPrice*100.0)/100.0;
         return totalPrice;
