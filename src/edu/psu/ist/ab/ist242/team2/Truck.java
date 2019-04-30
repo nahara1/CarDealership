@@ -1,3 +1,13 @@
+/*
+Project: Car Dealership
+Purpose Details: The Truck class is a child of the Vehicle class. It contains setters, getters, and methods that add, modify, remove, and search for trucks in the dealership inventory.
+Course: IST 242 - 001
+Team: 2
+Date Developed: 2/15/2019
+Last Date Changed: 4/28/2019
+Rev: 1
+*/
+
 package edu.psu.ist.ab.ist242.team2;
 
 import java.util.InputMismatchException;

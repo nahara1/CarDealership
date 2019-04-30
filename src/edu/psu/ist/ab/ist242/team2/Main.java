@@ -4,10 +4,9 @@ Purpose Details: To create a Java text-based console application for a car deale
 Course: IST 242 - 001
 Team: 2
 Date Developed: 2/15
-Last Date Changed: 4/28
+Last Date Changed: 4/30
 Rev: 1
 */
-
 
 package edu.psu.ist.ab.ist242.team2;
 
