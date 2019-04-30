@@ -34,9 +34,7 @@ public class Transaction {
 
     // Commission
 
-    public double getCommission() {
-        return commission;
-    }
+    public double getCommission() { return commission; }
 
     public void setCommission(double _Commission) {this.commission = _Commission * 0.1;}
 
