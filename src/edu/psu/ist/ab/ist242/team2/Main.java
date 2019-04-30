@@ -321,11 +321,28 @@ public class Main {
 
                 case SL_PRNT:
 
-                    // to do - print salesperson id as well
-                    System.out.printf("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", "ID", "Employee ID", "Name", "Phone Number", "Email", "Date Added");
-                    SalesLead.printSalesLead(slList);
+                    System.out.println("1 - Print Sales Lead list \n 2 - Print Sales Lead by Employee ID \n 3 - Print Sales Lead Information by ID \n");
+                    int print = input.nextInt();
 
-                    SalesLead.printSalesLeadById(slList, 1);
+                    // to do - print salesperson id as well
+                    switch (print) {
+                        case 1:
+                            System.out.printf("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", "ID", "Employee ID", "Name", "Phone Number", "Email", "Date Added");
+                            SalesLead.printSalesLead(slList);
+                            break;
+                        case 2:
+                            System.out.println("Enter employee id: ");
+                            int _SL_ID = input.nextInt();
+                            System.out.printf("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", "ID", "Employee ID", "Name", "Phone Number", "Email", "Date Added");
+                            SalesLead.printSalesLeadById(slList, _SL_ID);
+                            break;
+                        case 3:
+                            System.out.println("Enter employee id: ");
+                            String _empID = input.next();
+                            SalesLead.printSalesLeadByEmpID(slList, _empID);
+                            break;
+
+                    }
                     break;
 
                 case SELL_CODE:

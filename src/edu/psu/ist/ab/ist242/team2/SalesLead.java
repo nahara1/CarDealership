@@ -192,4 +192,13 @@ public class SalesLead {
         }
     }
 
+    public static void printSalesLeadByEmpID(ArrayList<SalesLead> slList, String _empID) {
+        for (SalesLead sl : slList) {
+
+            if (sl.empID.equals(_empID)) {
+                System.out.println("Number of Sales Lead: " + slList.size());
+            }
+        }
+    }
+
 }
