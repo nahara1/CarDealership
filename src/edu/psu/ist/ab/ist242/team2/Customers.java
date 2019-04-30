@@ -72,20 +72,20 @@ public class Customers {
         cust.setDealershipID(dealershipID);
 
         System.out.println("Please enter customer first name: ");
-        firstName = testAlpha(getInput());
+        firstName = Exception.testAlpha(Exception.getInput());
         cust.setFirstName(firstName);
 
 
         System.out.println("Please enter customer last name: ");
-        lastName = testAlpha(getInput());
+        lastName = Exception.testAlpha(Exception.getInput());
         cust.setLastName(lastName);
 
         System.out.println("Please enter customer phone number:  \n Please use this format: (012) 345-6789 ");
-        phoneNumber = testPhone(getInput());
+        phoneNumber = Exception.testPhone(Exception.getInput());
         cust.setPhoneNumber(phoneNumber);
 
         System.out.println("Please enter customer email: ");
-        custEmail = testEmail(getInput());
+        custEmail = Exception.testEmail(Exception.getInput());
         cust.setCustEmail(custEmail);
 
         cust.setCustID(cCount);
@@ -192,124 +192,6 @@ public class Customers {
 
     }
 */
-
-    /**
-     * getInput method prompts user for an input
-     *
-     * <p>
-     *  This method is used inside the addCustomer method to
-     *  ask for customer information and then through setters
-     *  add that information into the customer array list.
-     * </p>
-     *
-     * @return input
-     */
-    public static String getInput() {
-        Scanner scnr = new Scanner(System.in);
-        String input = scnr.nextLine();
-        return input;
-    }
-
-
-    /**
-     * testAlpha method tests if input contains alpha characters
-     *
-     * <p>
-     *  This method consists of a try and catch block
-     *  to assure user input contains only alpha characters.
-     * </p>
-     *
-     * @param alphaCharacter user input
-     * @return a String of alpha characters
-     * @throws InputMismatchException if string tested does not contain
-     *                                alpha characters
-     *
-     */
-    public static String testAlpha(String alphaCharacter) {
-        try {
-
-            if (alphaCharacter.matches("^[a-zA-Z]*$")) {
-                return alphaCharacter;
-            }
-            else  {
-                throw new InputMismatchException("not alpha");
-            }
-
-        } catch (InputMismatchException notAnAlpha) {
-            System.out.println("Invalid input. Please try again.");
-            return getInput();
-
-        }
-
-    }
-
-    /**
-     * testEmail method tests if input matches an email format
-     *
-     * <p>
-     *  This method consists of a try and catch block
-     *  to assure user input follows a standard email format.
-     * </p>
-     *
-     * @param email user input
-     * @return an email address
-     * @throws InputMismatchException if string tested does not match
-     *                                email format
-     *
-     */
-    public static String testEmail(String email) {
-        try {
-
-            if (email.matches("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$")) {
-                return email;
-            }
-            else  {
-                throw new InputMismatchException("invalid");
-            }
-
-
-
-        } catch (InputMismatchException notAnEmail) {
-            System.out.println("Invalid input. Please try again.");
-            return getInput();
-
-        }
-    }
-
-    /**
-     * testPhone method tests if input matches a phone number format
-     *
-     * <p>
-     *  This method consists of a try and catch block
-     *  to assure user input follows a standard phone number format.
-     * </p>
-     *
-     * @param phone user input
-     * @return a phone number
-     * @throws InputMismatchException if input tested does not match
-     *                                phone number format
-     *
-     */
-
-    public static String testPhone(String phone) {
-        try {
-
-            if (phone.matches("^[(]+[0-9]+[)]+[\\s]+[0-9]+[-]+[0-9]+$")) {
-                return phone;
-            }
-            else  {
-                throw new InputMismatchException("invalid");
-            }
-
-
-
-        } catch (InputMismatchException notAnEmail) {
-            System.out.println("Invalid input. Please try again.");
-            return getInput();
-
-        }
-    }
-
 
     // still working on this
     private void setDealershipID(int _dealershipID) {

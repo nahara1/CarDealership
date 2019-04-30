@@ -64,18 +64,19 @@ public final class Car extends Vehicle {
         car.setDealershipID(scnr.nextInt());
 
         System.out.println("Please enter VIN number: ");
-        car.setVin(scnr.next());
+        vin = Exception.testAlphaNumeric(Exception.getInput());
+        car.setVin(vin);
 
         System.out.println("Please enter car model: ");
-        model = testAlpha(getInput());
+        model = Exception.testAlpha(Exception.getInput());
         car.setModel(model);
 
         System.out.println("Please enter car maker: ");
-        maker = testAlpha(getInput());
+        maker = Exception.testAlpha(Exception.getInput());
         car.setMaker(maker);
 
         System.out.println("Please enter car year: ");
-        String _year = testInt(getInput());
+        String _year = Exception.testInt(Exception.getInput());
         year = Integer.parseInt(_year);
         car.setYear(year);
 
@@ -84,11 +85,11 @@ public final class Car extends Vehicle {
         //scnr.nextLine(); //IMPORTANT: do not remove, needed so that setColor works properly
 
         System.out.println("Please enter car color: ");
-        color = testAlpha(getInput());
+        color = Exception.testAlpha(Exception.getInput());
         car.setColor(color);
 
         System.out.println("Please enter car price: ");
-        String _price = testDouble(getInput());
+        String _price = Exception.testDouble(Exception.getInput());
         price = Double.parseDouble(_price);
         car.setPrice(price);
 
@@ -102,7 +103,7 @@ public final class Car extends Vehicle {
      */
     public static void printCars(ArrayList<Car> carList) {
         for (Car car : carList) {
-            System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-12s | %-10s \n", car.getName(), car.getVin(), car.getModel(), car.getMaker(), car.getColor(), car.getYear(), car.getPrice());
+            System.out.printf("%-10s | %-12s | %-10s | %-10s | %-12s | %-10s \n", car.getVin(), car.getModel(), car.getMaker(), car.getColor(), car.getYear(), car.getPrice());
 
         }
     }
@@ -204,116 +205,9 @@ public final class Car extends Vehicle {
             }
         }
 
-    /**
-     * getInput method prompts user for an input
-     *
-     * <p>
-     *  This method is used inside the addCar method to
-     *  ask for car information and then through setters
-     *  add that information into the car array list.
-     * </p>
-     *
-     * @return input
-     */
-    public static String getInput() {
-        Scanner scnr = new Scanner(System.in);
-        String input = scnr.nextLine();
-        return input;
 
-    }
-    /**
-     * testAlpha method tests if input contains alpha characters
-     *
-     * <p>
-     *  This method consists of a try and catch block
-     *  to assure user input contains only alpha characters.
-     * </p>
-     *
-     * @param alphaCharacter user input
-     * @return a String of alpha characters
-     * @throws InputMismatchException if string tested does not contain
-     *                                alpha characters
-     *
-     */
-
-    public static String testAlpha(String alphaCharacter) {
-        try {
-
-            if (alphaCharacter.matches("^[a-zA-Z]*$")) {
-                return alphaCharacter;
-            }
-            else  {
-                throw new InputMismatchException("not alpha");
-            }
-
-        } catch (InputMismatchException notAnAlpha) {
-            System.out.println("Invalid input. Please try again.");
-            return getInput();
-
-        }
-
-    }
-
-
-    /**
-     * testDouble method tests if input is a double
-     *
-     * <p>
-     *  This method consists of a try and catch block
-     *  to assure user input for setting an auto part price
-     *  is a double.
-     * </p>
-     *
-     * @param price user input
-     * @return a price
-     * @throws InputMismatchException if input tested is not a double
-     *
-     */
-    public static String testDouble(String price) {
-        try {
-
-            if (price.matches("\\d+\\.\\d*$")) {
-                return price;
-            }
-            else  {
-                throw new InputMismatchException("not price");
-            }
-
-        } catch (InputMismatchException notAnAlpha) {
-            System.out.println("Invalid input. Please try again.");
-            return getInput();
-
-        }
-
-    }
-
-    /**
-     * testInt method tests if input matches numeric characters
-     *
-     * <p>
-     *  This method consists of a try and catch block
-     *  to assure user input for setting year contains digits.
-     * </p>
-     *
-     * @param input user input
-     * @return year
-     * @throws InputMismatchException if input tested is not an integer
-     *
-     */
-    public static String testInt(String input) {
-        try {
-            if (input.matches("\\d*$")) {
-                return input;
-            }
-            else  {
-                throw new NumberFormatException("not an integer");
-            }
-        } catch (NumberFormatException notAnInt) {
-            System.out.println("Invalid input. You did not enter an integer number. Please try again. \n");
-            return getInput();
-        }
-    }
 }
+
 
 
 

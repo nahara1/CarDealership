@@ -1,7 +1,5 @@
 package edu.psu.ist.ab.ist242.team2.unitTesting;
 
-import edu.psu.ist.ab.ist242.team2.MainTest;
-
 import edu.psu.ist.ab.ist242.team2.Transaction;
 
 import org.junit.Test;
@@ -21,7 +19,7 @@ public class TransactionTest extends MainTest {
     }
 
     @Test
-    public void totalPayment_additionUnitTestFalse () {
+    public void totalPayment_UnitTestFalse () {
         Transaction trans = new Transaction();
         try {
             assertFalse(trans.calculateTransaction(5.0, 5.0) == 7.0);

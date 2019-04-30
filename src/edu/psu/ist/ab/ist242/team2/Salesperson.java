@@ -18,7 +18,6 @@ public class Salesperson {
     protected String empFirstName, empLastName, phoneNumber, empEmail, empID;
 
     Scanner userInput = new Scanner(System.in);
-    String input;
 
 
     // create method getSalespersonByID() find sp by their id

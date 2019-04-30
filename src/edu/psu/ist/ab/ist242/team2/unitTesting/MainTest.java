@@ -8,8 +8,9 @@ Last Date Changed: 4/29/2019
 Rev: 1
 */
 
-package edu.psu.ist.ab.ist242.team2;
+package edu.psu.ist.ab.ist242.team2.unitTesting;
 
+import edu.psu.ist.ab.ist242.team2.Main;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -23,7 +24,7 @@ public class MainTest {
    @Test
     public void getActionTest() {
        try {
-           assertEquals(Main.getAction("N"), 'N');
+           Assert.assertEquals(Main.getAction("N"), 'N');
        } catch (Exception e) {
            System.out.println("Exception: " + e.getMessage());
        }

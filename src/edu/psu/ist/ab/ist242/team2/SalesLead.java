@@ -64,23 +64,23 @@ public class SalesLead {
         sl.setSL_empID(_empID);
 
         System.out.println("Please enter SL first name: ");
-        sl_firstName = testAlpha(getInput());
+        sl_firstName = Exception.testAlpha(Exception.getInput());
         sl.setSl_firstName(sl_firstName);
 
         System.out.println("Please enter SL last name: ");
-        sl_lastName = testAlpha(getInput());
+        sl_lastName = Exception.testAlpha(Exception.getInput());
         sl.setSl_lastName(sl_lastName);
 
         System.out.println("Please enter date: ");
-        salesLeadDate = testDate(getInput());
+        salesLeadDate = Exception.testDate(Exception.getInput());
         sl.setSl_Date(salesLeadDate);
 
         System.out.println("Please enter SL phone number: ");
-        sl_phoneNumber = testPhone(getInput());
+        sl_phoneNumber = Exception.testPhone(Exception.getInput());
         sl.setSl_phoneNumber(sl_phoneNumber);
 
         System.out.println("Please enter SL email: ");
-        sl_Email = testEmail(getInput());
+        sl_Email = Exception.testEmail(Exception.getInput());
         sl.setSl_Email(sl_Email);
 
         sl.setSalesLeadID(cCount);
@@ -192,154 +192,13 @@ public class SalesLead {
         }
     }
 
-    /**
-     * getInput method prompts user for an input
-     *
-     * <p>
-     *  This method is used inside the addSL method to
-     *  ask for information and then through setters
-     *  add that information into the sales lead array list.
-     * </p>
-     *
-     * @return input
-     */
+    public static void printSalesLeadByEmpID(ArrayList<SalesLead> slList, String _empID) {
+        for (SalesLead sl : slList) {
 
-    public static String getInput() {
-        Scanner scnr = new Scanner(System.in);
-        String input = scnr.nextLine();
-        return input;
-
-    }
-
-    /**
-     * testAlpha method tests if input contains alpha characters
-     *
-     * <p>
-     *  This method consists of a try and catch block
-     *  to assure user input contains only alpha characters.
-     * </p>
-     *
-     * @param alphaCharacter user input
-     * @return a String of alpha characters
-     * @throws InputMismatchException if string tested does not contain
-     *                                alpha characters
-     *
-     */
-    public static String testAlpha(String alphaCharacter) {
-        try {
-
-            if (alphaCharacter.matches("^[a-zA-Z]*$")) {
-                return alphaCharacter;
+            if (sl.empID.equals(_empID)) {
+                System.out.println("Number of Sales Lead: " + slList.size());
             }
-            else  {
-                throw new InputMismatchException("not alpha");
-            }
-
-        } catch (InputMismatchException notAnAlpha) {
-            System.out.println("Invalid input. Please try again.");
-            return getInput();
-
-        }
-
-    }
-
-    /**
-     * testEmail method tests if input matches an email format
-     *
-     * <p>
-     *  This method consists of a try and catch block
-     *  to assure user input follows a standard email format.
-     * </p>
-     *
-     * @param email user input
-     * @return an email address
-     * @throws InputMismatchException if string tested does not match
-     *                                email format
-     *
-     */
-    public static String testEmail(String email) {
-        try {
-
-            if (email.matches("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$")) {
-                return email;
-            }
-            else  {
-                throw new InputMismatchException("invalid");
-            }
-
-
-
-        } catch (InputMismatchException notAnEmail) {
-            System.out.println("Invalid input. Please try again.");
-            return getInput();
-
         }
     }
 
-    /**
-     * testPhone method tests if input matches a phone number format
-     *
-     * <p>
-     *  This method consists of a try and catch block
-     *  to assure user input follows a standard phone number format.
-     * </p>
-     *
-     * @param phone user input
-     * @return a phone number
-     * @throws InputMismatchException if input tested does not match
-     *                                phone number format
-     *
-     */
-    public static String testPhone(String phone) {
-        try {
-
-            if (phone.matches("^[(]+[0-9]+[)]+[\\s]+[0-9]+[-]+[0-9]+$")) {
-                return phone;
-            }
-            else  {
-                throw new InputMismatchException("invalid");
-            }
-
-
-
-        } catch (InputMismatchException notAnEmail) {
-            System.out.println("Invalid input. Please try again.");
-            return getInput();
-
-        }
-    }
-
-    /**
-     * testDate method tests if input contains numbers
-     *
-     * <p>
-     *  This method consists of a try and catch block
-     *  to assure user input contains only numbers in a date format.
-     * </p>
-     *
-     * @param date user input
-     * @return number
-     * @throws InputMismatchException if string tested does not contain
-     *                                numbers
-     *
-     */
-    public static String testDate(String date) {
-        try {
-
-            if (date.matches("/\\d+[/][\\d][/][\\d]+$")) {
-                return date;
-            }
-            else  {
-                throw new InputMismatchException("invalid");
-            }
-
-
-
-        } catch (InputMismatchException notAnEmail) {
-            System.out.println("Invalid input. Please try again.");
-            return getInput();
-
-        }
-    }
-    
 }

@@ -27,6 +27,7 @@ public class Main {
     public static void main(String[] args) {
 
         ArrayList<Customers> cList = new ArrayList<> ();
+        ArrayList<Customers> cList1 = new ArrayList<> ();
         Customers cust = new Customers ();
 
         ArrayList<Dealership> listDealerships = new ArrayList<>();
@@ -51,10 +52,13 @@ public class Main {
 
 
         ArrayList<SalesLead> slList = new ArrayList<> ();
+        ArrayList<SalesLead> slList2 = new ArrayList<> ();
 
         ArrayList<Car> carList = new ArrayList<> ();
+        ArrayList<Car> carList2 = new ArrayList<> ();
 
         ArrayList<Truck> truckList = new ArrayList<> ();
+        ArrayList<Truck> truckList2 = new ArrayList<> ();
 
         ArrayList<Parts> partsList = new ArrayList<> ();
 
@@ -230,6 +234,7 @@ public class Main {
         tran1.setSubTotal(19999);
         tran1.setTotalPrice(21198.94);
         tran1.setPaymentType(PaymentType.cash);
+        tran1.setCommission(1999.90);
         transList.add(tran1);
 
         Transaction tran2 = new Transaction();
@@ -237,6 +242,7 @@ public class Main {
         tran2.setSubTotal(28000);
         tran2.setTotalPrice(29680);
         tran2.setPaymentType(PaymentType.credit);
+        tran2.setCommission(2800);
         transList.add(tran2);
 
         Transaction tran3 = new Transaction();
@@ -244,6 +250,7 @@ public class Main {
         tran3.setSubTotal(40000);
         tran3.setTotalPrice(42400);
         tran3.setPaymentType(PaymentType.credit);
+        tran3.setCommission(4000);
         transList.add(tran3);
 
 
@@ -301,6 +308,7 @@ public class Main {
             Scanner input = new Scanner (System.in);
             switch (userAction) {
                 case CUST_CODE:
+                    // add switch to select dealership
                     cList.add(cust.addCustomer());
                     //cust.printCustomerById(cList, 1);
 
@@ -316,11 +324,28 @@ public class Main {
 
                 case SL_PRNT:
 
-                    // to do - print salesperson id as well
-                    System.out.printf("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", "ID", "Employee ID", "Name", "Phone Number", "Email", "Date Added");
-                    SalesLead.printSalesLead(slList);
+                    System.out.println("1 - Print Sales Lead list \n 2 - Print Sales Lead by Employee ID \n 3 - Print Sales Lead Information by ID \n");
+                    int print = input.nextInt();
 
-                    SalesLead.printSalesLeadById(slList, 1);
+                    // to do - print salesperson id as well
+                    switch (print) {
+                        case 1:
+                            System.out.printf("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", "ID", "Employee ID", "Name", "Phone Number", "Email", "Date Added");
+                            SalesLead.printSalesLead(slList);
+                            break;
+                        case 2:
+                            System.out.println("Enter employee id: ");
+                            int _SL_ID = input.nextInt();
+                            System.out.printf("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", "ID", "Employee ID", "Name", "Phone Number", "Email", "Date Added");
+                            SalesLead.printSalesLeadById(slList, _SL_ID);
+                            break;
+                        case 3:
+                            System.out.println("Enter employee id: ");
+                            String _empID = input.next();
+                            SalesLead.printSalesLeadByEmpID(slList, _empID);
+                            break;
+
+                    }
                     break;
 
                 case SELL_CODE:

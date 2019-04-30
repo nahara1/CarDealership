@@ -3,6 +3,7 @@ Project: Car Dealership
 Purpose Details: Creates transactions and uses setters and getters to calculate the price and commission for salesperson. Prints all transactions.
 Course: IST 242 - 001
 Team: 2
+Author: Jeff Bezak
 Date Developed: 2/15/2019
 Last Date Changed: 4/30/2019
 Rev: 1
@@ -13,7 +14,6 @@ package edu.psu.ist.ab.ist242.team2;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 enum PaymentType {credit, cash}
 
@@ -34,9 +34,7 @@ public class Transaction {
 
     // Commission
 
-    public double getCommission() {
-        return commission;
-    }
+    public double getCommission() { return commission; }
 
     public void setCommission(double _Commission) {this.commission = _Commission * 0.1;}
 
@@ -57,9 +55,9 @@ public class Transaction {
     public void setPaymentType(PaymentType _pType) { payment = _pType; }
 
     public PaymentType setPaymentType() {
-        Scanner input = new Scanner(System.in);
         System.out.println("Enter payment type: cash or credit");
-        payment = PaymentType.valueOf(input.next().toLowerCase());
+        String _payment = Exception.testAlpha(Exception.getInput());
+        payment = PaymentType.valueOf(_payment.toLowerCase());
         return payment;
     }
 
@@ -72,6 +70,7 @@ public class Transaction {
      * @param transactionSubtotal subTotal
      * @param tax flat rate 6%
      * @return totalPrice
+     * @author Jeff Bezak
      */
 // junit
     public double calculateTransaction(double transactionSubtotal, double tax) {
@@ -85,26 +84,21 @@ public class Transaction {
     /**
      * addTransaction will add a new transaction to the array list of transactions
      * @return transaction
+     * @author Jeff Bezak
      */
 
     public Transaction addTransaction() {
-        System.out.println("Enter transaction ID");
         Transaction tran = new Transaction();
-        Scanner scnr = new Scanner(System.in);
 
-        while (!scnr.hasNextInt()) {
-            scnr.next();
-            System.out.println("Enter an integer");
-        }
-        tran.setTransactionId(scnr.nextInt());
+        System.out.println("Enter transaction ID");
+        String _transactionId = Exception.testInt(Exception.getInput());
+        transactionId = Integer.parseInt(_transactionId);
+        tran.setTransactionId(transactionId);
 
-        System.out.println("Enter subtotal");
-        while (!scnr.hasNextInt()) {
-            scnr.next();
-            System.out.println("Enter a double");
-        }
-
-        tran.setSubTotal(scnr.nextDouble());
+        System.out.println("Enter subtotal as a double");
+        String _subTotal = Exception.testDouble(Exception.getInput());
+        subTotal = Double.parseDouble(_subTotal);
+        tran.setSubTotal(subTotal);
 
         tran.setPaymentType();
 
@@ -121,6 +115,7 @@ public class Transaction {
     /**
      * listTransactions will print list of previous transactions
      * @param transList Transaction array list
+     * @author Jeff Bezak
      */
 
     public static void listTransactions(ArrayList<Transaction> transList) {
@@ -134,4 +129,7 @@ public class Transaction {
             System.out.println("Commission from sale: $" + df2.format(tran.getCommission()));
         }
     }
+
+    // add commission method
+
 }

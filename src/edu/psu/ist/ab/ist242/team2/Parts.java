@@ -99,11 +99,11 @@ import java.util.ArrayList;
         Parts parts = new Parts(cCount++);
         Scanner scnr = new Scanner(System.in);
         System.out.println("Please enter part name: ");
-        name = testAlpha(getInput());
+        name = Exception.testAlpha(Exception.getInput());
         parts.setPartName(name);
         parts.setCategory();
         System.out.println("Please enter part price: ");
-        price = Double.parseDouble(getInput());
+        price = Double.parseDouble(Exception.getInput());
         parts.setPrice(price);
 
         parts.setPartID(cCount);
@@ -216,91 +216,6 @@ import java.util.ArrayList;
             }
         }
     }
-
-    /**
-     * getInput method prompts user for an input
-     *
-     * <p>
-     *  This method is used inside the addParts method to
-     *  ask for an auto part information and then through setters
-     *  add that information into the Parts array list.
-     * </p>
-     *
-     * @return input
-     */
-    public static String getInput() {
-        Scanner scnr = new Scanner(System.in);
-        String input = scnr.nextLine();
-        return input;
-
-    }
-
-    /**
-     * testAlpha method tests if input contains alpha characters
-     *
-     * <p>
-     *  This method consists of a try and catch block
-     *  to assure user input contains only alpha characters.
-     * </p>
-     *
-     * @param alphaCharacter user input
-     * @return a String of alpha characters
-     * @throws InputMismatchException if string tested does not contain
-     *                                alpha characters
-     *
-     */
-
-    public static String testAlpha(String alphaCharacter) {
-        try {
-
-            if (alphaCharacter.matches("^[a-zA-Z]*$")) {
-                return alphaCharacter;
-            }
-            else  {
-                throw new InputMismatchException("not alpha");
-            }
-
-        } catch (InputMismatchException notAnAlpha) {
-            System.out.println("Invalid input. Please try again.");
-            return getInput();
-
-        }
-
-    }
-
-    /**
-     * testDouble method tests if input is a double
-     *
-     * <p>
-     *  This method consists of a try and catch block
-     *  to assure user input for setting an auto part price
-     *  is a double.
-     * </p>
-     *
-     * @param price user input
-     * @return a price
-     * @throws InputMismatchException if input tested is not a double
-     *
-     */
-
-    public static String testDouble(String price) {
-        try {
-
-            if (price.matches("\\d+\\.\\d*$")) {
-                return price;
-            }
-            else  {
-                throw new InputMismatchException("not price");
-            }
-
-        } catch (InputMismatchException notAnAlpha) {
-            System.out.println("Invalid input. Please try again.");
-            return getInput();
-
-        }
-
-    }
-
 }
 
 
