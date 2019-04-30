@@ -10,8 +10,6 @@ Rev: 1
 
 package edu.psu.ist.ab.ist242.team2;
 
-import edu.psu.ist.ab.ist242.team2.Exception;
-
 import java.util.*;
 
 /**
@@ -66,7 +64,8 @@ public final class Car extends Vehicle {
         car.setDealershipID(scnr.nextInt());
 
         System.out.println("Please enter VIN number: ");
-        car.setVin(scnr.next());
+        vin = Exception.testAlphaNumeric(Exception.getInput());
+        car.setVin(vin);
 
         System.out.println("Please enter car model: ");
         model = Exception.testAlpha(Exception.getInput());

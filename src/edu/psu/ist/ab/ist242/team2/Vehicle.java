@@ -26,22 +26,28 @@ public abstract class Vehicle {
     /**
      * Vehicle Identification Number
      */
-    private String vin;
+    protected String vin;
+
+
+    /**
+     * Dealership ID
+     */
+    protected int dealership_id;
 
     /**
      * Vehicle name
      */
-    private String name;
+    protected String name;
 
     /**
      * date
      */
-    private Date built;
+    protected Date built;
 
     /**
      * wheeldrive
      */
-    private Wheeldrive wheeldrive;
+    protected Wheeldrive wheeldrive;
 
     /**
      * Vehicle number of doors

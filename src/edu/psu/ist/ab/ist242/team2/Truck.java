@@ -10,7 +10,6 @@ Rev: 1
 
 package edu.psu.ist.ab.ist242.team2;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.*;
 
@@ -65,22 +64,37 @@ public final class Truck extends Vehicle {
     public Truck addTruck() {
         Truck truck = new Truck ();
         Scanner scnr = new Scanner (System.in);
+
         System.out.println("Enter Dealership ID: ");
-        truck.setDealershipID(scnr.nextInt());
+        String dealer_id = Exception.testInt(Exception.getInput());
+        dealership_id = Integer.parseInt(dealer_id);
+        truck.setDealershipID(dealership_id);
+
         System.out.println ("Please enter VIN number: ");
-        truck.setVin (scnr.nextLine ());
+        vin = Exception.testAlphaNumeric(Exception.getInput());
+        truck.setVin(vin);
+
         System.out.println ("Please enter truck model: ");
-        truck.setModel (scnr.nextLine ());
+        model = Exception.testAlpha(Exception.getInput());
+        truck.setModel(model);
+
         System.out.println ("Please enter truck maker: ");
-        truck.setMaker (scnr.nextLine ());
+        maker = Exception.testAlpha(Exception.getInput());
+        truck.setMaker(maker);
+
         System.out.println ("Please enter truck year: ");
         String _year = Exception.testInt(Exception.getInput());
         year = Integer.parseInt(_year);
         truck.setYear(year);
+
         truck.setTon();
+
         truck.setNumOfDoors();
+
         System.out.println ("Please enter truck color: ");
-        truck.setColor (scnr.nextLine ());
+        color = Exception.testAlpha(Exception.getInput());
+        truck.setColor(color);
+
         System.out.println("Please enter truck price: ");
         price = Double.parseDouble(Exception.getInput());
         String _price = Exception.testDouble(Exception.getInput());
@@ -174,8 +188,3 @@ public final class Truck extends Vehicle {
 
     }
 }
-
-
-
-
-

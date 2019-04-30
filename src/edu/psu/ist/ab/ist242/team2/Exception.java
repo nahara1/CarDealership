@@ -157,11 +157,11 @@ public class Exception {
      *
      * <p>
      *  This method consists of a try and catch block
-     *  to assure user input for setting year contains digits.
+     *  to assure user input contains digits only.
      * </p>
      *
      * @param input user input
-     * @return year
+     * @return integer
      * @throws InputMismatchException if input tested is not an integer
      *
      */
@@ -181,6 +181,19 @@ public class Exception {
 
     }
 
+    /**
+     * testAlphaNumeric method tests if input matches alphanumeric characters
+     *
+     * <p>
+     *  This method consists of a try and catch block
+     *  to assure user input contains alphanumeric characters only.
+     * </p>
+     *
+     * @param input user input
+     * @return alphanumeric string
+     * @throws InputMismatchException if input tested is not alphanumeric
+     *
+     */
     public static String testAlphaNumeric(String input) {
         try {
             if (input.matches("^[a-zA-Z0-9]*$")) {
@@ -191,6 +204,39 @@ public class Exception {
         } catch (NumberFormatException notAnInt) {
             System.out.println("Invalid input. You did not enter alphanumeric characters. Please try again. \n");
             return getInput();
+        }
+    }
+
+    /**
+     * testDate method tests if input contains numbers
+     *
+     * <p>
+     *  This method consists of a try and catch block
+     *  to assure user input contains only numbers in a date format.
+     * </p>
+     *
+     * @param date user input
+     * @return number
+     * @throws InputMismatchException if string tested does not contain
+     *                                numbers
+     *
+     */
+    public static String testDate(String date) {
+        try {
+
+            if (date.matches("/\\d+[/][\\d][/][\\d]+$")) {
+                return date;
+            }
+            else  {
+                throw new InputMismatchException("invalid");
+            }
+
+
+
+        } catch (InputMismatchException notAnEmail) {
+            System.out.println("Invalid input. Please try again.");
+            return getInput();
+
         }
     }
 
