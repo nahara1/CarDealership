@@ -124,4 +124,7 @@ public class Transaction {
             System.out.println("Commission from sale: $" + df2.format(tran.getCommission()));
         }
     }
+
+    // add commission method
+
 }
