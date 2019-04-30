@@ -3,6 +3,7 @@ Project: Car Dealership
 Purpose Details: Creates dealership and prints dealership name address and phone number.
 Course: IST 242 - 001
 Team: 2
+Author: Jeff Bezak
 Date Developed: 2/15/2019
 Last Date Changed: 4/28/2019
 Rev: 1
@@ -11,8 +12,6 @@ Rev: 1
 package edu.psu.ist.ab.ist242.team2;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class Dealership {
 
@@ -34,6 +33,7 @@ public class Dealership {
      * @param name         dealership name
      * @param address      dealership address
      * @param phoneNumber  dealership phone number
+     * @author Jeff Bezak
      */
 
     public Dealership(String name, String address, String phoneNumber) {}
@@ -104,6 +104,7 @@ public class Dealership {
     /**
      * listDealerships prints dealership information
      * @param dealerList dealership array list
+     * @author Jeff Bezak
      */
 
     public void listDealerships(ArrayList<Dealership> dealerList) {
@@ -116,60 +117,4 @@ public class Dealership {
             System.out.println("Phone Number: " + dealer.getPhoneNumber());
         }
     }
-
-
-    /**
-     * getInput method prompts user for an input
-     *
-     * <p>
-     *  This method is used inside the addDealership method to
-     *  ask for dealership information and then through setters
-     *  add that information into the dealership array list.
-     * </p>
-     *
-     * @return input
-     */
-
-    public static String getInput() {
-        Scanner scnr = new Scanner(System.in);
-        String input = scnr.nextLine();
-        return input;
-
-    }
-
-
-    /**
-     * testAlpha method tests if input contains alpha characters
-     *
-     * <p>
-     *  This method consists of a try and catch block
-     *  to assure user input contains only alpha characters.
-     * </p>
-     *
-     * @param alphaCharacter user input
-     * @return a String of alpha characters
-     * @throws InputMismatchException if string tested does not contain
-     *                                alpha characters
-     *
-     */
-    public static String testAlpha(String alphaCharacter) {
-        try {
-
-            if (alphaCharacter.matches("^[a-zA-Z]*$")) {
-                return alphaCharacter;
-            }
-            else  {
-                throw new InputMismatchException("not alpha");
-            }
-        }
-        catch (InputMismatchException notAnAlpha) {
-            System.out.println("Invalid input. Please try again.");
-            return getInput();
-        }
-    }
 }
-
-
-
-
-
