@@ -1,3 +1,13 @@
+/*
+Project: Car Dealership
+Purpose Details: Creates an object sales lead and adds information about the sales lead. Prints list of Sales Leads.
+Course: IST 242 - 001
+Team: 2
+Date Developed: 2/15/2019
+Last Date Changed: 4/29/2019
+Rev: 1
+*/
+
 package edu.psu.ist.ab.ist242.team2;
 import java.util.ArrayList;
 import java.util.InputMismatchException;

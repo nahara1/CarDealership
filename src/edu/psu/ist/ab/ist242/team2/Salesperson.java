@@ -1,3 +1,13 @@
+/*
+Project: Car Dealership
+Purpose Details: Creates object salesperson using setters and getters. Also contains method for selling parts.
+Course: IST 242 - 001
+Team: 2
+Date Developed: 2/15/2019
+Last Date Changed: 4/28/2019
+Rev: 1
+*/
+
 package edu.psu.ist.ab.ist242.team2;
 
 import java.util.Scanner;

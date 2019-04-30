@@ -1,3 +1,13 @@
+/*
+Project: Car Dealership
+Purpose Details: Creates transactions and uses setters and getters to calculate the price and commission for salesperson. Prints all transactions.
+Course: IST 242 - 001
+Team: 2
+Date Developed: 2/15/2019
+Last Date Changed: 4/30/2019
+Rev: 1
+*/ 
+
 package edu.psu.ist.ab.ist242.team2;
 
 

@@ -1,3 +1,13 @@
+/*
+Project: Car Dealership
+Purpose Details: Creates an object parts and adds parts to the parts array list.
+Course: IST 242 - 001
+Team: 2
+Date Developed: 2/15/2019
+Last Date Changed: 4/27/2019
+Rev: 1
+*/
+
 package edu.psu.ist.ab.ist242.team2;
 
 
