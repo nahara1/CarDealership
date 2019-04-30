@@ -27,6 +27,7 @@ public class Main {
     public static void main(String[] args) {
 
         ArrayList<Customers> cList = new ArrayList<> ();
+        ArrayList<Customers> cList1 = new ArrayList<> ();
         Customers cust = new Customers ();
 
         ArrayList<Dealership> listDealerships = new ArrayList<>();
@@ -51,10 +52,13 @@ public class Main {
 
 
         ArrayList<SalesLead> slList = new ArrayList<> ();
+        ArrayList<SalesLead> slList2 = new ArrayList<> ();
 
         ArrayList<Car> carList = new ArrayList<> ();
+        ArrayList<Car> carList2 = new ArrayList<> ();
 
         ArrayList<Truck> truckList = new ArrayList<> ();
+        ArrayList<Truck> truckList2 = new ArrayList<> ();
 
         ArrayList<Parts> partsList = new ArrayList<> ();
 
@@ -301,6 +305,7 @@ public class Main {
             Scanner input = new Scanner (System.in);
             switch (userAction) {
                 case CUST_CODE:
+                    // add switch to select dealership
                     cList.add(cust.addCustomer());
                     //cust.printCustomerById(cList, 1);
 
