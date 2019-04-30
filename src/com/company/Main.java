@@ -4,7 +4,7 @@ Purpose Details: To create a Java text-based console application for a car deale
 Course: IST 242 - 001
 Team: 2
 Date Developed: 2/15
-Last Date Changed: 4/27
+Last Date Changed: 4/28
 Rev: 1
 */
 
@@ -12,7 +12,10 @@ Rev: 1
 package com.company;
 
 
+import org.junit.Test;
+
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 
@@ -23,6 +26,7 @@ import java.util.Scanner;
  */
 
 public class Main {
+
 
     public static void main(String[] args) {
 
@@ -473,8 +477,8 @@ public class Main {
 
             userAction = getAction (PROMPT_ACTION);
         }
-    }
 
+    }
 
     public static char getAction(String prompt) {
 
@@ -487,13 +491,5 @@ public class Main {
 
     }
 
+
  }
-
-
-
-
-
-
-
-
-

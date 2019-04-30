@@ -1,27 +1,47 @@
 package com.company;
 
+import org.junit.Assert;
+import org.junit.Test;
+
+import static junit.framework.Assert.assertNotSame;
 import static junit.framework.TestCase.assertTrue;
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.*;
 
 public class MainTest {
 
 
-    @org.junit.Test
+   @Test
+    public void getActionTest() {
+       try {
+           assertEquals(Main.getAction("N"), 'N');
+       } catch (Exception e) {
+           System.out.println("Exception: " + e.getMessage());
+       }
+   }
+
+
+   @Test
     public void getActionTestTrue() {
-        assertTrue(Main.getAction("1"));
+       try {
+           Assert.assertEquals('N', 'N');
+       }
+       catch (Exception e) {
+           System.out.println("Exception: " + e.getMessage());
+       }
+   }
 
-    }
-
-    private void assertTrue(char action) {
-    }
-
-    @org.junit.Test
+    @Test
     public void getActionTestFalse() {
-        assertFalse(Main.getAction(""));
+        try {
+            Assert.assertNotEquals(Main.getAction("Naha"), 'N');
+        }
+        catch (Exception e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
     }
 
-    private void assertFalse(char action) {
-    }
+
 
 
 }
+

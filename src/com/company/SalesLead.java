@@ -99,10 +99,19 @@ public class SalesLead {
         this.salesLeadID = _salesLeadID;
     }
 
+    /**
+     * Sales Lead first name getter
+     * @return
+     */
     public String getSl_firstName() {
         return sl_firstName;
     }
 
+
+    /**
+     * Sales Lead first name setter
+     * @return
+     */
     public void setSl_firstName(String _sl_firstName) {
         this.sl_firstName = _sl_firstName;
     }
