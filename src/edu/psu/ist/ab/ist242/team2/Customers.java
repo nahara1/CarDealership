@@ -1,4 +1,14 @@
-package com.company;
+/*
+Project: Car Dealership
+Purpose Details: Creates an object customer with user input for information related to the customer. Prints list of all customers.
+Course: IST 242 - 001
+Team: 2
+Date Developed: 2/15/2019
+Last Date Changed: 4/28/2019
+Rev: 1
+*/
+
+package edu.psu.ist.ab.ist242.team2;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -198,7 +208,6 @@ public class Customers {
         Scanner scnr = new Scanner(System.in);
         String input = scnr.nextLine();
         return input;
-
     }
 
 
@@ -281,6 +290,7 @@ public class Customers {
      *                                phone number format
      *
      */
+
     public static String testPhone(String phone) {
         try {
 

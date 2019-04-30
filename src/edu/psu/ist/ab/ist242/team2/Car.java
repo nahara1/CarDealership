@@ -1,4 +1,14 @@
-package com.company;
+/*
+Project: Car Dealership
+Purpose Details: Creates object car extended from vehicle. Also contains methods to sell a vehicle and print the list of vehicles by model or color.
+Course: IST 242 - 001
+Team: 2
+Date Developed: 2/15
+Last Date Changed: 4/28/2019
+Rev: 1
+*/
+
+package edu.psu.ist.ab.ist242.team2;
 
 import java.util.*;
 

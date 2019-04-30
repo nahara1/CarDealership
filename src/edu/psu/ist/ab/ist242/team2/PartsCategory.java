@@ -1,4 +1,14 @@
-package com.company;
+/*
+Project: Car Dealership
+Purpose Details: Contains an enumeration for the type of parts.
+Course: IST 242 - 001
+Team: 2
+Date Developed: 2/15/2019
+Last Date Changed: 4/28/2019
+Rev: 1
+*/
+
+package edu.psu.ist.ab.ist242.team2;
 
 /**
  * <p>
