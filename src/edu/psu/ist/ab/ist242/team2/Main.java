@@ -309,16 +309,26 @@ public class Main {
             switch (userAction) {
                 case CUST_CODE:
                     // add switch to select dealership
+
                     cList.add(cust.addCustomer());
                     //cust.printCustomerById(cList, 1);
 
 
                     break;
                 case CUST_PRNT:
-                    System.out.printf("%-10s | %-12s |  %-12s | %-12s | %-10s \n", "ID", "First Name", "Last Name", "Email", "Phone Number");
-                    Customers.printCustomer(cList);
+                    System.out.println("1 - Car Dealership Abington \n 2 - Car Dealership Bensalem");
+                    int dealership = input.nextInt();
 
-                    //SalesLead.printSalesLead(slList);
+                    switch (dealership) {
+                        case 1:
+                            System.out.printf("%-10s | %-12s |  %-12s | %-12s | %-10s \n", "ID", "First Name", "Last Name", "Email", "Phone Number");
+                            Customers.printCustByDealershipID(cList, 1);
+                            break;
+                        case 2:
+                            System.out.printf("%-10s | %-12s |  %-12s | %-12s | %-10s \n", "ID", "First Name", "Last Name", "Email", "Phone Number");
+                            Customers.printCustByDealershipID(cList, 2);
+                            break;
+                    }
 
                     break;
 
@@ -349,9 +359,9 @@ public class Main {
                     break;
 
                 case SELL_CODE:
+
                     System.out.println("Enter Type ('car'/'truck'/'parts'): ");
                     String invType = input.nextLine().toLowerCase();
-                    // method to get car/truck/parts by id
 
                     switch (invType) {
                         case "car":

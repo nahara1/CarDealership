@@ -156,7 +156,14 @@ public class Customers {
         }
     }
 
+    public static void printCustByDealershipID(ArrayList<Customers> cList, int _id) {
+        for (Customers cust : cList) {
+            if (cust.dealershipID == _id) {
+                System.out.printf("%-10s | %-12s |  %-12s | %-12s | %-10s \n", cust.getCustID(), cust.getFirstName(), cust.getLastName(), cust.getcustEmail(), cust.getPhoneNumber());
+            }
 
+        }
+    }
 
     /**
      * printCustomerById method lists customer information based on a given ID
