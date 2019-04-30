@@ -9,13 +9,10 @@ Rev: 1
 */
 
 
-package com.company;
+package edu.psu.ist.ab.ist242.team2;
 
-
-import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.Scanner;
 
 

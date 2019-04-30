@@ -1,9 +1,8 @@
-package com.company;
+package edu.psu.ist.ab.ist242.team2;
 
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 enum PaymentType {credit, cash}
@@ -64,7 +63,7 @@ public class Transaction {
      * @param tax flat rate 6%
      * @return totalPrice
      */
-
+// junit
     private double calculateTransaction(double transactionSubtotal, double tax) {
         totalPrice = transactionSubtotal * tax;
         totalPrice = Math.round(totalPrice*100.0)/100.0;

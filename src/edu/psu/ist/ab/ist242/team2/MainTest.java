@@ -1,4 +1,4 @@
-package com.company;
+package edu.psu.ist.ab.ist242.team2;
 
 import org.junit.Assert;
 import org.junit.Test;

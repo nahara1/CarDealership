@@ -1,8 +1,6 @@
-package com.company;
+package edu.psu.ist.ab.ist242.team2;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class TruckTest extends MainTest {
 

@@ -1,4 +1,4 @@
-package com.company;
+package edu.psu.ist.ab.ist242.team2;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

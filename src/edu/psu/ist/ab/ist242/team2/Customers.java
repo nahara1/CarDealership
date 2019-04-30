@@ -1,4 +1,4 @@
-package com.company;
+package edu.psu.ist.ab.ist242.team2;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -198,7 +198,6 @@ public class Customers {
         Scanner scnr = new Scanner(System.in);
         String input = scnr.nextLine();
         return input;
-
     }
 
 
@@ -281,6 +280,7 @@ public class Customers {
      *                                phone number format
      *
      */
+
     public static String testPhone(String phone) {
         try {
 
