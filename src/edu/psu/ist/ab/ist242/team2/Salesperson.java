@@ -11,6 +11,7 @@ Rev: 1
 package edu.psu.ist.ab.ist242.team2;
 
 import java.util.Scanner;
+import java.util.*;
 
 public class Salesperson {
 
@@ -19,6 +20,7 @@ public class Salesperson {
 
     Scanner userInput = new Scanner(System.in);
 
+    Hashtable<String, Double> salary = new Hashtable<String, Double>();
 
     // create method getSalespersonByID() find sp by their id
 
@@ -78,8 +80,22 @@ public class Salesperson {
     public String getEmpEmail() {return empEmail;}
     public void setEmpEmail(String _empEmail){this.empEmail = _empEmail;}
 
+
+    public static void printSalesperson(ArrayList<Salesperson> salespersonArrayListList, String _id) {
+        for (Salesperson sp : salespersonArrayListList) {
+
+            // cannot use super.color from a non static context, so added String color to Car class
+
+            if (sp.empID.equals(_id)) {
+                System.out.printf("%-10s | %-12s | %-10s \n", sp.getEmpFirstName(), sp.getEmpLastName(), sp.getEmpEmail());
+            }
+        }
+    }
+
     //public void sellCar()
 
+
+    /*
     public void sellCar() {
         Scanner input_vin = new Scanner(System.in);
         int vin_ = input_vin.nextInt();
@@ -90,10 +106,8 @@ public class Salesperson {
         // remove vehicle from vehiclesList
         // remove(index number)
 
-
-
     }
-
+*/
 
     //public void sellParts()
 
