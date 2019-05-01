@@ -128,6 +128,11 @@ public class Customers {
         this.custID = _CustID;
     }
 
+    /**
+     * Customer firstName getter
+     * @return int firstName
+     */
+
     public String getFirstName() {
         return firstName;
     }
