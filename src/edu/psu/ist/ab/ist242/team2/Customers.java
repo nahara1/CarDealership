@@ -35,6 +35,7 @@ public class Customers {
      * Counter to automatically generate customer IDs
      */
     int cCount = 00005;
+    // Since we already have 5 default customers. Next customer count would be 6
 
     /**
      * Customers constructor requiring Customer ID
