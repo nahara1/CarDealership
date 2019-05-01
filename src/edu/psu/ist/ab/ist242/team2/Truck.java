@@ -153,7 +153,9 @@ public final class Truck extends Vehicle {
      * that are in the inventory on certain format
      * <p>
      *
-     *@param truckArrayList
+     *
+     * @param truckArrayList Array list of trucks
+     *
      */
     public static void printTrucks(ArrayList<Truck> truckArrayList) {
         for (Truck truck : truckArrayList) {
@@ -169,7 +171,7 @@ public final class Truck extends Vehicle {
      * @param _VIN Vehicle Identification Number
      * @throws ConcurrentModificationException if VIN does not correspond
      *                                         to any truck in the inventory
-     *
+     * @author Narrara & JiaJia
      */
     public static void sellTruck(ArrayList<Truck> trucksList, String _VIN) {
         try {
@@ -192,6 +194,7 @@ public final class Truck extends Vehicle {
      * printTrucksByLocation method prints trucks that are of a specific dealership
      * @param truckList car Array List
      * @param _location vehicle location
+     * @author Alex, JiaJia & Narrara
      */
     public static void printTrucksByLocation(ArrayList<Truck> truckList, String _location) {
         for (Truck truck : truckList) {

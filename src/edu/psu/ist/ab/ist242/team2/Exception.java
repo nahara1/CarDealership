@@ -35,6 +35,7 @@ public class Exception {
      * @return a String of alpha characters
      * @throws InputMismatchException if string tested does not contain
      *                                alpha characters
+     * @author Narrara
      *
      */
     public static String testAlpha(String alphaCharacter) {
@@ -67,7 +68,7 @@ public class Exception {
      * @return an email address
      * @throws InputMismatchException if string tested does not match
      *                                email format
-     *
+     * @author Narrara
      */
     public static String testEmail(String email) {
         try {
@@ -100,7 +101,7 @@ public class Exception {
      * @return a phone number
      * @throws InputMismatchException if input tested does not match
      *                                phone number format
-     *
+     * @author Narrara
      */
 
     public static String testPhone(String phone) {
@@ -133,6 +134,7 @@ public class Exception {
      * @param price user input
      * @return a price
      * @throws InputMismatchException if input tested is not a double
+     * @author Narrara
      *
      */
     public static String testDouble(String price) {
@@ -164,6 +166,7 @@ public class Exception {
      * @param input user input
      * @return integer
      * @throws InputMismatchException if input tested is not an integer
+     * @author Narrara
      *
      */
     public static String testInt(String input) {
@@ -193,6 +196,7 @@ public class Exception {
      * @param input user input
      * @return alphanumeric string
      * @throws InputMismatchException if input tested is not alphanumeric
+     * @author Narrara & JiaJia
      *
      */
     public static String testAlphaNumeric(String input) {
@@ -220,6 +224,7 @@ public class Exception {
      * @return number
      * @throws InputMismatchException if string tested does not contain
      *                                numbers
+     * @author Narrara
      *
      */
     public static String testDate(String date) {
@@ -253,7 +258,7 @@ public class Exception {
      * @return input    "Abington" or "Bensalem"
      * @throws InputMismatchException if string tested does not contain
      *                                "Abington" or "Bensalem"
-     *
+     * @author JiaJia, Narrara & Alex
      */
     public static String testLocation(String input) {
         try {

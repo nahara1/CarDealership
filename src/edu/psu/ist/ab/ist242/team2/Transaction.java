@@ -33,11 +33,26 @@ public class Transaction {
 
     // Transaction ID
 
+    /**
+     * Transaction Id getter
+     * @return transaction id
+     */
+
     public int getTransactionId() { return transactionId; }
+
+    /**
+     * Transaction Id getter
+     * @param _transactionId transaction id
+     */
 
     public void setTransactionId(int _transactionId) {this.transactionId = _transactionId;}
 
     // Commission
+
+    /**
+     * Commisssion Id getter
+     * @return
+     */
 
     public double getCommission() { return commission; }
 
