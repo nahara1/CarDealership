@@ -15,6 +15,9 @@ package edu.psu.ist.ab.ist242.team2;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+/**
+ * Enumeration that contains the preset values of credit and cash to set payment type
+ */
 enum PaymentType {credit, cash}
 
 public class Transaction {
@@ -142,11 +145,18 @@ public class Transaction {
         }
     }
 
-    // add commission method
+    // commission method
 
     public double setSalesCommission(double _totalSales) {
         return _totalSales*0.15;
     }
+
+    /**
+     * setSalesCommission will print specific employee's commission based of given employee's ID
+     * @param transactionArrayList Transaction array list
+     * @param _empID               Employee's ID
+     * @author Narrara & JiaJia
+     */
 
     public static void printSalesCommission(ArrayList<Transaction> transactionArrayList, String _empID) {
         for (Transaction t1 : transactionArrayList) {

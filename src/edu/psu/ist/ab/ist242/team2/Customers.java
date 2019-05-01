@@ -34,7 +34,8 @@ public class Customers {
     /**
      * Counter to automatically generate customer IDs
      */
-    int cCount = 00001;
+    int cCount = 00005;
+    // Since we already have 5 default customers. Next customer count would be 6
 
     /**
      * Customers constructor requiring Customer ID
@@ -156,6 +157,11 @@ public class Customers {
         }
     }
 
+    /**
+     * printCustByDealershipID method lists customers information based on dealership's ID
+     * @param cList customers Array List
+     * @param _id   dealership's id
+     */
     public static void printCustByDealershipID(ArrayList<Customers> cList, int _id) {
         for (Customers cust : cList) {
             if (cust.dealershipID == _id) {
@@ -188,17 +194,8 @@ public class Customers {
 
 
     public static void countCustomers(ArrayList<Customers> cList) {
-            System.out.println("Customers Total: " + cList.size());
-
-             }
-/*
-
-
-    public static void countCustomersByDealership(ArrayList<Customers> cList, int _cdID) {
         System.out.println("Customers Total: " + cList.size());
-
     }
-*/
 
     // still working on this
     private void setDealershipID(int _dealershipID) {
