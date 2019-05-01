@@ -19,6 +19,7 @@ import java.util.*;
  * It contains methods that add, remove, and search for cars
  * in the dealership inventory.
  *</p>
+ *
  * @author JiaJia, Ronald, Narrara
  *
  */
