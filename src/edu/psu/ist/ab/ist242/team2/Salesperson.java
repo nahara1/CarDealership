@@ -16,8 +16,8 @@ import java.util.*;
 public class Salesperson {
 
     private double commission;
-    protected String empFirstName, empLastName, phoneNumber, empEmail, empID, location;
-
+    protected String empFirstName, empLastName, phoneNumber, empEmail, location;
+    public static String empID;
     Scanner userInput = new Scanner(System.in);
 
     Hashtable<String, Double> salary = new Hashtable<String, Double>();

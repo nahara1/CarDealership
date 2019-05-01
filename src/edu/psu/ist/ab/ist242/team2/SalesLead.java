@@ -47,6 +47,21 @@ public class SalesLead {
     public SalesLead() { }
 
     /**
+     *
+     */
+    public SalesLead(int _id, String _salesLeadDate, String _sl_location, String _sl_firstName, String _sl_lastName, String _sl_phoneNumber, String _sl_Email, String _empID) {
+        this.salesLeadID = _id;
+        this.salesLeadDate = _salesLeadDate;
+        this.sl_location = _sl_location;
+        this.sl_Email = _sl_Email;
+        this.sl_firstName = _sl_firstName;
+        this.sl_lastName = _sl_lastName;
+        this.sl_phoneNumber = _sl_phoneNumber;
+        this.empID = _empID;
+
+    }
+
+    /**
      * addSL method adds a new SalesLead
      * <p>
      *   The addSL method prompts user to enter
@@ -63,8 +78,8 @@ public class SalesLead {
         System.out.println("Employee ID: " + _empID);
         sl.setSL_empID(_empID);
 
-        System.out.println("Please enter location: ");
-        sl_location = Exception.testAlpha(Exception.getInput());
+        System.out.println("Please enter location ( 'Abington' / 'Bensalem' ) ");
+        sl_location = Exception.testLocation(Exception.getInput());
         sl.setSL_location(sl_location);
 
         System.out.println("Please enter SL first name: ");
@@ -212,7 +227,7 @@ public class SalesLead {
     public static void printSalesLeadByLocation(ArrayList<SalesLead> slList, String _location) {
         for (SalesLead sl : slList) {
             if (sl.sl_location.equals(_location)) {
-                System.out.printf("%-5s | %-12s | %-10s | %-10s | %-12s | %-10s\n", sl.getSalesLeadID(), sl.getSl_firstName(), sl.getSl_lastName(), sl.getSl_Email(), sl.getSl_phoneNumber(), sl.getSl_location());
+                System.out.printf("%-5s | %-12s | %-10s | %-10s | %-12s | %-10s\n", sl.getSalesLeadID(), sl.getSl_firstName(), sl.getSl_lastName(), sl.getSl_Email(), sl.getSl_phoneNumber(), sl.getSl_location(), sl.getSl_Date());
             }
         }
     }

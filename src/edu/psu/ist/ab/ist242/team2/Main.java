@@ -349,6 +349,7 @@ public class Main {
         tran1.setTotalPrice(21198.94);
         tran1.setPaymentType(PaymentType.cash);
         tran1.setCommission(1999.90);
+        tran1.setCommissionID("ABC1");
         transList.add(tran1);
 
         Transaction tran2 = new Transaction();
@@ -357,6 +358,7 @@ public class Main {
         tran2.setTotalPrice(29680);
         tran2.setPaymentType(PaymentType.credit);
         tran2.setCommission(2800);
+        tran2.setCommissionID("A3F6");
         transList.add(tran2);
 
         Transaction tran3 = new Transaction();
@@ -364,6 +366,7 @@ public class Main {
         tran3.setSubTotal(40000);
         tran3.setTotalPrice(42400);
         tran3.setPaymentType(PaymentType.credit);
+        tran3.setCommissionID("H5K9");
         tran3.setCommission(4000);
         transList.add(tran3);
 
@@ -455,7 +458,7 @@ public class Main {
 
                 case SL_PRNT:
 
-                    System.out.println("1 - Print Sales Lead list \n 2 - Print Sales Lead by Employee ID \n 3 - Print Sales Lead Information by ID \n");
+                    System.out.println("\n 1 - Print Sales Lead list \n 2 - Print Sales Lead by Employee ID \n 3 - Print Sales Lead Information by ID \n 4 - Print Sales Lead list by location");
                     int print = input.nextInt();
 
                     // to do - print salesperson id as well
@@ -465,7 +468,7 @@ public class Main {
                             SalesLead.printSalesLead(slList);
                             break;
                         case 2:
-                            System.out.println("Enter employee id: ");
+                            System.out.println("Enter Sales Lead ID: ");
                             int _SL_ID = input.nextInt();
                             System.out.printf("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", "ID", "Employee ID", "Name", "Phone Number", "Email", "Date Added");
                             SalesLead.printSalesLeadById(slList, _SL_ID);
@@ -474,6 +477,16 @@ public class Main {
                             System.out.println("Enter employee id: ");
                             String _empID = input.next();
                             SalesLead.printSalesLeadByEmpID(slList, _empID);
+                            break;
+                        case 4:
+                            System.out.println("Enter Location \n 1 - Abington \n 2 - Bensalem ");
+                            int location = input.nextInt();
+                            System.out.printf("%-5s | %-12s | %-10s | %-10s | %-12s | %-10s | %-10s\n", "ID", "First Name", "Last Name", "Email", "Phone Number", "Location", "Date Added");
+                            if (location==1) {
+                                SalesLead.printSalesLeadByLocation(slList, "Abington");
+                            } else if (location==2) {
+                                SalesLead.printSalesLeadByLocation(slList, "Bensalem");
+                            }
                             break;
 
                     }
@@ -509,18 +522,17 @@ public class Main {
 
 
                 case SL_CODE:
-                    System.out.println("Enter your emp id: ");
+                    System.out.println("Enter your employee id: ");
                     String emp_id = input.next();
                     slList.add(sl.addSL(emp_id));
 
                     break;
 
                 case INV_CODE:
-                    System.out.println("Enter Vehicle Type ('car'/'truck'/'parts'): ");
-                    String type = input.nextLine().toLowerCase();
-                    System.out.println("Enter location ('Abington'/'Bensalem':");
+                    String inv_type = getType();
+                    System.out.println("Enter location \n 1 - Abington \n 2 - Bensalem:");
                     String _location = input.nextLine();
-                    switch (type) {
+                    switch (inv_type) {
                         case "car":
                             car.printCarByLocation(carList, _location);
 
@@ -538,18 +550,12 @@ public class Main {
 
 
                 case SEARCH_CODE:
-
-                    Scanner scnr = new Scanner(System.in);
-
-                    System.out.println ("Enter Vehicle Type ('car'/'truck'/'parts':): ");
-                    String inv_type = input.nextLine().toLowerCase();
-
-
+                    inv_type = getType();
                     switch (inv_type) {
                         case "car":
                             System.out.println("Enter Type ('color'/'model'/'maker'/'VIN'): ");
                             String searchType = input.nextLine().toLowerCase();
-                            // method to get car/truck/parts by id
+                            Scanner scnr = new Scanner(System.in);
 
                             switch (searchType) {
                                 case "color":
@@ -661,6 +667,15 @@ public class Main {
         return firstChar;
 
     }
+
+    public static String getType() {
+        Scanner scnr = new Scanner(System.in);
+        System.out.println("Enter Vehicle Type ('car'/'truck'/'parts'): ");
+        String type  = scnr.nextLine().toLowerCase();
+        return type;
+    }
+
+
 
 
  }

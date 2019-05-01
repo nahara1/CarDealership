@@ -48,7 +48,7 @@ public class Exception {
 
         } catch (InputMismatchException notAnAlpha) {
             System.out.println("Invalid input. Please try again.");
-            return getInput();
+            return testAlpha(getInput());
 
         }
 
@@ -82,7 +82,7 @@ public class Exception {
 
         } catch (InputMismatchException notAnEmail) {
             System.out.println("Invalid input. Please try again.");
-            return getInput();
+            return testEmail(getInput());
 
         }
     }
@@ -116,7 +116,7 @@ public class Exception {
 
         } catch (InputMismatchException notAnEmail) {
             System.out.println("Invalid input. Please try again. \n Please use this format: (012) 345-6789");
-            return getInput();
+            return testPhone(getInput());
 
         }
     }
@@ -146,7 +146,7 @@ public class Exception {
 
         } catch (InputMismatchException notAnAlpha) {
             System.out.println("Invalid input. Please try again.");
-            return getInput();
+            return testDouble(getInput());
 
         }
 
@@ -175,7 +175,7 @@ public class Exception {
             }
         } catch (NumberFormatException notAnInt) {
             System.out.println("Invalid input. You did not enter an integer number. Please try again. \n");
-            return getInput();
+            return testInt(getInput());
         }
 
 
@@ -203,7 +203,7 @@ public class Exception {
             }
         } catch (NumberFormatException notAnInt) {
             System.out.println("Invalid input. You did not enter alphanumeric characters. Please try again. \n");
-            return getInput();
+            return testAlphaNumeric(getInput());
         }
     }
 
@@ -235,11 +235,22 @@ public class Exception {
 
         } catch (InputMismatchException notAnEmail) {
             System.out.println("Invalid input. Please try again.");
-            return getInput();
+            return testDate(getInput());
 
         }
     }
 
-
+    public static String testLocation(String input) {
+        try {
+            if ((input.matches("Abington"))||(input.matches("Bensalem"))) {
+                return input;
+            } else {
+                throw new InputMismatchException("invalid");
+            }
+        } catch (InputMismatchException LocationNotFound) {
+            System.out.println("Invalid input. Enter only either 'Abington' or 'Bensalem'. Please try again. \n");
+            return testLocation(getInput());
+        }
+    }
 
 }
