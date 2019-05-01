@@ -143,12 +143,6 @@ import java.util.ArrayList;
         return partCategory;
     }
 
-    /*
-        public void setPartCategory(String anyPartCategory) {
-            this.partCategory = anyPartCategory;
-        }
-    */
-
     public void setLocation(String _location) {
         this.location = _location;
     }
@@ -210,6 +204,10 @@ import java.util.ArrayList;
         return partCategory;
     }
 
+    /**
+     * printParts method prints all parts by their names
+     * @param PartsArrayList parts Array List
+     */
     public static void printParts(ArrayList<Parts> PartsArrayList) {
         for (Parts parts : PartsArrayList) {
             System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-12s\n", parts.getPartName());
@@ -217,11 +215,15 @@ import java.util.ArrayList;
         }
     }
 
+    /**
+     * printPartsByCategory method prints parts that are of a specific category
+     * @param partsList parts Array List
+     * @param _category parts category
+     */
     public static void printPartsByCategory(ArrayList<Parts> partsList, PartsCategory _category) {
         for (Parts parts : partsList) {
             if (parts.getPartName().equals(_category)) {
                 System.out.printf("%-10s | %-10s \n", parts.getPartName(), parts.getPartCategory());
-                //System.out.println("Car Part Name:" + parts.getPartName() + "Part Category:" + parts.getPartCategory());
             }
         }
     }

@@ -35,7 +35,7 @@ public class SalesLead {
 
     /**
      * SalesLead constructor requiring sales lead ID
-     * @param _id
+     * @param _id SalesLeads' ID
      */
     public SalesLead(int _id) {
         this.salesLeadID = _id;
@@ -47,7 +47,15 @@ public class SalesLead {
     public SalesLead() { }
 
     /**
-     *
+     * SalesLead constructor
+     * @param _id      SalesLead ID
+     * @param _salesLeadDate    SalesLead Date
+     * @param _sl_location      Location that SalesLead is at
+     * @param _sl_Email         SalesLead email address
+     * @param _sl_firstName     SalesLead first name
+     * @param _sl_lastName      SalesLead last name
+     * @param _sl_phoneNumber   SalesLead phone number
+     * @param _empID            Employee ID number
      */
     public SalesLead(int _id, String _salesLeadDate, String _sl_location, String _sl_firstName, String _sl_lastName, String _sl_phoneNumber, String _sl_Email, String _empID) {
         this.salesLeadID = _id;
@@ -188,6 +196,10 @@ public class SalesLead {
 
     public String getSl_location() { return sl_location; }
 
+    /**
+     * printSalesLead method prints list of SalesLeads' information, total number of SalesLeads
+     * @param slList SalesLead ArrayList
+     */
     public static void printSalesLead(ArrayList<SalesLead> slList) {
         for (SalesLead sales_lead : slList) {
           System.out.printf("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", sales_lead.getSalesLeadID(), sales_lead.getSL_empID(), sales_lead.getSl_firstName() + " " + sales_lead.getSl_lastName(), sales_lead.getSl_phoneNumber(), sales_lead.getSl_Email(), sales_lead.getSl_Date());
@@ -204,8 +216,8 @@ public class SalesLead {
 
     /**
      * printSalesLeadById method prints SalesLead that are of a certain ID
-     * @param slList
-     * @param salesLeadID
+     * @param slList SalesLead ArrayList
+     * @param salesLeadID SalesLeads' ID
      */
     public static void printSalesLeadById(ArrayList<SalesLead> slList, int salesLeadID) {
         for (SalesLead sl : slList) {
@@ -215,6 +227,11 @@ public class SalesLead {
         }
     }
 
+    /**
+     * printSalesLeadByEmpID method prints SalesLead that are of Employee's ID
+     * @param slList SalesLead ArrayList
+     * @param _empID Employee's ID
+     */
     public static void printSalesLeadByEmpID(ArrayList<SalesLead> slList, String _empID) {
         for (SalesLead sl : slList) {
 
@@ -224,6 +241,11 @@ public class SalesLead {
         }
     }
 
+    /**
+     * printSalesLeadByLocation method prints SalesLead that are of a certain location
+     * @param slList SalesLead ArrayList
+     * @param _location SalesLead's location
+     */
     public static void printSalesLeadByLocation(ArrayList<SalesLead> slList, String _location) {
         for (SalesLead sl : slList) {
             if (sl.sl_location.equals(_location)) {

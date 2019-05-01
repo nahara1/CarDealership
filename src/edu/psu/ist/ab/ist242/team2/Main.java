@@ -74,6 +74,22 @@ public class Main {
         Salesperson sp = new Salesperson ();
         SalesLead sl = new SalesLead ();
 
+        //SalesLead
+        /**
+         * Creating Sales persons to add to sales person list
+         * @param _id              SalesLead ID
+         * @param _salesLeadDate    SalesLead Date
+         * @param _sl_location      Location that SalesLead is at
+         * @param _sl_Email         SalesLead email address
+         * @param _sl_firstName     SalesLead first name
+         * @param _sl_lastName      SalesLead last name
+         * @param _sl_phoneNumber   SalesLead phone number
+         * @param _empID            Employee ID number
+         * @author Narrara & JiaJia
+         */
+
+        SalesLead sl1 = new SalesLead (1, "02/04/2019", "Abington", "Crystal@gmail.com", "Crystal", "Johnson", "(215)-908-2341", "ABC1");
+        SalesLead sl2 = new SalesLead (2, "04/01/2012", "Bensalem", "Ashley@gmail.com", "Ashley", "White", "(215)-789-2091", "A3F6");
 
         //SalesPeople
         /**
