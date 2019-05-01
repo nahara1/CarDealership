@@ -101,10 +101,16 @@ import java.util.ArrayList;
         System.out.println("Please enter part name: ");
         name = Exception.testAlpha(Exception.getInput());
         parts.setPartName(name);
+
         parts.setCategory();
+
         System.out.println("Please enter part price: ");
         price = Double.parseDouble(Exception.getInput());
         parts.setPrice(price);
+
+        System.out.println("Please enter location: ");
+        location = Exception.testAlpha(Exception.getInput());
+        parts.setLocation(location);
 
         parts.setPartID(cCount);
 
@@ -143,11 +149,11 @@ import java.util.ArrayList;
         }
     */
 
-    public void setVLocation(String _location) {
+    public void setLocation(String _location) {
         this.location = _location;
     }
 
-    public String getVLocation() {
+    public String getLocation() {
         return location;
     }
 
@@ -217,16 +223,24 @@ import java.util.ArrayList;
         }
     }
 
-
-    /*
-    public static void sellParts(ArrayList<Parts> partsList, String _partName) {
+    /**
+     * printPartsByLocation method prints parts that are of a specific dealership
+     * @param partsList parts Array List
+     * @param _location parts location
+     */
+    public static void printPartsByLocation(ArrayList<Parts> partsList, String _location) {
         for (Parts parts : partsList) {
-            if (parts.getPartName().equals(_partName)) {
-                partsList.remove(parts);
+            if (parts.location.equals(_location)) {
+                System.out.printf("%-10s | %-10s | %-10s | %-10s | %-10s \n", parts.getPartID(), parts.getPartName(), parts.getPrice(), parts.getPartCategory(), parts.getLocation());
             }
         }
     }
-*/
+
+    /**
+     * sellParts removes parts item from array list
+     * @param partsList  parts Array List
+     * @param _partID parts identification number
+     */
     public static void sellParts(ArrayList<Parts> partsList, int _partID) {
         for (Parts parts : partsList) {
             if (parts.getPartID() == _partID) {

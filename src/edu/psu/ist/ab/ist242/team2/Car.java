@@ -63,6 +63,10 @@ public final class Car extends Vehicle {
         System.out.println("Enter Dealership ID: ");
         car.setDealershipID(scnr.nextInt());
 
+        System.out.println("Please enter location: ");
+        location = Exception.testAlpha(Exception.getInput());
+        car.setVLocation(location);
+
         System.out.println("Please enter VIN number: ");
         vin = Exception.testAlphaNumeric(Exception.getInput());
         car.setVin(vin);

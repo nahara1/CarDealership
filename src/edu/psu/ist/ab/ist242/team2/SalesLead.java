@@ -25,7 +25,7 @@ public class SalesLead {
     /**
      *
      */
-    protected String sl_firstName, sl_lastName, sl_phoneNumber, sl_Email, empID;
+    protected String sl_location, sl_firstName, sl_lastName, sl_phoneNumber, sl_Email, empID;
     protected Boolean salesLeadActive;
     protected String salesLeadDate;
     int cCount;
@@ -62,6 +62,10 @@ public class SalesLead {
         // fix this
         System.out.println("Employee ID: " + _empID);
         sl.setSL_empID(_empID);
+
+        System.out.println("Please enter location: ");
+        sl_location = Exception.testAlpha(Exception.getInput());
+        sl.setSL_location(sl_location);
 
         System.out.println("Please enter SL first name: ");
         sl_firstName = Exception.testAlpha(Exception.getInput());
@@ -165,6 +169,10 @@ public class SalesLead {
         return empID;
     }
 
+    public void setSL_location(String _location) { this.sl_location = _location; }
+
+    public String getSl_location() { return sl_location; }
+
     public static void printSalesLead(ArrayList<SalesLead> slList) {
         for (SalesLead sales_lead : slList) {
           System.out.printf("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", sales_lead.getSalesLeadID(), sales_lead.getSL_empID(), sales_lead.getSl_firstName() + " " + sales_lead.getSl_lastName(), sales_lead.getSl_phoneNumber(), sales_lead.getSl_Email(), sales_lead.getSl_Date());
@@ -197,6 +205,14 @@ public class SalesLead {
 
             if (sl.empID.equals(_empID)) {
                 System.out.println("Number of Sales Lead: " + slList.size());
+            }
+        }
+    }
+
+    public static void printSalesLeadByLocation(ArrayList<SalesLead> slList, String _location) {
+        for (SalesLead sl : slList) {
+            if (sl.sl_location.equals(_location)) {
+                System.out.printf("%-5s | %-12s | %-10s | %-10s | %-12s | %-10s\n", sl.getSalesLeadID(), sl.getSl_firstName(), sl.getSl_lastName(), sl.getSl_Email(), sl.getSl_phoneNumber(), sl.getSl_location());
             }
         }
     }

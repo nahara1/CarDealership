@@ -452,12 +452,13 @@ public class Main {
 
                             break;
                         case "truck":
+                            System.out.println("Enter VIN:");
                             vinNum = input.nextLine();
                             truck.sellTruck(truckList, vinNum);
 
                             break;
                         case "parts":
-                            //String partName = input.nextLine();
+                            System.out.println("Enter Item ID:");
                             int partID = input.nextInt();
                             parts.sellParts(partsList, partID);
 
@@ -475,19 +476,21 @@ public class Main {
                     break;
 
                 case INV_CODE:
-                    System.out.println("Enter Vehicle Type ('car'/'truck'): ");
+                    System.out.println("Enter Vehicle Type ('car'/'truck'/'parts'): ");
                     String type = input.nextLine().toLowerCase();
+                    System.out.println("Enter location ('Abington'/'Bensalem':");
+                    String _location = input.nextLine();
                     switch (type) {
                         case "car":
-                            car.printCars(carList);
+                            car.printCarByLocation(carList, _location);
 
                             break;
                         case "truck":
-                            truck.printTrucks(truckList);
+                            truck.printTrucksByLocation(truckList, _location);
 
                             break;
                         case "parts":
-                            parts.printParts(partsList);
+                            parts.printPartsByLocation(partsList, _location);
 
                             break;
                     }
