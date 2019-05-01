@@ -6,6 +6,16 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**
+ * <h1>Transaction Test Class</h1>
+ *<p>
+ * The Transaction test class contains unit testing for calculation methods that
+ * are in the Transaction class.
+ *</p>
+ * @author Narrara, JiaJia
+ *
+ */
+
 public class TransactionTest extends MainTest {
 
     /**
@@ -35,7 +45,12 @@ public class TransactionTest extends MainTest {
         }
 
     }
-    
+
+    /**
+     * Unit testing for sales commission method.
+     * @author JiaJia
+     */
+
     @Test
     public void setSalesCommission_UnitTestTrue () {
         Transaction trans = new Transaction();
