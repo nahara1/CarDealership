@@ -43,7 +43,6 @@ public class TransactionTest extends MainTest {
         catch (Exception e) {
             System.out.println("Exception: " + e.getMessage());
         }
-
     }
 
     /**
@@ -60,7 +59,6 @@ public class TransactionTest extends MainTest {
         catch (Exception e) {
             System.out.println("Exception: " + e.getMessage());
         }
-
     }
 
     @Test
@@ -72,7 +70,5 @@ public class TransactionTest extends MainTest {
         catch (Exception e) {
             System.out.println("Exception: " + e.getMessage());
         }
-
     }
-
 }
