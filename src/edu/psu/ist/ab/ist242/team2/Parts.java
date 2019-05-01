@@ -200,7 +200,19 @@ import java.util.ArrayList;
 
         }
     }
-/*
+
+    public static void printPartsByCategory(ArrayList<Parts> partsList, String _partName) {
+        for (Parts parts : partsList) {
+
+            if (parts.getPartName().equals(_partName)) {
+// System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s\n", parts.getPartName(), parts.getPartCategory());
+                System.out.println("Car Part Name:" + parts.getPartName() + "Part Category:" + parts.getPartCategory());
+            }
+        }
+    }
+
+
+    /*
     public static void sellParts(ArrayList<Parts> partsList, String _partName) {
         for (Parts parts : partsList) {
             if (parts.getPartName().equals(_partName)) {

@@ -82,6 +82,16 @@ public class Main {
         //Vehicles - objects [done]
 
         // Cars
+        /**
+         * Creating Cars to add to Car list in inventory
+         * @param Color         Color of car
+         * @param Year          Year of car
+         * @param Model         Name of car
+         * @param Maker         Company that manufactured car
+         * @param NumofDoors    Number of doors car has
+         * @param Price         Price of car
+         * @author Alex Hirsh
+         */
 
         Car car1 = new Car ("1A2B3C");
         carList.add(car1);
@@ -139,6 +149,13 @@ public class Main {
 
         // Trucks
 
+        /**
+         * Creating Trucks to add to Truck list in inventory
+         * @param VIN   Truck VIN number
+         * @param Ton   Truck Weight in Tonnage
+         * @author Alex Hirsh
+         */
+
 
         Truck truck1 = new Truck ("5C6D7E");
         truck1.setTon (Ton.one);
@@ -180,6 +197,16 @@ public class Main {
 
 
         //Customer's information
+        /**
+         * Creating Customers to add to Customer List
+         * @param FirstName     customer first name
+         * @param LastName      customer last name
+         * @param GroupID       customers group ID number
+         * @param CustID        customers ID number
+         * @param PhoneNumber   customers phone number
+         * @param CustEmail     customers email address
+         * @author Alex Hirsh, Ron
+         */
         Customers cust1 = new Customers ();
         Customers cust2 = new Customers ();
         Customers cust3 = new Customers ();
@@ -228,7 +255,16 @@ public class Main {
         cList.add(cust5);
 
 
-        // Transactions
+        /**
+         * Creating Transactions to add to Transaction List
+         * @param TransactionId     Transaction ID number
+         * @param Subtotal          Cost without tax
+         * @param TotalPrice        Total Cost with tax
+         * @param PaymentType       How the customer paid
+         * @param Commission        Perecentage of money that goes to sales lead
+         * @author Alex Hirsh
+         */
+
         Transaction tran1 = new Transaction();
         tran1.setTransactionId(1);
         tran1.setSubTotal(19999);
@@ -255,6 +291,13 @@ public class Main {
 
 
         //SalesLead - add information (name, phone number, email, salespeople id)
+        //SalesLead - add information (name, phone number, email, salespeople id)
+
+        /**
+         * Creating Sales Leads to add information for Sales Lead list
+         * @param SalesLeadID       Sales Lead's ID number
+         * @author Alex Hirsh
+         */
         SalesLead s1 = new SalesLead ();
         s1.setSalesLeadID (0);
 
@@ -417,44 +460,60 @@ public class Main {
 
                     Scanner scnr = new Scanner(System.in);
 
-                    System.out.println("Enter Type ('color'/'model'/'maker'/'VIN'): ");
-                    String searchType = input.nextLine().toLowerCase();
-                    // method to get car/truck/parts by id
-
-                    switch (searchType) {
-                        case "color":
-
-                            System.out.println("Please enter color: ");
-                            String input_ = scnr.nextLine();
-
-                            Car.printCarByColor(carList, input_);
+                    System.out.println ("Enter Vehicle Type ('car'/'truck'/'parts':): ");
+                    String inv_type = input.nextLine().toLowerCase();
 
 
-                            break;
-                        case "maker":
+                    switch (inv_type) {
+                        case "car":
+                            System.out.println("Enter Type ('color'/'model'/'maker'/'VIN'): ");
+                            String searchType = input.nextLine().toLowerCase();
+                            // method to get car/truck/parts by id
 
-                            System.out.println("Please enter maker: ");
-                            input_ = scnr.nextLine();
+                            switch (searchType) {
+                                case "color":
 
-                            Car.printCarByColor(carList, input_);
+                                    System.out.println("Please enter color: ");
+                                    String input_ = scnr.nextLine();
 
-                            break;
-                        case "model":
+                                    Car.printCarByColor(carList, input_);
 
-                            System.out.println("Please enter model: ");
-                            input_ = scnr.nextLine();
 
-                            Car.printCarByModel(carList, input_);
+                                    break;
+                                case "maker":
 
-                            break;
-                        case "VIN":
-                            System.out.println("Please enter VIN: ");
-                            input_ = scnr.nextLine();
+                                    System.out.println("Please enter maker: ");
+                                    input_ = scnr.nextLine();
 
-                            //Car.printCarBy(carList, input_);
+                                    Car.printCarByColor(carList, input_);
 
-                            break;
+                                    break;
+                                case "model":
+
+                                    System.out.println("Please enter model: ");
+                                    input_ = scnr.nextLine();
+
+                                    Car.printCarByModel(carList, input_);
+
+                                    break;
+                                case "VIN":
+                                    System.out.println("Please enter VIN: ");
+                                    input_ = scnr.nextLine();
+
+                                    //Car.printCarBy(carList, input_);
+
+                                    break;
+                            }
+                        case "parts":
+                            System.out.println("Enter Category (): ");
+                            Scanner  category = new Scanner(System.in);
+                            PartsCategory parts_category = PartsCategory.valueOf(category.next().toLowerCase());
+                            parts.printPartsByCategory(partsList, searchType);
                     }
+
+
+
+
                     break;
 
 
@@ -469,8 +528,8 @@ public class Main {
 
                     //while (userAction != 'E') {
 
-                    System.out.println ("Enter Vehicle Type ('car'/'truck'): ");
-                    String inv_type = input.nextLine().toLowerCase();
+                    System.out.println ("Enter Vehicle Type ('car'/'truck':): ");
+                    inv_type = input.nextLine().toLowerCase();
 
                     switch (inv_type) {
                         case "car":

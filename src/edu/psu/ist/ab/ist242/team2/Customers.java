@@ -11,7 +11,7 @@ Rev: 1
 package edu.psu.ist.ab.ist242.team2;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
+
 import java.util.Scanner;
 
 public class Customers {
@@ -67,7 +67,7 @@ public class Customers {
 
         // ask for dealership id / location ??
 
-        System.out.println("Enter Dealership ID: ");
+        System.out.println("Enter Dealership ID: \n 1 - Abington \n 2 - Bensalem ");
         int dealershipID = scnr.nextInt();
         cust.setDealershipID(dealershipID);
 
