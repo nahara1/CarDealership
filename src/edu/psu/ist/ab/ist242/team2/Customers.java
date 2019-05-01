@@ -138,36 +138,71 @@ public class Customers {
 
     /**
      * Customer firstName getter
-     * @return int firstName
+     * @return String firstName
      */
 
     public String getFirstName() {
         return firstName;
     }
 
+    /**
+     * Customer firstName setter
+     * @return String firstName
+     */
+
     public void setFirstName(String _FirstName) {
         this.firstName = _FirstName;
     }
+
+    /**
+     * Customer lastName getter
+     * @return String lastName
+     */
 
     public String getLastName() {
         return lastName;
     }
 
+    /**
+     * Customer lastName getter
+     * @return String lastName
+     */
+
     public void setLastName(String _LastName) {
         this.lastName = _LastName;
     }
+
+    /**
+     * Customer phoneNumber getter
+     * @return String phoneNumber
+     */
 
     public String getPhoneNumber() {
         return phoneNumber;
     }
 
+    /**
+     * Customer phoneNumber setter
+     * @return String phoneNumber
+     */
+
     public void setPhoneNumber(String _PhoneNumber) {
         this.phoneNumber = _PhoneNumber;
     }
 
+    /**
+     * Customer custEmail getter
+     * @return String custEmail
+     */
+
     public String getcustEmail() {
         return custEmail;
     }
+
+    /**
+     * Customer custEmail setter
+     * @return String custEmail
+     */
 
     public void setCustEmail(String _email) {
         this.custEmail = _email;
