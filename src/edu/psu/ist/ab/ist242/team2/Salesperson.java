@@ -20,6 +20,7 @@ public class Salesperson {
      * Employees commission, first and last names, phone number, email, and location
      * Employee ID is a unique number for each employee
      */
+    
     private double commission;
     protected String empFirstName, empLastName, phoneNumber, empEmail, location;
     public static String empID;
@@ -35,7 +36,6 @@ public class Salesperson {
      */
     public void addSalesLead(String empID) {
         // ask for id
-
         String input = userInput.nextLine();
         empID = input;
         SalesLead sl = new SalesLead();
