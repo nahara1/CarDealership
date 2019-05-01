@@ -1,10 +1,10 @@
 /*
 Project: Car Dealership
-Purpose Details: Creates object salesperson using setters and getters. Also contains method for selling parts.
+Purpose Details: Creates object salesperson using setters and getters.
 Course: IST 242 - 001
 Team: 2
 Date Developed: 2/15/2019
-Last Date Changed: 4/28/2019
+Last Date Changed: 5/1/2019
 Rev: 1
 */
 
@@ -26,6 +26,12 @@ public class Salesperson {
 
 
     // Add salesLead - new customer
+
+    /**
+     * addSalesLead method adds a new sales lead to the dealership
+     * @param empID
+     * @author Ronald
+     */
     public void addSalesLead(String empID) {
         // ask for id
 
@@ -35,6 +41,11 @@ public class Salesperson {
         sl.addSL(empID);
 
     }
+
+    /**
+     * employee ID getter
+     * @return
+     */
 
     public String getEmpID() {return empID;} // get random number
     public void setEmpID(String _empID) {this.empID = _empID;}

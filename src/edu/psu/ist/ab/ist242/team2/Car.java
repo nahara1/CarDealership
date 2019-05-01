@@ -152,6 +152,7 @@ public final class Car extends Vehicle {
      * printCarsByMaker method prints cars by their maker
      * @param carList car Array List
      * @param _maker car maker
+     * @author JiaJia & Narrara
      */
 
     public static void printCarByMaker(ArrayList<Car> carList, String _maker) {

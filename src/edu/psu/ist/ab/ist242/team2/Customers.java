@@ -18,41 +18,25 @@ public class Customers {
 
     /**
      * Unique identification number of each customer and dealership
-     *
-     * @param custID    customerID
-     * @param dealershipID  dealershipID
-     * @return int
      * @author Ronald Salguero
      */
+
     private int custID, dealershipID;
 
     /**
      * Customers first and last name, phone number, email, and groupID
-     *
-     * @param firstName     customer's firstName
-     * @param lastName      customer's lastName
-     * @param phoneNumber   customer's phoneNumber
-     * @param custEmail     customer's email
-     * @param groupID       customer's groupID
-     * @return String
      * @author Ronald Salguero
      */
     private String firstName, lastName, phoneNumber, custEmail, groupID, custLocation;
 
     /**
      * Counter to automatically generate customer IDs
-     *
-     * @param cCount
-     * @return int
      * @author Ronald Salguero
      */
     int cCount = 00001;
 
     /**
      * Customers constructor requiring Customer ID
-     *
-     * @param custID Customer ID
-     * @return int
      * @author Ronald Salguero
      */
     Customers(int custID) {
@@ -109,22 +93,36 @@ public class Customers {
     // Group customers based on their last name (asc order)
 
     /**
-     *Asks user to input customer's groupID
-     *
-     *@return String
+     * Group ID getter
+     * @return String
      */
 
     public String getGroupID() {
         return groupID;
     }
 
+    /**
+     * Group ID setter
+     * @param _GroupID Group ID
+     */
+
     public void setGroupID(String _GroupID) {
         this.groupID = _GroupID;
     }
 
+    /**
+     * Customer ID getter
+     * @return an integer Customer ID
+     */
+
     public int getCustID() {
         return custID;
     }
+
+    /**
+     * Customer ID getter
+     * @return an integer Customer ID
+     */
 
     public void setCustID(int _CustID) {
         this.custID = _CustID;
@@ -219,7 +217,7 @@ public class Customers {
         System.out.println ("Customers Total: " + cList.size ());
     }
 
-    // still working on this
+
     private void setDealershipID(int _dealershipID) {
         this.dealershipID = _dealershipID;
     }
