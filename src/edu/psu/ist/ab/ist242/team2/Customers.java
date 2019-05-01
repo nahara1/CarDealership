@@ -1,6 +1,6 @@
 /*
 Project: Car Dealership
-Purpose Details: Creates an object customer with user input for information related to the customer. Prints list of all customers.
+Purpose Details: Creates an object customer with user input for information related to the customer. Prints lists customers.
 Course: IST 242 - 001
 Team: 2
 Date Developed: 2/15/2019
