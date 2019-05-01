@@ -298,8 +298,6 @@ public class Main {
         Inventory in5 = new Inventory ();
 
 
-        //Customer's information
-
         /**
          * Creating Customers to add to Customer List
          * @param FirstName     customer first name
@@ -310,6 +308,9 @@ public class Main {
          * @param CustEmail     customers email address
          * @author Alex Hirsh, Ronald Salguero
          */
+
+        //Customer's information
+
         Customers cust1 = new Customers ();
         Customers cust2 = new Customers ();
         Customers cust3 = new Customers ();
