@@ -205,7 +205,7 @@ public class Main {
          * @param CustID        customers ID number
          * @param PhoneNumber   customers phone number
          * @param CustEmail     customers email address
-         * @author Alex Hirsh, Ron
+         * @author Alex Hirsh, Ronald Salguero
          */
         Customers cust1 = new Customers ();
         Customers cust2 = new Customers ();

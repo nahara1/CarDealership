@@ -16,7 +16,7 @@ import java.util.*;
 public class Salesperson {
 
     private double commission;
-    protected String empFirstName, empLastName, phoneNumber, empEmail, empID;
+    protected String empFirstName, empLastName, phoneNumber, empEmail, empID, location;
 
     Scanner userInput = new Scanner(System.in);
 
@@ -35,6 +35,8 @@ public class Salesperson {
         sl.addSL(empID);
 
     }
+
+
 
 
     // repeated customer - get their id - create for loop
@@ -56,13 +58,7 @@ public class Salesperson {
 
 // Give discount
 
-    public void salesPeopleWork()
-
-    {
-
-
-
-}
+    public void salesPeopleWork() { }
 
 
     public String getEmpID() {return empID;} // get random number
@@ -83,74 +79,18 @@ public class Salesperson {
 
     public static void printSalesperson(ArrayList<Salesperson> salespersonArrayListList, String _id) {
         for (Salesperson sp : salespersonArrayListList) {
-
-            // cannot use super.color from a non static context, so added String color to Car class
-
             if (sp.empID.equals(_id)) {
                 System.out.printf("%-10s | %-12s | %-10s \n", sp.getEmpFirstName(), sp.getEmpLastName(), sp.getEmpEmail());
             }
         }
     }
 
-    //public void sellCar()
-
-
-    /*
-    public void sellCar() {
-        Scanner input_vin = new Scanner(System.in);
-        int vin_ = input_vin.nextInt();
-        System.out.println("Enter VIN number: ");
-
-        // how to retrieve an object based on vin number
-
-        // remove vehicle from vehiclesList
-        // remove(index number)
-
-    }
-*/
-
-    //public void sellParts()
-
-    public void sellParts() {
-        Scanner input_partID = new Scanner(System.in);
-        int idNumber_ = input_partID.nextInt();
-
-        // get parts id to retrieve parts item from parts arrayList
-        System.out.println("Enter part ID number: ");
-
-
-        // ?
-        // remove vehicle from partsList
-        // check if there's an item with given id ??
-               /*
-                if (idNumber_ == (parts.getPartsID)) {
-
-                }
-
-                or
-                boolean check = partsList.contains("id");
-
-                if (check) {
-                    //do sth
-                }else{System.out.println("Try again");}
-                */
-               // get index and then remove it from arrayList
-
-       // pList.indexOf(parts) ?
-
-
-
-
+    public void setVLocation(String _location) {
+        this.location = _location;
     }
 
-
-
-   //public void addCar()
-
-   //
-
-
-
-
+    public String getVLocation() {
+        return location;
+    }
 
 }

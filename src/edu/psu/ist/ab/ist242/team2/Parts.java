@@ -34,9 +34,9 @@ import java.util.ArrayList;
     private int partID;
 
     /**
-     * Auto part name
+     * Auto part name, location
      */
-    private String name;
+    private String name, location;
 
     /**
      * Auto part price
@@ -143,6 +143,13 @@ import java.util.ArrayList;
         }
     */
 
+    public void setVLocation(String _location) {
+        this.location = _location;
+    }
+
+    public String getVLocation() {
+        return location;
+    }
 
     /**
      * Parts name getter
@@ -203,10 +210,9 @@ import java.util.ArrayList;
 
     public static void printPartsByCategory(ArrayList<Parts> partsList, String _partName) {
         for (Parts parts : partsList) {
-
             if (parts.getPartName().equals(_partName)) {
-// System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s\n", parts.getPartName(), parts.getPartCategory());
-                System.out.println("Car Part Name:" + parts.getPartName() + "Part Category:" + parts.getPartCategory());
+                System.out.printf("%-10s | %-10s \n", parts.getPartName(), parts.getPartCategory());
+                //System.out.println("Car Part Name:" + parts.getPartName() + "Part Category:" + parts.getPartCategory());
             }
         }
     }

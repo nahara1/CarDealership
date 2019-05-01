@@ -38,6 +38,9 @@ public class Transaction {
 
     public void setCommission(double _Commission) {this.commission = _Commission * 0.1;}
 
+    public void setCommission (int _trans_id) {
+
+    }
     // Price
 
     public double getSubTotal() { return subTotal; }
