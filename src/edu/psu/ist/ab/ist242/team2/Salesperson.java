@@ -16,15 +16,16 @@ import java.util.Hashtable;
 import java.util.HashMap;
 
 public class Salesperson {
-
+    /**
+     * Employees commission, first and last names, phone number, email, and location
+     * Employee ID is a unique number for each employee
+     */
     private double commission;
     protected String empFirstName, empLastName, phoneNumber, empEmail, location;
     public static String empID;
     Scanner userInput = new Scanner(System.in);
 
     // create method getSalespersonByID() find sp by their id
-
-
     // Add salesLead - new customer
 
     /**
@@ -61,8 +62,15 @@ public class Salesperson {
 
     public String getEmpEmail() {return empEmail;}
     public void setEmpEmail(String _empEmail){this.empEmail = _empEmail;}
+    
+    public void setLocation(String _location) {this.location = _location;}
+    public String getLocation() {return location;}
 
-
+    /**
+     * printSalesperson method lists salesperson information
+     * @param salespersonArrayListList salesperson Array List
+     * @author Narrara
+     */
     public static void printSalesperson(ArrayList<Salesperson> salespersonArrayListList, String _id) {
         for (Salesperson sp : salespersonArrayListList) {
             if (sp.empID.equals(_id)) {
@@ -70,13 +78,4 @@ public class Salesperson {
             }
         }
     }
-
-    public void setLocation(String _location) {
-        this.location = _location;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
 }
