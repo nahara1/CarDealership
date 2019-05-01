@@ -189,6 +189,9 @@ import java.util.ArrayList;
     public void setPrice(double _price) { this.price = _price; }
 
 
+    public void setCategory(PartsCategory _category) { this.partCategory = _category; }
+
+    public PartsCategory getCategory() { return partCategory; }
     /**
      * setCategory method sets category type for an auto part
      *

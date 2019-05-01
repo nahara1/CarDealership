@@ -211,12 +211,59 @@ public class Main {
         truck5.setTon (Ton.two);
 
 
+        //Parts
+        /**
+         * Creating parts to add to part list
+         * @param PartName      Name of part
+         * @param PartID        Parts ID number
+         * @param Category      Category part belongs to
+         * @param Price         Price of part
+         * @param Location      Dealership part is located at
+         * @author Alex Hirsh
+         */
+
+        Parts p1 = new Parts();
+        partsList.add(p1);
+        p1.setPartName("O2 Sensor");
+        p1.setPartID(4671);
+        p1.setCategory(PartsCategory.electronic);
+        p1.setPrice(23.50);
+        p1.setLocation("Abington");
+
+        Parts p2 = new Parts();
+        partsList.add(p2);
+        p2.setPartName("Head Gasket");
+        p2.setPartID(5671);
+        p2.setCategory(PartsCategory.engine);
+        p2.setPrice(35.50);
+        p2.setLocation("Bensalem");
+
+        Parts p3 = new Parts();
+        partsList.add(p3);
+        p3.setPartName("Seat Belt");
+        p3.setPartID(6671);
+        p3.setCategory(PartsCategory.interior);
+        p3.setPrice(55.00);
+        p3.setLocation("Bensalem");
+
+        Parts p4 = new Parts();
+        partsList.add(p4);
+        p4.setPartName("Headlights (pair)");
+        p4.setPartID(7771);
+        p4.setCategory(PartsCategory.exterior);
+        p4.setPrice(200.00);
+        p4.setLocation("Abington");
+
+        Parts p5 = new Parts();
+        partsList.add(p5);
+        p5.setPartName("Brakes (single)");
+        p5.setPartID(8581);
+        p5.setCategory(PartsCategory.control);
+        p5.setPrice(12.75);
+        p5.setLocation("Abington");
+
+
         //Inventory
-
-        //    in1.setCar(car1);
-
-
-        //Get quantity in inventory
 
 
         Inventory in1 = new Inventory ();
@@ -224,17 +271,10 @@ public class Main {
         Inventory in3 = new Inventory ();
         Inventory in4 = new Inventory ();
         Inventory in5 = new Inventory ();
-        Inventory in6 = new Inventory ();
-        Inventory in7 = new Inventory ();
-        Inventory in8 = new Inventory ();
-        Inventory in9 = new Inventory ();
-        Inventory in10 = new Inventory ();
-
-
-        //Get quantity in inventory
 
 
         //Customer's information
+
         /**
          * Creating Customers to add to Customer List
          * @param FirstName     customer first name
