@@ -25,6 +25,7 @@ public class Transaction {
     private double subTotal;
     private double totalPrice;
     private double tax = 1.06;
+    public String commissionID;
 
     // Transaction ID
 
@@ -36,7 +37,11 @@ public class Transaction {
 
     public double getCommission() { return commission; }
 
-    public void setCommission(double _Commission) {this.commission = _Commission * 0.1;}
+    public void setCommission(double _Commission) {this.commission = _Commission;}
+
+    public String getCommissionID() { return Salesperson.empID; }
+
+    public void setCommissionID(String commissionID) {Salesperson.empID = commissionID;}
 
     // Price
 
@@ -108,7 +113,14 @@ public class Transaction {
         tran.setCommission(tran.getSubTotal());
         System.out.println("Salesperson earned $" + df2.format(tran.getCommission()) + " commission");
 
+        System.out.println("Enter Employee ID");
+        Salesperson.empID = Exception.testAlphaNumeric(Exception.getInput());
+        tran.setSalesCommission(getTotalPrice());
+        tran.setCommissionID(Salesperson.empID);
+
         System.out.println("Transaction recorded");
+
+
         return tran;
     }
 
@@ -131,5 +143,17 @@ public class Transaction {
     }
 
     // add commission method
+
+    public double setSalesCommission(double _totalSales) {
+        return _totalSales*0.15;
+    }
+
+    public static void printSalesCommission(ArrayList<Transaction> transactionArrayList, String _empID) {
+        for (Transaction t1 : transactionArrayList) {
+            if (t1.getCommissionID().equals(_empID)) {
+                System.out.println("Commission: " + t1.getCommission());
+            }
+        }
+    }
 
 }

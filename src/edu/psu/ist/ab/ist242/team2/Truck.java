@@ -187,4 +187,17 @@ public final class Truck extends Vehicle {
         }
 
     }
+
+    /**
+     * printTrucksByLocation method prints trucks that are of a specific dealership
+     * @param truckList car Array List
+     * @param _location vehicle location
+     */
+    public static void printTrucksByLocation(ArrayList<Truck> truckList, String _location) {
+        for (Truck truck : truckList) {
+            if (truck.location.equals(_location)) {
+                System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-10s \n", truck.getVin(), truck.getYear(), truck.getMaker(), truck.getModel(), truck.getVLocation(), truck.getPrice());
+            }
+        }
+    }
 }

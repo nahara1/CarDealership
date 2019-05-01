@@ -37,11 +37,6 @@ public class Inventory {
     }
 
 
-
-// output car by price in asc or desc order
-
-// getters and setters
-
     /**
      * addCarToInventory method adds a car to carsList
      * @param _car
@@ -58,7 +53,6 @@ public class Inventory {
     public void setParts(Parts _parts) {
         partsList.add(_parts);
     }
-
 
 
     }

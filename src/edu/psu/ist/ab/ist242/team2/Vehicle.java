@@ -35,9 +35,9 @@ public abstract class Vehicle {
     protected int dealership_id;
 
     /**
-     * Vehicle name
+     * Vehicle name, location
      */
-    protected String name;
+    protected String name, location;
 
     /**
      * date
@@ -271,5 +271,13 @@ public abstract class Vehicle {
         return numDoors;
     }
 
-   //public abstract void addCarToInventory(Car car1);
+
+    public void setVLocation(String _location) {
+        this.location = _location;
+    }
+
+    public String getVLocation() {
+        return location;
+    }
+
 }
