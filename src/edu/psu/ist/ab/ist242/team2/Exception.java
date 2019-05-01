@@ -240,6 +240,20 @@ public class Exception {
         }
     }
 
+    /**
+     * testLocation method tests if input is only either "Abington" or "Bensalem"
+     *
+     * <p>
+     *  This method consists of a try and catch block
+     *  to assure user input is only either "Abington" or "Bensalem".
+     * </p>
+     *
+     * @param  input    user input
+     * @return input    "Abington" or "Bensalem"
+     * @throws InputMismatchException if string tested does not contain
+     *                                "Abington" or "Bensalem"
+     *
+     */
     public static String testLocation(String input) {
         try {
             if ((input.matches("Abington"))||(input.matches("Bensalem"))) {

@@ -15,6 +15,9 @@ package edu.psu.ist.ab.ist242.team2;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+/**
+ * Enumeration that contains the preset values of credit and cash to set payment type
+ */
 enum PaymentType {credit, cash}
 
 public class Transaction {
