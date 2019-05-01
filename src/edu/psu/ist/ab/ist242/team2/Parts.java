@@ -208,9 +208,9 @@ import java.util.ArrayList;
         }
     }
 
-    public static void printPartsByCategory(ArrayList<Parts> partsList, String _partName) {
+    public static void printPartsByCategory(ArrayList<Parts> partsList, PartsCategory _category) {
         for (Parts parts : partsList) {
-            if (parts.getPartName().equals(_partName)) {
+            if (parts.getPartName().equals(_category)) {
                 System.out.printf("%-10s | %-10s \n", parts.getPartName(), parts.getPartCategory());
                 //System.out.println("Car Part Name:" + parts.getPartName() + "Part Category:" + parts.getPartCategory());
             }

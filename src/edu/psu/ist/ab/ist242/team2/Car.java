@@ -206,6 +206,23 @@ public final class Car extends Vehicle {
         }
 
 
+    /**
+     * printCarsByLocation method prints cars that are of a specific dealership
+     * @param carList car Array List
+     * @param _location vehicle location
+     */
+    public static void printCarByLocation(ArrayList<Car> carList, String _location) {
+        for (Car car : carList) {
+
+            // cannot use super.color from a non static context, so added String color to Car class
+
+            if (car.location.equals(_location)) {
+                System.out.printf("%-10s | %-10s | %-12s | %-10s | %-10s | %-10s \n", car.getVin(), car.getYear(), car.getMaker(), car.getModel(), car.getVLocation(), car.getPrice());
+            }
+        }
+    }
+
+
 }
 
 

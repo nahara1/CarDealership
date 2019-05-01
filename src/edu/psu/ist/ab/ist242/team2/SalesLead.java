@@ -75,7 +75,7 @@ public class SalesLead {
         salesLeadDate = Exception.testDate(Exception.getInput());
         sl.setSl_Date(salesLeadDate);
 
-        System.out.println("Please enter SL phone number: ");
+        System.out.println("Please enter SL phone number: \n Please use this format: (012) 345-6789)");
         sl_phoneNumber = Exception.testPhone(Exception.getInput());
         sl.setSl_phoneNumber(sl_phoneNumber);
 

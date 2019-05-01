@@ -508,7 +508,7 @@ public class Main {
                             System.out.println("Enter Category (): ");
                             Scanner  category = new Scanner(System.in);
                             PartsCategory parts_category = PartsCategory.valueOf(category.next().toLowerCase());
-                            parts.printPartsByCategory(partsList, searchType);
+                            parts.printPartsByCategory(partsList, parts_category);
                     }
 
 

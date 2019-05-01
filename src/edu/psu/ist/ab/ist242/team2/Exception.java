@@ -115,7 +115,7 @@ public class Exception {
 
 
         } catch (InputMismatchException notAnEmail) {
-            System.out.println("Invalid input. Please try again.");
+            System.out.println("Invalid input. Please try again. \n Please use this format: (012) 345-6789");
             return getInput();
 
         }
@@ -224,7 +224,7 @@ public class Exception {
     public static String testDate(String date) {
         try {
 
-            if (date.matches("/\\d+[/][\\d][/][\\d]+$")) {
+            if (date.matches("[0-9]+[/]+[\\d]+[/]+[\\d]*$")) {
                 return date;
             }
             else  {

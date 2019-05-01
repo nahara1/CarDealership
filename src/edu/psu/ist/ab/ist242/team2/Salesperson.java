@@ -39,18 +39,6 @@ public class Salesperson {
 
 
 
-    // repeated customer - get their id - create for loop
-
-    // dealership, salesPersonID
-
-
-
-
-    // sellParts remove parts object from ArrayList PartsList - remove from inventory
-
-    // addCar addParts to inventory
-
-
 
 
     // add new customer and salesLead - to know which salesperson added customer/salesLead
@@ -58,7 +46,7 @@ public class Salesperson {
 
 // Give discount
 
-    public void salesPeopleWork() { }
+
 
 
     public String getEmpID() {return empID;} // get random number
