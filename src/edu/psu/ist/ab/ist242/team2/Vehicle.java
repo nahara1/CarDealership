@@ -271,6 +271,11 @@ public abstract class Vehicle {
         return numDoors;
     }
 
+    /**
+     * setVLocation sets vehicle location
+     * @param _location
+     * @author
+     */
 
     public void setVLocation(String _location) {
         this.location = _location;

@@ -29,6 +29,7 @@ public class Transaction {
     private double totalPrice;
     private double tax = 1.06;
     public String commissionID;
+    public final double salary = 1500.00;
 
     // Transaction ID
 
@@ -147,8 +148,15 @@ public class Transaction {
 
     // commission method
 
-    public double setSalesCommission(double _totalSales) {
-        return _totalSales*0.15;
+    /**
+     * setSalesCommission sets salesperson commission
+     * @param _value a double
+     * @return commission
+     * @author JiaJia & Narrara
+     */
+
+    public double setSalesCommission(double _value) {
+        return _value*0.15;
     }
 
     /**
@@ -166,5 +174,13 @@ public class Transaction {
         }
     }
 
+
+
+    public Transaction addCommission(double _sales) {
+        Transaction commission = new Transaction();
+
+
+        return commission;
+    }
 
 }

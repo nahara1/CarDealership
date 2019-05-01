@@ -14,6 +14,7 @@ public class Exception {
      * </p>
      *
      * @return input
+     * @author Nahara
      */
     public static String getInput() {
         Scanner scnr = new Scanner(System.in);
