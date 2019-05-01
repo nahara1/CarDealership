@@ -142,11 +142,18 @@ public class Transaction {
         }
     }
 
-    // add commission method
+    // commission method
 
     public double setSalesCommission(double _totalSales) {
         return _totalSales*0.15;
     }
+
+    /**
+     * setSalesCommission will print specific employee's commission based of given employee's ID
+     * @param transactionArrayList Transaction array list
+     * @param _empID               Employee's ID
+     * @author Narrara & JiaJia
+     */
 
     public static void printSalesCommission(ArrayList<Transaction> transactionArrayList, String _empID) {
         for (Transaction t1 : transactionArrayList) {
