@@ -15,24 +15,36 @@ import java.util.*;
 
 
 /**
- * @author
- * @version
- * @since
+ * @author Narrara, JiaJIa, Ronald, Alex, Jeff, Jason
+ * @version 1
+ * @since 2/15/2019
  */
 
 public class Main {
 
     public static void main(String[] args) {
 
+        /**
+         * Array List that stores objects of the Customers class
+         */
 
         ArrayList<Customers> cList = new ArrayList<> ();
-        ArrayList<Customers> cList1 = new ArrayList<> ();
+
+        /**
+         * Customer object
+         */
         Customers cust = new Customers ();
 
-        ArrayList<Dealership> listDealerships = new ArrayList<> ();
+        /**
+         * Array List that stores objects of the Dealership class
+         */
 
 
         //Dealerships
+
+        /**
+         * Dealership class objects
+         */
 
         Dealership dealer1 = new Dealership ();
         dealer1.setDealershipID (1);
@@ -666,6 +678,12 @@ public class Main {
         }
     }
 
+    /**
+     * gets user input
+     * @param prompt a char
+     * @return a char
+     */
+
     public static char getAction(String prompt) {
 
         Scanner scnr = new Scanner (System.in);
@@ -675,6 +693,11 @@ public class Main {
         char firstChar = answer.charAt (0);
         return firstChar;
     }
+
+    /**
+     * gets type of inventory item
+     * @return a String
+     */
 
     public static String getType() {
         Scanner scnr = new Scanner (System.in);
