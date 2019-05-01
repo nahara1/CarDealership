@@ -76,12 +76,45 @@ public class Main {
 
 
         //SalesPeople
+        /**
+         * Creating Sales persons to add to sales person list
+         * @param EmpID             Employee ID number
+         * @param EmpEmail          Employee email address
+         * @param EmpFirstName      Employee first name
+         * @param EmpLastName       Employee last name
+         * @param PhoneNumber       Employee phone number
+         * @param Location          Location that employee is at
+         * @author Alex Hirsh
+         */
+
         Salesperson sp1 = new Salesperson ();
         sp1.setEmpID ("ABC1");
+        sp1.setEmpEmail("carlover123@gmail.com");
+        sp1.setEmpFirstName("Jimmy");
+        sp1.setEmpLastName("Butler");
+        sp1.setPhoneNumber("215-512-1215");
+        sp1.setLocation("Abington");
 
-        //Vehicles - objects [done]
+        Salesperson sp2 = new Salesperson();
+        sp2.setEmpID("A3F6");
+        sp2.setEmpEmail("bensalemcdealer25@aol.com");
+        sp2.setEmpFirstName("Jesse");
+        sp2.setEmpLastName("Doyle");
+        sp2.setPhoneNumber("410-547-2453");
+        sp2.setLocation("Bensalem");
+
+        Salesperson sp3 = new Salesperson();
+        sp3.setEmpID("H5K9");
+        sp3.setEmpEmail("tonystark14@gmail.com");
+        sp3.setEmpFirstName("Tony");
+        sp3.setEmpLastName("Stark");
+        sp3.setPhoneNumber("267-834-9120");
+        sp3.setLocation("Abington");
+
+
 
         // Cars
+
         /**
          * Creating Cars to add to Car list in inventory
          * @param Color         Color of car
@@ -100,6 +133,7 @@ public class Main {
         car1.setModel("Sedan");
         car1.setMaker("Ford");
         car1.setName("Name");
+        car1.setVLocation("Abington");
         car1.setNumOfDoors(NumDoors.two);
         car1.setPrice(20000);
 
@@ -113,6 +147,7 @@ public class Main {
         car2.setMaker("Volkswagen");
         car2.setName("Name2");
         car2.setNumOfDoors(NumDoors.four);
+        car2.setVLocation("Bensalem");
         car2.setPrice(30000);
 
 
@@ -124,6 +159,7 @@ public class Main {
         car3.setMaker("Chevrolet");
         car3.setName("Name3");
         car3.setNumOfDoors(NumDoors.two);
+        car3.setVLocation("Abington");
         car3.setPrice(21000);
 
 
@@ -134,17 +170,19 @@ public class Main {
         car4.setModel("Coupe");
         car4.setMaker("Honda");
         car4.setName("Name");
+        car4.setVLocation("Bensalem");
         car4.setNumOfDoors(NumDoors.four);
         car4.setPrice(19000);
 
         Car car5 = new Car ("6H3M2X");
         carList.add(car5);
         car5.setColor("Yellow");
-        car4.setYear(2008);
-        car4.setModel("Sedan");
-        car4.setMaker("Volkswagen");
-        car4.setName("Name");
-        car1.setNumOfDoors(NumDoors.two);
+        car5.setYear(2008);
+        car5.setModel("Sedan");
+        car5.setMaker("Volkswagen");
+        car5.setName("Name");
+        car5.setVLocation("Abington");
+        car5.setNumOfDoors(NumDoors.two);
 
 
         // Trucks

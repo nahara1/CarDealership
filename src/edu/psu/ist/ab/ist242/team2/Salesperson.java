@@ -73,11 +73,11 @@ public class Salesperson {
         }
     }
 
-    public void setVLocation(String _location) {
+    public void setLocation(String _location) {
         this.location = _location;
     }
 
-    public String getVLocation() {
+    public String getLocation() {
         return location;
     }
 
