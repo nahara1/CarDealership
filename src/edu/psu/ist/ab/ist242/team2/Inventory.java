@@ -12,7 +12,6 @@ package edu.psu.ist.ab.ist242.team2;
 
 import java.util.*;
 
-
 public class Inventory {
 
     /**
@@ -28,6 +27,7 @@ public class Inventory {
     /**
      * Constructor Method creates ArrayLists named carsList, trucksList, partsList, and transList
      * of Car, Truck, Parts, and Transaction types
+     * @author Narrara
      */
     public Inventory() {
         carsList = new ArrayList<Car>();
@@ -37,22 +37,4 @@ public class Inventory {
     }
 
 
-    /**
-     * addCarToInventory method adds a car to carsList
-     * @param _car
-     */
-    public void addCarToInventory(Car _car) {
-        carsList.add(_car);
-    }
-
-    /**
-     * setParts method adds parts to partsList
-     * @param _parts
-     */
-
-    public void setParts(Parts _parts) {
-        partsList.add(_parts);
-    }
-
-
-    }
+}

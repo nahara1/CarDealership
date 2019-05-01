@@ -22,6 +22,7 @@ import java.util.ArrayList;
  * It contains setters, getters, and methods that add, modify,
  * remove, and search for trucks in the dealership inventory.
  *</p>
+ * @author Ronald, Narrara
  *
  */
 

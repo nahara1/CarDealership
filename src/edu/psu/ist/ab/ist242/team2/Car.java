@@ -19,6 +19,7 @@ import java.util.*;
  * It contains methods that add, remove, and search for cars
  * in the dealership inventory.
  *</p>
+ * @author JiaJia, Ronald, Narrara
  *
  */
 
@@ -53,6 +54,7 @@ public final class Car extends Vehicle {
      *   to be stored in the inventory.
      * </p>
      * @return a Car object
+     * @author JiaJia
      */
 
     public Car addCar() {
@@ -104,6 +106,7 @@ public final class Car extends Vehicle {
     /**
      * printCars method prints car inventory list
      * @param carList car list Array List
+     * @author Ronald, Narrara
      */
     public static void printCars(ArrayList<Car> carList) {
         for (Car car : carList) {
@@ -119,6 +122,7 @@ public final class Car extends Vehicle {
      * printCarsByColor method prints cars that are of a certain color
      * @param carList car Array List
      * @param _color a specific car color
+     * @author Narrara & JiaJIa
      */
     public static void printCarByColor(ArrayList<Car> carList, String _color) {
         for (Car car : carList) {
@@ -136,6 +140,7 @@ public final class Car extends Vehicle {
      * printCarsByNumDoors method prints cars by number of doors
      * @param carList car Array List
      * @param _doors number of doors
+     * @author Narrara, JiaJia
      */
 
     public static void printCarByNumDoors(ArrayList<Car> carList, NumDoors _doors) {

@@ -10,12 +10,8 @@ Rev: 1
 
 package edu.psu.ist.ab.ist242.team2;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
-/**
- *
- */
+
 public class SalesLead {
     /**
      * Sales Lead unique identification number
@@ -56,6 +52,7 @@ public class SalesLead {
      * @param _sl_lastName      SalesLead last name
      * @param _sl_phoneNumber   SalesLead phone number
      * @param _empID            Employee ID number
+     * @author JiaJia, Narrara
      */
     public SalesLead(int _id, String _salesLeadDate, String _sl_location, String _sl_firstName, String _sl_lastName, String _sl_phoneNumber, String _sl_Email, String _empID) {
         this.salesLeadID = _id;
@@ -77,12 +74,12 @@ public class SalesLead {
      *   to be stored in the inventory.
      * </p>
      * @return a sl object
+     * @author JiaJia, Ronald
      */
     // add salesPeople id to know which one added a salesLead
     public SalesLead addSL(String _empID) {
         SalesLead sl = new SalesLead(cCount++);
-        Scanner scnr = new Scanner(System.in);
-        // fix this
+
         System.out.println("Employee ID: " + _empID);
         sl.setSL_empID(_empID);
 
@@ -205,12 +202,12 @@ public class SalesLead {
           System.out.printf("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", sales_lead.getSalesLeadID(), sales_lead.getSL_empID(), sales_lead.getSl_firstName() + " " + sales_lead.getSl_lastName(), sales_lead.getSl_phoneNumber(), sales_lead.getSl_Email(), sales_lead.getSl_Date());
            // System.out.println(sales_lead.getSalesLeadID(), sales_lead.getSl_firstName(), sales_lead.getSl_lastName());
 
-            // index of each object
+            /* index of each object
             System.out.println("Index: " + slList.indexOf(sales_lead));
-
-            // use this to count sales lead -
-            System.out.println("Number of Sales Lead: " + slList.size());
-
+                */
+            /* use this to count sales lead -
+            System.out.println("Total number of Sales Lead: " + slList.size());
+            */
         }
     }
 
@@ -218,6 +215,7 @@ public class SalesLead {
      * printSalesLeadById method prints SalesLead that are of a certain ID
      * @param slList SalesLead ArrayList
      * @param salesLeadID SalesLeads' ID
+     * @author Narrara
      */
     public static void printSalesLeadById(ArrayList<SalesLead> slList, int salesLeadID) {
         for (SalesLead sl : slList) {
@@ -231,6 +229,7 @@ public class SalesLead {
      * printSalesLeadByEmpID method prints SalesLead that are of Employee's ID
      * @param slList SalesLead ArrayList
      * @param _empID Employee's ID
+     * @author Narrara
      */
     public static void printSalesLeadByEmpID(ArrayList<SalesLead> slList, String _empID) {
         for (SalesLead sl : slList) {
@@ -245,6 +244,7 @@ public class SalesLead {
      * printSalesLeadByLocation method prints SalesLead that are of a certain location
      * @param slList SalesLead ArrayList
      * @param _location SalesLead's location
+     * @author JiaJia
      */
     public static void printSalesLeadByLocation(ArrayList<SalesLead> slList, String _location) {
         for (SalesLead sl : slList) {

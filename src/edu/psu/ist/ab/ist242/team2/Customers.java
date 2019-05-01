@@ -14,6 +14,14 @@ import java.util.ArrayList;
 
 import java.util.Scanner;
 
+/**
+ * <h1> Customers </h1>
+ *<p>
+ * The Customer class holds the data members and methods that will add customers to the dealership.
+ *</p>
+ *
+ */
+
 public class Customers {
 
     /**

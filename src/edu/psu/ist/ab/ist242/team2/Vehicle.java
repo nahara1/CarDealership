@@ -19,7 +19,7 @@ import java.util.Scanner;
  * It contains methods that add, remove, and search for cars
  * in the dealership inventory.
  *</p>
- *
+ * @author Narrara
  */
 
 public abstract class Vehicle {

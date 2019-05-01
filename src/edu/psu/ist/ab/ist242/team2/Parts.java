@@ -22,6 +22,7 @@ import java.util.ArrayList;
  * The Parts program contains setters, getters, and methods that add, modify,
  * and remove auto parts.
  *</p>
+ * @author Narrara, JiaJia, Ronald
  *
  */
 
@@ -195,6 +196,7 @@ import java.util.ArrayList;
      * </p>
      *
      * @return part Category
+     * @author Narrara
      */
 
     public PartsCategory setCategory() {
@@ -207,6 +209,7 @@ import java.util.ArrayList;
     /**
      * printParts method prints all parts by their names
      * @param PartsArrayList parts Array List
+     * @author JiaJia, Narrara
      */
     public static void printParts(ArrayList<Parts> PartsArrayList) {
         for (Parts parts : PartsArrayList) {
@@ -219,6 +222,7 @@ import java.util.ArrayList;
      * printPartsByCategory method prints parts that are of a specific category
      * @param partsList parts Array List
      * @param _category parts category
+     * @author Jason
      */
     public static void printPartsByCategory(ArrayList<Parts> partsList, PartsCategory _category) {
         for (Parts parts : partsList) {
@@ -232,6 +236,7 @@ import java.util.ArrayList;
      * printPartsByLocation method prints parts that are of a specific dealership
      * @param partsList parts Array List
      * @param _location parts location
+     * @author JiaJia, Alex, Narrara
      */
     public static void printPartsByLocation(ArrayList<Parts> partsList, String _location) {
         for (Parts parts : partsList) {
@@ -245,6 +250,7 @@ import java.util.ArrayList;
      * sellParts removes parts item from array list
      * @param partsList  parts Array List
      * @param _partID parts identification number
+     * @author Narrara
      */
     public static void sellParts(ArrayList<Parts> partsList, int _partID) {
         for (Parts parts : partsList) {
