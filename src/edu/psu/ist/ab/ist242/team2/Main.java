@@ -15,24 +15,36 @@ import java.util.*;
 
 
 /**
- * @author
- * @version
- * @since
+ * @author Narrara, JiaJia, Alex, Ronald, Jeff, Jason
+ * @version 1
+ * @since 2/15/2019
  */
 
 public class Main {
 
     public static void main(String[] args) {
 
+        /**
+         * Array List that stores objects of the Customers class
+         */
 
         ArrayList<Customers> cList = new ArrayList<> ();
-        ArrayList<Customers> cList1 = new ArrayList<> ();
+
+        /**
+         * Customer object
+         */
         Customers cust = new Customers ();
 
-        ArrayList<Dealership> listDealerships = new ArrayList<> ();
+        /**
+         * Array List that stores objects of the Dealership class
+         */
 
 
         //Dealerships
+
+        /**
+         * Dealership class objects
+         */
 
         Dealership dealer1 = new Dealership ();
         dealer1.setDealershipID (1);
@@ -444,7 +456,6 @@ public class Main {
             Scanner input = new Scanner (System.in);
             switch (userAction) {
                 case CUST_CODE:
-                    // add switch to select dealership
 
                     cList.add (cust.addCustomer ());
                     //cust.printCustomerById(cList, 1);
@@ -565,7 +576,7 @@ public class Main {
                     inv_type = getType ();
                     switch (inv_type) {
                         case "car":
-                            System.out.println ("Enter Type ('color'/'model'/'maker'/'VIN'): ");
+                            System.out.println ("Enter Type ('color'/'model'/'maker'/'location'): ");
                             String searchType = input.nextLine ().toLowerCase ();
                             Scanner scnr = new Scanner (System.in);
 
@@ -596,10 +607,11 @@ public class Main {
 
                                     break;
                                 case "VIN":
-                                    System.out.println ("Please enter VIN: ");
-                                    input_ = scnr.nextLine ();
+                                    System.out.println ("Please enter location ('Abington'/'Bensalem'): ");
 
-                                    //Car.printCarBy(carList, input_);
+                                    input_ = Exception.testLocation(Exception.getInput());
+
+                                    Car.printCarByLocation(carList, input_);
 
                                     break;
                             }
@@ -620,10 +632,6 @@ public class Main {
                     break;
 
                 case ADD_VEHICLE:
-                    //String userInput = "Type 1 to add a car or 2 to add a truck";
-                    //userAction = getAction(userInput);
-
-                    //while (userAction != 'E') {
 
                     System.out.println ("Enter Vehicle Type ('car'/'truck':): ");
                     inv_type = input.nextLine ().toLowerCase ();
@@ -666,6 +674,12 @@ public class Main {
         }
     }
 
+    /**
+     * gets user input
+     * @param prompt a char
+     * @return a char
+     */
+
     public static char getAction(String prompt) {
 
         Scanner scnr = new Scanner (System.in);
@@ -675,6 +689,11 @@ public class Main {
         char firstChar = answer.charAt (0);
         return firstChar;
     }
+
+    /**
+     * gets type of inventory item
+     * @return a String
+     */
 
     public static String getType() {
         Scanner scnr = new Scanner (System.in);

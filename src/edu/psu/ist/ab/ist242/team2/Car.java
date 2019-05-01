@@ -1,10 +1,10 @@
 /*
 Project: Car Dealership
-Purpose Details: Creates object car extended from vehicle. Also contains methods to sell a vehicle and print the list of vehicles by model or color.
+Purpose Details: Creates object car extended from vehicle. Also contains methods to sell a vehicle and print list of vehicles by model or color.
 Course: IST 242 - 001
 Team: 2
-Date Developed: 2/15
-Last Date Changed: 4/28/2019
+Date Developed: 2/15/2019
+Last Date Changed: 1/5/2019
 Rev: 1
 */
 
@@ -19,6 +19,7 @@ import java.util.*;
  * It contains methods that add, remove, and search for cars
  * in the dealership inventory.
  *</p>
+ *
  * @author JiaJia, Ronald, Narrara
  *
  */
