@@ -11,8 +11,7 @@ Rev: 1
 package edu.psu.ist.ab.ist242.team2;
 
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 
 /**
@@ -25,6 +24,16 @@ public class Main {
 
 
     public static void main(String[] args) {
+
+
+
+        Hashtable<String, Double> salaries = new Hashtable<String, Double>();
+        String name;
+        Double pay_;
+
+        salaries.put("Jimmy", new Double(1500.00));
+        salaries.put("Jesse", new Double(1500.00));
+        salaries.put("Tony", new Double(1500.00));
 
         ArrayList<Customers> cList = new ArrayList<> ();
         ArrayList<Customers> cList1 = new ArrayList<> ();

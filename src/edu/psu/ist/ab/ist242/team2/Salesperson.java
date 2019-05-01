@@ -12,6 +12,8 @@ package edu.psu.ist.ab.ist242.team2;
 
 import java.util.Scanner;
 import java.util.*;
+import java.util.Hashtable;
+import java.util.HashMap;
 
 public class Salesperson {
 
@@ -19,8 +21,6 @@ public class Salesperson {
     protected String empFirstName, empLastName, phoneNumber, empEmail, location;
     public static String empID;
     Scanner userInput = new Scanner(System.in);
-
-    Hashtable<String, Double> salary = new Hashtable<String, Double>();
 
     // create method getSalespersonByID() find sp by their id
 
@@ -35,19 +35,6 @@ public class Salesperson {
         sl.addSL(empID);
 
     }
-
-
-
-
-
-
-    // add new customer and salesLead - to know which salesperson added customer/salesLead
-
-
-// Give discount
-
-
-
 
     public String getEmpID() {return empID;} // get random number
     public void setEmpID(String _empID) {this.empID = _empID;}
