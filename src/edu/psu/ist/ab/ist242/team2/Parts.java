@@ -10,8 +10,6 @@ Rev: 1
 
 package edu.psu.ist.ab.ist242.team2;
 
-
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import java.util.ArrayList;
