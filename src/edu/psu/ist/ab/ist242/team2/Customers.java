@@ -217,10 +217,20 @@ public class Customers {
         System.out.println ("Customers Total: " + cList.size ());
     }
 
+    /**
+     * Dealership ID setter
+     * @param _dealershipID Dealership ID
+     */
+
 
     private void setDealershipID(int _dealershipID) {
         this.dealershipID = _dealershipID;
     }
+
+    /**
+     * Dealership ID getter
+     * @return an integer Dealership ID
+     */
 
     private int getDealershipID() {
         return dealershipID;
