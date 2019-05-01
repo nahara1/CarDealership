@@ -29,6 +29,29 @@ public class TransactionTest extends MainTest {
         }
 
     }
+    
+    @Test
+    public void setSalesCommission_UnitTestTrue () {
+        Transaction trans = new Transaction();
+        try {
+            assertTrue(trans.setSalesCommission(100.0) == 15.0);
+        }
+        catch (Exception e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
 
+    }
+
+    @Test
+    public void setSalesCommission_UnitTestFalse () {
+        Transaction trans = new Transaction();
+        try {
+            assertFalse(trans.setSalesCommission(100.0) == 20.0);
+        }
+        catch (Exception e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
+
+    }
 
 }
