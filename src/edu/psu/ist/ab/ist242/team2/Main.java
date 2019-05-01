@@ -456,7 +456,7 @@ public class Main {
 
                     break;
                 case CUST_PRNT:
-                    System.out.println("1 - Car Dealership Abington \n 2 - Car Dealership Bensalem");
+                    System.out.println("1 - Car Dealership Abington \n2 - Car Dealership Bensalem");
                     int dealership = input.nextInt();
 
                     switch (dealership) {
@@ -546,7 +546,7 @@ public class Main {
 
                 case INV_CODE:
                     String inv_type = getType();
-                    System.out.println("Enter location \n 1 - Abington \n 2 - Bensalem:");
+                    System.out.println("Enter location \n 1 - Abington \n2 - Bensalem:");
                     String _location = input.nextLine();
                     switch (inv_type) {
                         case "car":
