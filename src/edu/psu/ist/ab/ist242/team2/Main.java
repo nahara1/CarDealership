@@ -15,7 +15,7 @@ import java.util.*;
 
 
 /**
- * @author Narrara, JiaJIa, Ronald, Alex, Jeff, Jason
+ * @author Narrara, JiaJia, Alex, Ronald, Jeff, Jason
  * @version 1
  * @since 2/15/2019
  */
@@ -456,7 +456,6 @@ public class Main {
             Scanner input = new Scanner (System.in);
             switch (userAction) {
                 case CUST_CODE:
-                    // add switch to select dealership
 
                     cList.add (cust.addCustomer ());
                     //cust.printCustomerById(cList, 1);
@@ -577,7 +576,7 @@ public class Main {
                     inv_type = getType ();
                     switch (inv_type) {
                         case "car":
-                            System.out.println ("Enter Type ('color'/'model'/'maker'/'VIN'): ");
+                            System.out.println ("Enter Type ('color'/'model'/'maker'/'location'): ");
                             String searchType = input.nextLine ().toLowerCase ();
                             Scanner scnr = new Scanner (System.in);
 
@@ -608,10 +607,11 @@ public class Main {
 
                                     break;
                                 case "VIN":
-                                    System.out.println ("Please enter VIN: ");
-                                    input_ = scnr.nextLine ();
+                                    System.out.println ("Please enter location ('Abington'/'Bensalem'): ");
 
-                                    //Car.printCarBy(carList, input_);
+                                    input_ = Exception.testLocation(Exception.getInput());
+
+                                    Car.printCarByLocation(carList, input_);
 
                                     break;
                             }
@@ -632,10 +632,6 @@ public class Main {
                     break;
 
                 case ADD_VEHICLE:
-                    //String userInput = "Type 1 to add a car or 2 to add a truck";
-                    //userAction = getAction(userInput);
-
-                    //while (userAction != 'E') {
 
                     System.out.println ("Enter Vehicle Type ('car'/'truck':): ");
                     inv_type = input.nextLine ().toLowerCase ();
