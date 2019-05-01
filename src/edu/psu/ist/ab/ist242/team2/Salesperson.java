@@ -17,7 +17,7 @@ import java.util.HashMap;
 
 public class Salesperson {
     /**
-     * Employees commission, first and last names, phone number, email, and location
+     * Employee's commission, first and last names phone number, email, and location
      * Employee ID is a unique number for each employee
      */
     
