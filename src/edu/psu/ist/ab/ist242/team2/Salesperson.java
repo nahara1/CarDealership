@@ -43,10 +43,6 @@ public class Salesperson {
 
     }
 
-    /**
-     * employee ID getter
-     * @return
-     */
 
     public String getEmpID() {return empID;} // get random number
     public void setEmpID(String _empID) {this.empID = _empID;}
