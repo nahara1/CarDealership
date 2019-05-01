@@ -77,7 +77,13 @@ public class Transaction {
     public PaymentType getPaymentType() { return payment; }
 
     public void setPaymentType(PaymentType _pType) { payment = _pType; }
-
+    
+    /**
+     * setPaymentTyp method
+     * Prompt user to select payment type and use try and catch to only accept characters
+     * @return payment
+     */
+    
     public PaymentType setPaymentType() {
         System.out.println("Enter payment type: cash or credit");
         String _payment = Exception.testAlpha(Exception.getInput());
@@ -191,11 +197,8 @@ public class Transaction {
     }
 
 
-
     public Transaction addCommission(double _sales) {
         Transaction commission = new Transaction();
-
-
         return commission;
     }
 
