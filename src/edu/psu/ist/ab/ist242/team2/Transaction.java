@@ -171,7 +171,8 @@ public class Transaction {
      */
 
     public double setSalesCommission(double _value) {
-        return _value*0.15;
+        double comm = _value*0.15;
+        return comm;
     }
 
     /**
