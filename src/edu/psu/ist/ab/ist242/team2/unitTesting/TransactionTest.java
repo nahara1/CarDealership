@@ -8,6 +8,12 @@ import static org.junit.Assert.*;
 
 public class TransactionTest extends MainTest {
 
+    /**
+     * Unit testing for calculateTransaction method in the Transaction class.
+     * It tests whether or not the calculation works properly.
+     * @author Narrara & JiaJia
+     */
+
     @Test
     public void totalPayment_UnitTestTrue() {
         Transaction trans = new Transaction();
