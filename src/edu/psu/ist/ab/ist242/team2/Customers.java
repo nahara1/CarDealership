@@ -18,6 +18,7 @@ import java.util.Scanner;
  *<p>
  * The Customer class holds the data members and methods that will add customers to the dealership.
  *</p>
+ *
  */
 
 public class Customers {
