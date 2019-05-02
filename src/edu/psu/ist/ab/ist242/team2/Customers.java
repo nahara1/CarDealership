@@ -11,7 +11,6 @@ Rev: 1
 package edu.psu.ist.ab.ist242.team2;
 
 import java.util.ArrayList;
-
 import java.util.Scanner;
 
 /**
@@ -35,7 +34,7 @@ public class Customers {
      * Customers first and last name, phone number, email, and groupID
      * @author Ronald Salguero
      */
-    private String firstName, lastName, phoneNumber, custEmail, groupID, custLocation;
+    private String firstName, lastName, phoneNumber, custEmail, groupID;
 
     /**
      * Counter to automatically generate customer IDs
@@ -102,7 +101,7 @@ public class Customers {
 
     /**
      * Group ID getter
-     * @return String
+     * @return String groupID
      */
 
     public String getGroupID() {
@@ -111,7 +110,7 @@ public class Customers {
 
     /**
      * Group ID setter
-     * @param _GroupID Group ID
+     * @param _GroupID
      */
 
     public void setGroupID(String _GroupID) {
@@ -120,7 +119,7 @@ public class Customers {
 
     /**
      * Customer ID getter
-     * @return an integer Customer ID
+     * @return int custID
      */
 
     public int getCustID() {
@@ -129,7 +128,7 @@ public class Customers {
 
     /**
      * Customer ID getter
-     * @return an integer Customer ID
+     * @return int _CustID
      */
 
     public void setCustID(int _CustID) {
@@ -147,7 +146,7 @@ public class Customers {
 
     /**
      * Customer firstName setter
-     * @return String firstName
+     * @return String _FirstName
      */
 
     public void setFirstName(String _FirstName) {
@@ -165,7 +164,7 @@ public class Customers {
 
     /**
      * Customer lastName getter
-     * @return String lastName
+     * @return String _LastName
      */
 
     public void setLastName(String _LastName) {
@@ -183,7 +182,7 @@ public class Customers {
 
     /**
      * Customer phoneNumber setter
-     * @return String phoneNumber
+     * @return String _PhoneNumber
      */
 
     public void setPhoneNumber(String _PhoneNumber) {
@@ -201,7 +200,7 @@ public class Customers {
 
     /**
      * Customer custEmail setter
-     * @return String custEmail
+     * @return String _email
      */
 
     public void setCustEmail(String _email) {

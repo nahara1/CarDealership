@@ -17,7 +17,7 @@ import java.util.HashMap;
 
 public class Salesperson {
     /**
-     * Employees commission, first and last names, phone number, email, and location
+     * Employee's commission, first and last names phone number, email, and location
      * Employee ID is a unique number for each employee
      */
     
@@ -43,23 +43,88 @@ public class Salesperson {
 
     }
 
+    /**
+     * Salesperson empID getter
+     * @return String empID
+     */
 
     public String getEmpID() {return empID;} // get random number
+
+    /**
+     * Salesperson empID setter
+     * @return String empID
+     */
+
     public void setEmpID(String _empID) {this.empID = _empID;}
 
+    /**
+     * Salesperson empFirstName getter
+     * @return String empFirstName
+     */
+
     public String getEmpFirstName() {return empFirstName;}
+
+    /**
+     * Salesperson empFirstName setter
+     * @return String empFirstName
+     */
+
     public void setEmpFirstName(String _empFirstName) {this.empFirstName = _empFirstName;}
 
+    /**
+     * Salesperson empLastName getter
+     * @return String empLastName
+     */
+
     public String getEmpLastName() {return empLastName;}
+
+    /**
+     * Salesperson empFirstName setter
+     * @return String empFirstName
+     */
+
     public void setEmpLastName(String _empLastName) {this.empLastName = _empLastName;}
 
+    /**
+     * Salesperson phoneNumber getter
+     * @return String phoneNumber
+     */
+
     public String getPhoneNumber() {return phoneNumber;}
-    public void setPhoneNumber(String _PhoneNumber){this.phoneNumber = _PhoneNumber;}
+
+    /**
+     * Salesperson phoneNumber setter
+     * @return String phoneNumber
+     */
+
+    public void setPhoneNumber(String _PhoneNumber) {this.phoneNumber = _PhoneNumber;}
+
+    /**
+     * Salesperson empEmail getter
+     * @return String empEmail
+     */
 
     public String getEmpEmail() {return empEmail;}
-    public void setEmpEmail(String _empEmail){this.empEmail = _empEmail;}
+
+    /**
+     * Salesperson empEmail setter
+     * @return String empEmail
+     */
+
+    public void setEmpEmail(String _empEmail) {this.empEmail = _empEmail;}
+
+    /**
+     * Salesperson location setter
+     * @return String location
+     */
     
     public void setLocation(String _location) {this.location = _location;}
+
+    /**
+     * Salesperson location getter
+     * @return String location
+     */
+
     public String getLocation() {return location;}
 
     /**
