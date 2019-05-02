@@ -1,3 +1,13 @@
+/*
+Project: Car Dealership
+Purpose Details: Contains the exceptions for alpha characters, email format, phone number format, price format, date format
+Course: IST 242 - 001
+Team: 2
+Date Developed: 2/15/2019
+Last Date Changed: 4/28/2019
+Rev: 1
+*/
+
 package edu.psu.ist.ab.ist242.team2;
 
 import java.util.InputMismatchException;
@@ -8,18 +18,14 @@ import java.util.Scanner;
 /**
  * <h1> Exception </h1>
  *<p>
- *     The Exception class handles exceptions for all other classes.
- *
- * </p>
+ * The Exception class handles exception with try and catch blocks for all the other classes.
+ *</p>
  *
  * @author Narrara
  *
  */
 
 public class Exception {
-
-
-
 
     /**
      * getInput method prompts user for an input
