@@ -554,7 +554,7 @@ public class Main {
 
                 case INV_CODE:
                     String inv_type = getType ();
-                    System.out.println ("Enter location \n 1 - Abington \n2 - Bensalem:");
+                    System.out.println ("\n Enter location \n 1 - Abington \n2 - Bensalem:");
                     String _location = input.nextLine ();
                     switch (inv_type) {
                         case "car":
