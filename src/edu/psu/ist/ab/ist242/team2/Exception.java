@@ -3,21 +3,19 @@ package edu.psu.ist.ab.ist242.team2;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-
-
 /**
- * <h1> Custoemers </h1>
+ * <h1> Exception </h1>
  *<p>
- * The Customer class holds the data members and methods that will add customers to the dealership.
+ * The Exception class contains methods with try and catch blocks that will handle
+ * exceptions when user enters an input.
+ *
  *</p>
  *
- * @author Narrara
+ * @author Narrara, JiaJia
  *
  */
 
 public class Exception {
-
-
 
 
     /**
