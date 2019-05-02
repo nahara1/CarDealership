@@ -6,10 +6,11 @@ import java.util.Scanner;
 
 
 /**
- * <h1> Custoemers </h1>
+ * <h1> Exception </h1>
  *<p>
- * The Customer class holds the data members and methods that will add customers to the dealership.
- *</p>
+ *     The Exception class handles exceptions for all other classes.
+ *
+ * </p>
  *
  * @author Narrara
  *
