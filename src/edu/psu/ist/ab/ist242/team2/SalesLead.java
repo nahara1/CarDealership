@@ -118,7 +118,6 @@ public class SalesLead {
      * @return Sales Lead ID
      */
 
-
     public int getSalesLeadID() {
         return salesLeadID;
     }
@@ -134,8 +133,9 @@ public class SalesLead {
 
     /**
      * Sales Lead first name getter
-     * @return
+     * @return String sl_firstName
      */
+
     public String getSl_firstName() {
         return sl_firstName;
     }
@@ -143,53 +143,94 @@ public class SalesLead {
 
     /**
      * Sales Lead first name setter
-     * @return
+     * @return String _sl_firstName
      */
+
     public void setSl_firstName(String _sl_firstName) {
         this.sl_firstName = _sl_firstName;
     }
 
-    public String getSl_lastName() {
-        return sl_lastName;
-    }
+    /**
+     * Sales Lead last name getter
+     * @return String sl_lastName
+     */
 
-    public void setSl_lastName(String _sl_lastName) {
-        this.sl_lastName = _sl_lastName;
-    }
+    public String getSl_lastName() { return sl_lastName; }
 
-    public String getSl_phoneNumber() {
-        return sl_phoneNumber;
-    }
+    /**
+     * Sales Lead last name setter
+     * @return String _sl_lastName
+     */
 
-    public void setSl_phoneNumber(String _sl_phoneNumber) {
-        this.sl_phoneNumber = _sl_phoneNumber;
-    }
+    public void setSl_lastName(String _sl_lastName) { this.sl_lastName = _sl_lastName; }
 
-    public String getSl_Email() {
-        return sl_Email;
-    }
+    /**
+     * Sales Lead phone number getter
+     * @return String sl_phoneNumber
+     */
 
-    public void setSl_Email(String _sl_Email) {
-        this.sl_Email = _sl_Email;
-    }
+    public String getSl_phoneNumber() { return sl_phoneNumber; }
 
-    public String getSl_Date() {
-        return salesLeadDate;
-    }
+    /**
+     * Sales Lead phone number setter
+     * @return String _sl_phoneNumber
+     */
 
-    public void setSl_Date(String _sl_Date) {
-        this.salesLeadDate = _sl_Date;
-    }
+    public void setSl_phoneNumber(String _sl_phoneNumber) { this.sl_phoneNumber = _sl_phoneNumber; }
 
-    private void setSL_empID(String _empID) {
-        this.empID = _empID;
-    }
+    /**
+     * Sales Lead email getter
+     * @return String sl_Email
+     */
 
-    private String getSL_empID() {
-        return empID;
-    }
+    public String getSl_Email() { return sl_Email; }
+
+    /**
+     * Sales Lead email setter
+     * @return String _sl_Email
+     */
+
+    public void setSl_Email(String _sl_Email) { this.sl_Email = _sl_Email; }
+
+    /**
+     * Sales Lead date getter
+     * @return String salesLeadDate
+     */
+
+    public String getSl_Date() { return salesLeadDate; }
+
+    /**
+     * Sales Lead date setter
+     * @return String _sl_Date
+     */
+
+    public void setSl_Date(String _sl_Date) { this.salesLeadDate = _sl_Date; }
+
+    /**
+     * Sales Lead employee ID setter
+     * @return String _empID
+     */
+
+    private void setSL_empID(String _empID) { this.empID = _empID; }
+
+    /**
+     * Sales Lead employee ID getter
+     * @return String empID
+     */
+
+    private String getSL_empID() { return empID; }
+
+    /**
+     * Sales Lead location setter
+     * @return String _location
+     */
 
     public void setSL_location(String _location) { this.sl_location = _location; }
+
+    /**
+     * Sales Lead location getter
+     * @return String sl_location
+     */
 
     public String getSl_location() { return sl_location; }
 
@@ -197,6 +238,7 @@ public class SalesLead {
      * printSalesLead method prints list of SalesLeads' information, total number of SalesLeads
      * @param slList SalesLead ArrayList
      */
+
     public static void printSalesLead(ArrayList<SalesLead> slList) {
         for (SalesLead sales_lead : slList) {
           System.out.printf("%-5s | %-12s | %-15s | %-15s | %-14s | %-10s\n", sales_lead.getSalesLeadID(), sales_lead.getSL_empID(), sales_lead.getSl_firstName() + " " + sales_lead.getSl_lastName(), sales_lead.getSl_phoneNumber(), sales_lead.getSl_Email(), sales_lead.getSl_Date());
@@ -217,6 +259,7 @@ public class SalesLead {
      * @param salesLeadID SalesLeads' ID
      * @author Narrara
      */
+
     public static void printSalesLeadById(ArrayList<SalesLead> slList, int salesLeadID) {
         for (SalesLead sl : slList) {
             if (sl.salesLeadID == salesLeadID) {
@@ -231,6 +274,7 @@ public class SalesLead {
      * @param _empID Employee's ID
      * @author Narrara
      */
+
     public static void printSalesLeadByEmpID(ArrayList<SalesLead> slList, String _empID) {
         for (SalesLead sl : slList) {
 
@@ -246,6 +290,7 @@ public class SalesLead {
      * @param _location SalesLead's location
      * @author JiaJia
      */
+
     public static void printSalesLeadByLocation(ArrayList<SalesLead> slList, String _location) {
         for (SalesLead sl : slList) {
             if (sl.sl_location.equals(_location)) {
