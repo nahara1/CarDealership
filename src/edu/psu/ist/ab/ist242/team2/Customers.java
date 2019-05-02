@@ -34,7 +34,7 @@ public class Customers {
      * Customers first and last name, phone number, email, and groupID
      * @author Ronald Salguero
      */
-    private String firstName, lastName, phoneNumber, custEmail, groupID, custLocation;
+    private String firstName, lastName, phoneNumber, custEmail, groupID;
 
     /**
      * Counter to automatically generate customer IDs
