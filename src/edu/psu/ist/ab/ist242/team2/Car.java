@@ -221,6 +221,7 @@ public final class Car extends Vehicle {
      * printCarsByLocation method prints cars that are of a specific dealership
      * @param carList car Array List
      * @param _location vehicle location
+     * @author JiaJia, Alex, Narrara
      */
     public static void printCarByLocation(ArrayList<Car> carList, String _location) {
         for (Car car : carList) {
